@@ -1,6 +1,7 @@
 'use client'
 
 import styles, { layout } from "@/app/style"
+import CarReservationForm from "@/components/forms/CarReservationForm";
 import { cars } from "@/constants";
 import Image from "next/image"
 import { useState } from "react";
@@ -51,11 +52,11 @@ const CarDetails = ({ params }) => {
           </div>
           <div className={`${layout.sectionInfo}`}>
             <h2 className={styles.heading2}>
-              لماذا عليك أن تختار<br className="sm:block hidden" /> مسار الغربية
+                حجز سيارة {selectedCar.name}
             </h2>
-            <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-            نحن ندرك أن رحلة الحج والعمرة هي تجربة روحانية مهمة وتتطلب التخطيط الجيد لضمان الراحة والطمأنينة. من هذا المنطلق، عملنا على تصميم خدماتنا لتلبية احتياجاتك بأعلى مستويات الجودة والمصداقية، لضمان تجربة لا تُنسى من البداية إلى النهاية.
-            </p>
+            
+            <CarReservationForm/>
+
           </div>
 
         </section>
