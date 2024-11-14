@@ -18,8 +18,14 @@ const CarDetails = ({ params }) => {
   
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
+        <div className="text-center my-10">
+          <h2 className={styles.heading2}>
+              حجز سيارة {selectedCar.name}
+          </h2>
+        </div>
+         
         <section className={layout.section}>
-          
+            
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 relative h-[400px] lg:w-[50%] w-[100%] `}>
             <div className="w-full max-w-4xl mx-auto">
               {/* Main Image */}
@@ -50,10 +56,7 @@ const CarDetails = ({ params }) => {
               </div>
             </div>
           </div>
-          <div className={`${layout.sectionInfo}`}>
-            <h2 className={styles.heading2}>
-                حجز سيارة {selectedCar.name}
-            </h2>
+          <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 `}>
             
             <CarReservationForm/>
 

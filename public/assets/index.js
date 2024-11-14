@@ -30,6 +30,11 @@ import appointment from './appointment.svg'
 import easyBook from './easy-book.svg'
 import services from './services.svg'
 import price from './price.svg'
+import user from './user.svg'
+import email from './email.svg'
+import calendar from './calendar.svg'
+import clockHours from './clock.svg';
+import upload from './upload.svg'
 
 export {
   logo,
@@ -63,5 +68,10 @@ export {
   appointment,
   easyBook,
   services,
-  price
+  price,
+  user,
+  email, 
+  calendar,
+  clockHours,
+  upload
 };
