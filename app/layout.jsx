@@ -2,8 +2,9 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import styles from "./style";
-import { NavBar, Footer } from "@/components";
-
+// import { NavBar, Footer } from "@/components";
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],

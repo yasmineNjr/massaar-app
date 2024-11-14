@@ -1,13 +1,16 @@
 'use client'
 
 import styles, { layout } from "@/app/style"
+import { cars } from "@/constants";
 import Image from "next/image"
-import { hero1 } from "@/public/assets"
-import { cars } from "@/constants"
+import { useState } from "react";
 
 const CarDetails = ({ params }) => {
 
   const selectedCar = cars.find((car) => (car.id === params.id));
+
+  const [main, setMain] = useState(selectedCar.mainImg);
+
 
   return (
     <div className="bg-primary w-full overflow-hidden">
@@ -16,10 +19,37 @@ const CarDetails = ({ params }) => {
       <div className={`${styles.boxWidth}`}>
         <section className={layout.section}>
           
-        <div className={`flex-1 flex ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 relative h-[400px]`}>
-          <Image src={selectedCar.mainImg} alt={selectedCar.name} className='w-[100%] h-[100%] relative object-fill'/>
-        </div>
-          <div className={layout.sectionInfo}>
+          <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 relative h-[400px] lg:w-[50%] w-[100%] `}>
+            <div className="w-full max-w-4xl mx-auto">
+              {/* Main Image */}
+              <div className="relative w-full h-64 md:h-96">
+                <Image
+                  src={main}
+                  alt="Main Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </div>
+
+              {/* Thumbnail Row */}
+              <div className="flex flex-row justify-between overflow-x-auto mt-4 w-full">
+                {selectedCar.imgs.map((car, index) => (
+                  <div key={index} className="relative h-24 w-24 md:h-32 md:w-32">
+                    <Image
+                      src={car}
+                      alt={selectedCar.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-lg cursor-pointer"
+                      onClick={() => setMain(car)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className={`${layout.sectionInfo}`}>
             <h2 className={styles.heading2}>
               لماذا عليك أن تختار<br className="sm:block hidden" /> مسار الغربية
             </h2>

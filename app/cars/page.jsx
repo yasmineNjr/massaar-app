@@ -1,7 +1,7 @@
 import React from 'react'
 import { cars } from '@/constants'
 import styles, { layout} from '../style'
-import { List } from '@/components'
+import List from '../../components/List'
 
 const CarsList = () => {
   return (

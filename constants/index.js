@@ -87,7 +87,7 @@ export const navLinks = [
         GPS: 'no',
         automatic: 'yes',
         mainImg: staria,
-        imgs: [ staria, staria, staria]
+        imgs: [ staria, BMW, fordTurus]
     },
     {
         id: 'car-2',
@@ -101,7 +101,7 @@ export const navLinks = [
         GPS: 'yes',
         automatic: 'yes',
         mainImg: BMW,
-        imgs: [ BMW, BMW, BMW]
+        imgs: [ staria, BMW, fordTurus]
     },
     {
         id: 'car-3',
@@ -115,7 +115,7 @@ export const navLinks = [
         GPS: 'no',
         automatic: 'no',
         mainImg: fordTurus,
-        imgs: [ fordTurus, fordTurus, fordTurus]
+        imgs: [ staria, BMW, fordTurus]
     },
 ];
 

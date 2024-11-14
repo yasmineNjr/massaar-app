@@ -1,7 +1,7 @@
 import styles from '@/app/style';
 import { hero1 } from '../public/assets'
 import Image from "next/image";
-import { QuickBook } from '.';
+import QuickBook from './QuickBook';
 import Button from './Button';
 import { TextGenerateEffect } from './ui/text-generate-effect';
 import { InfiniteMovingCards } from './ui/infinite-moving-cards';
