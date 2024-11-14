@@ -6,7 +6,13 @@ import { navLinks } from '../constants';
 import Image from 'next/image';
 
 function NavBar() {
-  const [toggle, setToggle] = useState(true);
+
+  const [toggle, setToggle] = useState(false);
+  
+  const clickMenu = () => {
+    setToggle((prev) => !prev)
+  }
+
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
       <Image src={logo} alt='algharbia' className='w-[80px] h=[32px]'/>
@@ -26,10 +32,10 @@ function NavBar() {
         <Image 
           src={toggle ? close : menu} 
           alt='menu' 
-          className='w-[28px] h-[28px] object-contain'
-          onClick={() => setToggle((prev) => !prev)}
+          className='w-[28px] h-[28px] object-contain cursor-pointer'
+          onClick={clickMenu}
         />
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 left-0 mx-4 my-2 min-width-[140px] rounded-xl sidebar`}>
+        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 left-0 mx-4 my-2 min-width-[140px] rounded-xl sidebar z-[10]`}>
           <ul className='list-none flex flex-col justify-end items-center flex-1'>
             {navLinks.map((nav, index) => (
               <li key={nav.id} 

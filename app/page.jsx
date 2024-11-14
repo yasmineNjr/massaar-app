@@ -19,10 +19,8 @@ export default function Home() {
           <HaveToChoose/>
           <Testimonials/>
           <CTA/>
-          {/* <Footer /> */}
         </div>
       </div>
-
-  </div>
+    </div>
   );
 }

@@ -78,24 +78,44 @@ export const navLinks = [
     {
         id: 'car-1',
         img: staria,
-        name: "Nike Air Jordan-01",
+        name: "staria",
         model: "model-1",
         description: "description-1",
         pricePerHour: 'price-1',
         rating: 'rating-1',
         passengers: '4',
-        GPS: 'none',
+        GPS: 'no',
         automatic: 'yes',
+        mainImg: staria,
+        imgs: [ staria, staria, staria]
     },
     {
         id: 'car-2',
         img: BMW,
-        name: "Nike Air Jordan-10",
+        name: "BMW",
+        model: "model-2",
+        description: "description-2",
+        pricePerHour: 'price-2',
+        rating: 'rating-2',
+        passengers: '6',
+        GPS: 'yes',
+        automatic: 'yes',
+        mainImg: BMW,
+        imgs: [ BMW, BMW, BMW]
     },
     {
         id: 'car-3',
         img: fordTurus,
-        name: "Nike Air Jordan-100",
+        name: "fordTurus",
+        model: "model-3",
+        description: "description-3",
+        pricePerHour: 'price-3',
+        rating: 'rating-3',
+        passengers: '4',
+        GPS: 'no',
+        automatic: 'no',
+        mainImg: fordTurus,
+        imgs: [ fordTurus, fordTurus, fordTurus]
     },
 ];
 

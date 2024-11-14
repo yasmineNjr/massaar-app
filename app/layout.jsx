@@ -5,17 +5,6 @@ import styles from "./style";
 import { NavBar, Footer } from "@/components";
 
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: [ '300', '400', '500', '600', '700'],
@@ -32,7 +21,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <body
-        // className={cn('min-h-screen bg-dark-300 font-sans antialiased')}
       >
         
         <div className="bg-primary w-full overflow-hidden">
