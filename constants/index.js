@@ -121,20 +121,60 @@ export const navLinks = [
 
 export const hotels = [
   {
+      id: 'hotel-1',
       img: clock,
       name: "Makkah Clock Royal Tower",
+      model: "model-2",
+      description: "description-2",
+      pricePerHour: 'price-2',
+      rating: 'rating-2',
+      passengers: '6',
+      GPS: 'yes',
+      automatic: 'yes',
+      mainImg: clock,
+      imgs: [ clock, lobik, rayhan]
   },
   {
+      id: 'hotel-2',
       img: lobik,
       name: "Luvyka Hotel Madinah",
+      model: "model-2",
+      description: "description-2",
+      pricePerHour: 'price-2',
+      rating: 'rating-2',
+      passengers: '6',
+      GPS: 'yes',
+      automatic: 'yes',
+      mainImg: lobik,
+      imgs: [ clock, lobik, rayhan]
   },
   {
+      id: 'hotel-3',
       img: rayhan,
       name: "Al Marwa Rayhaan by Rotana",
+      model: "model-2",
+      description: "description-2",
+      pricePerHour: 'price-2',
+      rating: 'rating-2',
+      passengers: '6',
+      GPS: 'yes',
+      automatic: 'yes',
+      mainImg: rayhan,
+      imgs: [ clock, lobik, rayhan]
   },
   {
+    id: 'hotel-4',
     img: alansar,
     name: "Anwar Al Madinah Mövenpick Hotel",
+    model: "model-2",
+    description: "description-2",
+    pricePerHour: 'price-2',
+    rating: 'rating-2',
+    passengers: '6',
+    GPS: 'yes',
+    automatic: 'yes',
+    mainImg: alansar,
+    imgs: [ clock, lobik, rayhan]
 },
 ];
 

@@ -5,15 +5,19 @@ import styles from '@/app/style'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const List = (items) => {
+const List = (items, id) => {
     
     const router = useRouter();
     const lst = items.items;
     
     const viewDetails = (id) => {
         
-        router.push(`/cars/${id}`);
+        if(id === 'car')
+            router.push(`/cars/${id}`);
+        else(id === 'hotel')
+            router.push(`/hotels/${id}`);
     }
+
   return (
     <ul className='text-white flex gap-10 justify-center w-full'>
         {lst.map((item) => (

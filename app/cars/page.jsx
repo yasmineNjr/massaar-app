@@ -14,11 +14,11 @@ const CarsList = () => {
                 <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-dimWhite ss:leading-[100.8px] leading-[75px]">
                 يتوفر لدينا {cars.length} سيارات
                 </h1>
-                <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-dimWhite ss:leading-[100.8px] leading-[75px]">
+                {/* <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-dimWhite ss:leading-[100.8px] leading-[75px]">
                   فرز حسب
-                </h1>
+                </h1> */}
               </div>
-              <List items={cars}/>
+              <List items={cars} id='car'/>
             </div>
           </section>
         </div>
