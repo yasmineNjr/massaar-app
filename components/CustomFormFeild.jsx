@@ -124,6 +124,7 @@ const RenderField= ({field, props}) => {
             return(
                 renderSkeleton ? renderSkeleton(field) : null
             )
+            
         case FormFieldType.SELECT:
             return(
                 <FormControl>
@@ -148,6 +149,7 @@ const RenderField= ({field, props}) => {
                     id={props.name}
                     checked={field.value}
                     onCheckedChange={field.onChange}
+                    className="w-5 h-5 border-dimWhite hover:border-dimWhite focus:ring-2 focus:ring-dimWhite checked:bg-dimWhite checked:border-dimWhite"
                     />
                     <label htmlFor={props.name} className="checkbox-label">
                     {props.label}

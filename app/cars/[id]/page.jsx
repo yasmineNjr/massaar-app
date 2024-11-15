@@ -19,14 +19,14 @@ const CarDetails = ({ params }) => {
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={styles.heading2}>
+          <h2 className={`${styles.heading2} text-right`}>
               حجز سيارة {selectedCar.name}
           </h2>
         </div>
          
         <section className={layout.section}>
             
-          <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 relative h-[400px] lg:w-[50%] w-[100%] `}>
+          <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative h-[525px] lg:w-[50%] w-[100%] `}>
             <div className="w-full max-w-4xl mx-auto">
               {/* Main Image */}
               <div className="relative w-full h-64 md:h-96">
@@ -56,9 +56,9 @@ const CarDetails = ({ params }) => {
               </div>
             </div>
           </div>
-          <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 `}>
+          <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 lg:w-[50%] w-[100%]`}>
             
-            <CarReservationForm/>
+            <CarReservationForm item={selectedCar}/>
 
           </div>
 
