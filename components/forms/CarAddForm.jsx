@@ -34,7 +34,7 @@ const CarAddForm = () => {
                             name="name"
                             label="الاسم"
                             placeholder="BMW"
-                            iconSrc="/assets/user.svg"
+                            iconSrc="/assets/model.svg"
                             iconAlt="car"
                         />
                         <CustomFormField
@@ -43,7 +43,7 @@ const CarAddForm = () => {
                             name="model"
                             label="الموديل"
                             placeholder="2023"
-                            iconSrc="/assets/user.svg"
+                            iconSrc="/assets/model.svg"
                             iconAlt="model"
                         />
                         <CustomFormField
@@ -59,7 +59,7 @@ const CarAddForm = () => {
                             name="price"
                             label="سعر الساعة"
                             placeholder="100"
-                            iconSrc="/assets/clock.svg"
+                            iconSrc="/assets/dolar.svg"
                             iconAlt="price"
                         />
                         <CustomFormField
@@ -68,7 +68,7 @@ const CarAddForm = () => {
                             name="passengers"
                             label="عدد الركاب"
                             placeholder="4"
-                            iconSrc="/assets/clock.svg"
+                            iconSrc="/assets/passenger.svg"
                             iconAlt="passengers"
                         />
                         <div className="flex flex-1 w-full flex-row justify-between mt-3">
