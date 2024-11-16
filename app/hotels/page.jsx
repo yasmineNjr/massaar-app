@@ -19,7 +19,7 @@ const HotelsList = () => {
                   فرز حسب
                 </h1> */}
               </div>
-              <List items={hotels} id='hotel'/>
+              <List items={hotels} destination='hotel'/>
             </div>
           </section>
         </div>

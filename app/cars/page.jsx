@@ -18,7 +18,7 @@ const CarsList = () => {
                   فرز حسب
                 </h1> */}
               </div>
-              <List items={cars} id='car'/>
+              <List items={cars} destination='car'/>
             </div>
           </section>
         </div>

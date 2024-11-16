@@ -5,17 +5,21 @@ import styles from '@/app/style'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const List = (items, id) => {
+const List = ({items, destination}) => {
     
     const router = useRouter();
-    const lst = items.items;
+    const lst = items;
     
     const viewDetails = (id) => {
         
-        if(id === 'car')
-            router.push(`/cars/${id}`);
-        else(id === 'hotel')
-            router.push(`/hotels/${id}`);
+        let path = '';
+        if(destination === 'car'){
+            path = `/cars/${id}`
+        }else if(destination === 'hotel'){
+            path = `/hotels/${id}`
+        }
+        router.push(path);
+        // console.log(path)
     }
 
   return (
