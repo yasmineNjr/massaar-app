@@ -1,9 +1,10 @@
 import React from 'react'
+import NewHotel from '@/components/NewHotel'
 
-const NewHotel = () => {
+const NewHotelPage = () => {
   return (
-    <div>NewHotel</div>
+    <NewHotel/>
   )
 }
 
-export default NewHotel
+export default NewHotelPage

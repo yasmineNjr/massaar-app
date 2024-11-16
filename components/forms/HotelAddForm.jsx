@@ -16,7 +16,7 @@ export const FormFieldType = {
     SKELETON: 'skeleton',
   };
 
-const CarAddForm = () => {
+const HotelAddForm = () => {
 
     const form = useForm();
 
@@ -33,31 +33,31 @@ const CarAddForm = () => {
                             control={form.control}
                             name="name"
                             label="الاسم"
-                            placeholder="BMW"
+                            placeholder="Makkah Clock Royal Tower"
                             iconSrc="/assets/model.svg"
-                            iconAlt="car"
+                            iconAlt="hotel"
                         />
                         <CustomFormField
                             fieldType={FormFieldType.INPUT}
                             control={form.control}
-                            name="model"
-                            label="الموديل"
-                            placeholder="2023"
+                            name="location"
+                            label="الموقع"
+                            placeholder="مكة"
                             iconSrc="/assets/model.svg"
-                            iconAlt="model"
+                            iconAlt="location"
                         />
                         <CustomFormField
                             fieldType={FormFieldType.TEXTAREA}
                             control={form.control}
                             name="description"
                             label="الوصف(إختياري)"
-                            placeholder="وصف عن السيارة."
+                            placeholder="وصف عن الفندق."
                         />
                         <CustomFormField
                             fieldType={FormFieldType.NUMRICINPUT}
                             control={form.control}
                             name="price"
-                            label="سعر الساعة"
+                            label="سعر الليلة"
                             placeholder="100"
                             iconSrc="/assets/dolar.svg"
                             iconAlt="price"
@@ -65,8 +65,8 @@ const CarAddForm = () => {
                         <CustomFormField
                             fieldType={FormFieldType.NUMRICINPUT}
                             control={form.control}
-                            name="passengers"
-                            label="عدد الركاب"
+                            name="persons"
+                            label="عدد الأشخاص"
                             placeholder="4"
                             iconSrc="/assets/passenger.svg"
                             iconAlt="passengers"
@@ -75,14 +75,32 @@ const CarAddForm = () => {
                             <CustomFormField
                                 fieldType={FormFieldType.CHECKBOX}
                                 control={form.control}
-                                name="automatic"
-                                label="أوتوماتيك"
+                                name="wifi"
+                                label="Wi-Fi"
                             />
                             <CustomFormField
                                 fieldType={FormFieldType.CHECKBOX}
                                 control={form.control}
-                                name="gps"
-                                label="GPS"
+                                name="heat"
+                                label="تدفئة/تبريد"
+                            />
+                             <CustomFormField
+                                fieldType={FormFieldType.CHECKBOX}
+                                control={form.control}
+                                name="dining"
+                                label="غداء"
+                            />
+                             <CustomFormField
+                                fieldType={FormFieldType.CHECKBOX}
+                                control={form.control}
+                                name="breakfast"
+                                label="فطور"
+                            />
+                             <CustomFormField
+                                fieldType={FormFieldType.CHECKBOX}
+                                control={form.control}
+                                name="tv"
+                                label="TV"
                             />
                         </div>
                     </div>
@@ -92,7 +110,7 @@ const CarAddForm = () => {
                             fieldType={FormFieldType.SKELETON}
                             control={form.control}
                             name="mainImg"
-                            label="الرجاء اختيار الصورة الرئيسية للسيارة"
+                            label="الرجاء اختيار الصورة الرئيسية للفندق"
                             renderSkeleton={(field) => (
                                 <FormControl>
                                     <FileUploader files={field.value} onChange={field.onChange} />
@@ -104,7 +122,7 @@ const CarAddForm = () => {
                             fieldType={FormFieldType.SKELETON}
                             control={form.control}
                             name="identificationDocument"
-                            label="الرجاء اختيار الصور الثانوية للسيارة"
+                            label="الرجاء اختيار الصور الثانوية للفندق"
                             renderSkeleton={(field) => (
                                 <FormControl>
                                     <FileUploader files={field.value} onChange={field.onChange} />
@@ -123,4 +141,4 @@ const CarAddForm = () => {
         )
 }
 
-export default CarAddForm
+export default HotelAddForm

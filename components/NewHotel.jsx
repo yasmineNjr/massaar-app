@@ -1,8 +1,8 @@
 import styles, { layout } from '@/app/style'
 import React from 'react'
-import CarAddForm from './forms/CarAddForm'
+import HotelAddForm from './forms/HotelAddForm'
 
-const NewCar = () => {
+const NewHotel= () => {
   return (
     <div className="w-full overflow-hidden">
   
@@ -10,12 +10,12 @@ const NewCar = () => {
             <div className={`${styles.boxWidth}`}>
                 <div className="text-center">
                     <h2 className={`${styles.heading2} text-right`}>
-                        إضافة سيارة جديدة
+                        إضافة فندق جديد
                     </h2>
                 </div>
             
             <section className='sm:py-10 py-0'> 
-                <CarAddForm/>
+                <HotelAddForm/>
             </section> 
       </div>
     </div>
@@ -23,5 +23,5 @@ const NewCar = () => {
   )
 }
 
-export default NewCar
+export default NewHotel
 
