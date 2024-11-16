@@ -37,6 +37,7 @@ import clockHours from './clock.svg';
 import upload from './upload.svg'
 import model from './model.svg'
 import passenger from './passenger.svg'
+import location from './location.svg'
 // import carName from './carName'
 
 export {
@@ -78,6 +79,7 @@ export {
   clockHours,
   upload,
   model,
-  passenger
+  passenger,
+  location
   // carName
 };

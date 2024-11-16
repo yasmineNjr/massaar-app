@@ -34,7 +34,7 @@ const HotelAddForm = () => {
                             name="name"
                             label="الاسم"
                             placeholder="Makkah Clock Royal Tower"
-                            iconSrc="/assets/model.svg"
+                            iconSrc="/assets/hotel.svg"
                             iconAlt="hotel"
                         />
                         <CustomFormField
@@ -43,7 +43,7 @@ const HotelAddForm = () => {
                             name="location"
                             label="الموقع"
                             placeholder="مكة"
-                            iconSrc="/assets/model.svg"
+                            iconSrc="/assets/location.svg"
                             iconAlt="location"
                         />
                         <CustomFormField
