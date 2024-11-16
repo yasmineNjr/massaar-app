@@ -203,18 +203,3 @@ const formSchema = z.object({
   }
 
 export default CarReservationForm;
-
-
- {/* <FormField
-          name="example"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Example Field</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="bg-gold-gradient ">Submit</Button> */}

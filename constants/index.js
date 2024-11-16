@@ -49,10 +49,15 @@ export const navLinks = [
       link: "/contact",
       title: "اتصل بنا",
     },
+    // {
+    //   id: "signin",
+    //   link: "/contact",
+    //   title: "تسجيل الدخول",
+    // },
     {
-      id: "signin",
-      link: "/contact",
-      title: "تسجيل الدخول",
+      id: "dashboard",
+      link: "/dashboard",
+      title: "لوحة التحكم",
     },
   ];
   
