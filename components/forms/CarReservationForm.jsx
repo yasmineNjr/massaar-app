@@ -3,9 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-// import { Button } from "@/components/ui/button"
 
-import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
 import CustomFormField from "../CustomFormFeild"
 
@@ -13,24 +11,24 @@ import { Label } from "../ui/label"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import FileUploader from "../FileUploadr"
 import { useState } from "react"
-import { SelectItem } from "../ui/select"
 import Button from "../Button"
+
+
+export const FormFieldType = {
+  INPUT: 'input',
+  TEXTAREA: 'textarea',
+  PHONE_INPUT: 'phoneInput',
+  CHECKBOX: 'checkbox',
+  DATE_PICKER: 'datePicker',
+  SELECT: 'select',
+  SKELETON: 'skeleton',
+};
 
 const formSchema = z.object({
     username: z.string().min(2, {
       message: "Username must be at least 2 characters.",
     }),
   })
-
-  export const FormFieldType = {
-    INPUT: 'input',
-    TEXTAREA: 'textarea',
-    PHONE_INPUT: 'phoneInput',
-    CHECKBOX: 'checkbox',
-    DATE_PICKER: 'datePicker',
-    SELECT: 'select',
-    SKELETON: 'skeleton',
-  };
 
   const PaymentOptions = [ 'الدفع باستخدام بطاقة ائتمان أو خصم عبر المدفوعات عبر الانترنت' , 'الدفع أثناء التوصيل' , 'تحويل مصرفي مباشر', ]
 

@@ -323,3 +323,4 @@ export const socialMedia = [
     link: "mailto:admin@alaglaan.com/",
   },
 ];
+

@@ -14,11 +14,11 @@ export default function DashboardLayout({ children }) {
       const [selectedItem, setSelectedItem] = useState("إدارة الطلبات");
 
     return (
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen lg:flex-row flex-col">
         {/* Sidebar */}
-        <aside className="w-64 bg-dark text-white p-4">
+        <aside className="lg:w-64 w-full bg-dark text-white p-4">
           <h2 className="text-lg font-bold">أهلا بك في لوحة التحكم</h2>
-          <ul>
+          <ul className="flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 lg:w-auto w-full lg:justify-start justify-between">
             {menuItems.map((item) => (
                 <li
                 key={item.name}
