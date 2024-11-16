@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const CarDetails = ({ params }) => {
 
+  console.log(params)
   const selectedCar = cars.find((car) => (car.id === params.id));
 
   const [main, setMain] = useState(selectedCar.mainImg);
