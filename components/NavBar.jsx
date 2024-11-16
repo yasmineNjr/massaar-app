@@ -34,7 +34,6 @@ function NavBar() {
              <li
               key={nav.id} 
               className={`font-normal cursor-pointer text-[16px] text-dimWhite ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
-              {/* <a href={`${nav.link}`}>{nav.title}</a> */}
               <DropdownMenu>
                 <DropdownMenuTrigger  className='text-dimWhite'>{nav.title}</DropdownMenuTrigger>
                   <DropdownMenuContent className='bg-black-gradient text-dimWhite'>
@@ -59,11 +58,23 @@ function NavBar() {
         <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 left-0 mx-4 my-2 min-width-[140px] rounded-xl sidebar z-[10]`}>
           <ul className='list-none flex flex-col justify-end items-center flex-1'>
             {navLinks.map((nav, index) => (
-              <li key={nav.id} 
-              className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
-                <a href={`${nav.link}`}>{nav.title}</a>
-              </li>
-            ))}
+               nav.id !== 'reservations' ?
+                <li key={nav.id} 
+                className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                  <a href={`${nav.link}`}>{nav.title}</a>
+                </li> : 
+                <div>
+                   <li key={nav.id} 
+                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                      <a href='/hotels'>حجز فندقي</a>
+                    </li>
+                    <li key={nav.id} 
+                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                      <a href='/cars'>حجز سيارة</a>
+                    </li>
+                </div>
+               
+              ))}
           </ul>
         </div>
       </div>
