@@ -23,14 +23,17 @@ const List = ({items, destination}) => {
     }
 
   return (
-    <ul className='text-white flex gap-10 justify-center w-full'>
-        {lst.map((item) => (
-            <li key={item.id} className='cursor-pointer' onClick={() => viewDetails(item.id)}>
-                <h2 className={styles.heading2}>
-                {item.name}
-                </h2>
-            </li>
+    <ul className='text-white flex flex-wrap gap-10 items-center p-4 mt-10 justify-center w-full'>
+        {lst.map(({id, img, name, model, description, pricePerHour, rating, passengers, GPS, automatic, mainImg, imgs}) => (
+            // <li key={item.id} className='cursor-pointer' onClick={() => viewDetails(item.id)}>
+            //     <h2 className={styles.heading2}>
+            //     {item.name}
+            //     </h2>
+            // </li>
             // <Link href="/cars/[id]" as={`/cars/${item.id}`}>Go to Car</Link>
+            <div key={id} className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:ww-96 w-[80vw]'>
+                {name}
+            </div>
         ))
         }
     </ul>
