@@ -32,11 +32,16 @@ const List = ({items, destination}) => {
 
   return (
     // <div className='text-white flex flex-wrap gap-10 items-center p-4 mt-10 justify-center w-full'>
-    <div className="text-dimWhite flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8">
-        {lst.map(({id, img, name, model, description, pricePerHour, rating, passengers, GPS, automatic, mainImg, imgs}) => (
-            <div key={id} className="sm:h-[41rem] h-[36rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[50vw]">
-                <PinContainer title={name} href={`${path}/${id}`} >
+    // <div className="text-dimWhite flex flex-wrap gap-4 items-center justify-center p-4 gap-x-24 gap-y-8 bg-gold">
+    <div className="flex flex-wrap items-center justify-center gap-x-24 gap-y-8">
+        {lst.map(({id, img, name, model, description, pricePerHour, rating, passengers, GPS, automatic, mainImg, imgs}) => (//sm:w-[570px] w-[50vw]
+            <div key={id} 
+            // className="sm:h-[36rem] h-[25rem] lg:min-h-[32.5rem] flex items-center justify-center bg-white shadow w-80"
+            className="sm:h-[41rem] h-[36rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]  text-dimWhite"
+            >
+                <PinContainer title={name} href={`${path}/${id}`}>
                     <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
+                        {/* sm:w-[570px] w-[80vw]  */}
                         <div className="relative w-full h-full overflow-hidden lg:rounded-3xl" style={{ backgroundColor: "#13162D" }}>
                             <Image src={mainImg} alt={name}/>
                         </div>
