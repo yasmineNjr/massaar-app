@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from '../style'
 import StatCard from '@/components/StatCard'
+import {DataTable} from '@/components/table/DataTable'
+import {columns} from '@/components/table/columns'
 
-async function getData(){
+async function getData() {
   // Fetch data from your API here.
   return [
     {
@@ -80,6 +82,7 @@ async function getData(){
     // ...
   ]
 }
+
 const Dashboard = async() => {
 
   const lst =[
@@ -158,6 +161,8 @@ const Dashboard = async() => {
     // ...
   ]
 
+  const data = await getData();
+
   return (
     <div className="w-full overflow-hidden">
   
@@ -194,6 +199,8 @@ const Dashboard = async() => {
                       icon={"/assets/cancelled.svg"}
                   />
                   </section>
+
+                  <DataTable data={data} columns={columns}/>
                 </main>
             </section> 
       </div>
