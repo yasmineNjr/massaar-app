@@ -324,3 +324,8 @@ export const socialMedia = [
   },
 ];
 
+export const StatusIcon = {
+  scheduled: "/assets/check.svg",
+  pending: "/assets/pending.svg",
+  cancelled: "/assets/cancelled.svg",
+};
