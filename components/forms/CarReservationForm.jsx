@@ -44,7 +44,7 @@ const formSchema = z.object({
    
     return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="font-bold space-y-6 flex-1 w-full  text-dimWhite">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="font-bold space-y-6 flex-1 w-full text-dimWhite">
        
           <CustomFormField
             fieldType={FormFieldType.INPUT}

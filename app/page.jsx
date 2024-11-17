@@ -10,9 +10,9 @@ import HaveToChoose from '../components/HaveToChoose';
 
 export default function Home() {
   return (
-    <div className="bg-primary w-full overflow-hidden">
-  
-      <div className={`bg-primary ${styles.flexStart}`}>
+    <div className="bg-white w-full overflow-hidden">
+  {/* bg-primary */}
+      <div className={`bg-primary bg-white ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Hero/>
         </div>

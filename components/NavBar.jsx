@@ -22,20 +22,20 @@ function NavBar() {
   }
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar'>
+    <nav className='w-full flex py-6 justify-between items-center navbar bg-white'>
       <Image src={logo} alt='algharbia' className='w-[80px] h=[32px]'/>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
           nav.id !== 'reservations' ?
             <li key={nav.id} 
-            className={`font-normal cursor-pointer text-[16px] text-dimWhite ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
+            className={`font-normal cursor-pointer text-[16px] text-dimWhite text-primary ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
               <a href={`${nav.link}`}>{nav.title}</a>
             </li> :
              <li
               key={nav.id} 
-              className={`font-normal cursor-pointer text-[16px] text-dimWhite ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
+              className={`font-normal cursor-pointer text-[16px] text-dimWhite text-primary ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
               <DropdownMenu>
-                <DropdownMenuTrigger  className='text-dimWhite'>{nav.title}</DropdownMenuTrigger>
+                <DropdownMenuTrigger  className='text-dimWhite text-primary'>{nav.title}</DropdownMenuTrigger>
                   <DropdownMenuContent className='bg-black-gradient text-dimWhite'>
                     <DropdownMenuItem><div className='w-full text-center'><a href='/hotels'>حجز فندقي</a> </div></DropdownMenuItem>
                     <DropdownMenuItem><div className='w-full text-center'><a href='/cars'>حجز سيارة</a> </div></DropdownMenuItem>
