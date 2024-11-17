@@ -94,6 +94,11 @@ const config = {
   		fontFamily: {
   			sans: ["var(--font-sans)", ...fontFamily.sans]
   		},
+		  backgroundImage: {
+			appointments: "url('/assets/appointments-bg.png')",
+			pending: "url('/assets/pending-bg.png')",
+			cancelled: "url('/assets/cancelled-bg.png')",
+		  },
   		keyframes: {
   			'accordion-down': {
   				from: {

@@ -1,15 +1,16 @@
 import React from 'react'
+import clsx from 'clsx';
+import Image from 'next/image';
 
 const StatCard = ({ count = 0, label, icon, type }) => {
   return (
-    <div className=''
-    // {clsx('stat-card', {
-    //     "bg-appointments": type === "appointments",
-    //     "bg-pending": type === "pending",
-    //     "bg-cancelled": type === "cancelled",
-    //   })}
+    <div className={clsx('stat-card', {
+        "bg-appointments": type === "appointments",
+        "bg-pending": type === "pending",
+        "bg-cancelled": type === "cancelled",
+      })}
       >
-        {/* <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4'>
           <Image
             src={icon}
             width={32}
@@ -20,8 +21,7 @@ const StatCard = ({ count = 0, label, icon, type }) => {
           <h2 className='text-32-bold text-white'>{count}</h2>
         </div>
   
-        <p className='text-14-regular'>{label}</p> */}
-        xxx
+        <p className='text-14-regular'>{label}</p>
       </div>
   )
 }

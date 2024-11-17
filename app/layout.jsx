@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       >
         
         <div className="bg-primary w-full overflow-hidden">
-          <div className={`${styles.paddingX} ${styles.flexCenter} bg-white`}>
+          <div className={`${styles.paddingX} ${styles.flexCenter} `}>
             <div className={`${styles.boxWidth}`}>
               <NavBar/>
             </div>
