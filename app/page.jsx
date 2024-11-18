@@ -7,18 +7,20 @@ import PopularHotels from '../components/PopularHotels';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import HaveToChoose from '../components/HaveToChoose';
+import PasskeyModal from "@/components/PasskeyModal";
 
-export default function Home() {
+export default function Home() { 
+
   return (
-    <div className="bg-white w-full overflow-hidden">
-  {/* bg-primary */}
-      <div className={`bg-primary bg-white ${styles.flexStart}`}>
+    <div className="w-full overflow-hidden bg-transparent">
+  
+      <div className={`bg-transparent ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Hero/>
         </div>
       </div>
   
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
           <PopularCars/>

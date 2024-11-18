@@ -5,6 +5,7 @@ import styles from "./style";
 // import { NavBar, Footer } from "@/components";
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import PasskeyModal from "@/components/PasskeyModal";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -17,14 +18,18 @@ export const metadata = {
   description: "A website for organizing tourist trips",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, searchParams }) {
+
+  const isAdmin = searchParams?.admin === "true";
 
   return (
     <html lang="en" dir="rtl">
       <body
       >
         
-        <div className="bg-primary w-full overflow-hidden">
+        <div className="bg-primary w-full overflow-hidden bg-gradient-to-r from-customLightGreen to-white">
+          {isAdmin && <PasskeyModal/>}
+
           <div className={`${styles.paddingX} ${styles.flexCenter} `}>
             <div className={`${styles.boxWidth}`}>
               <NavBar/>

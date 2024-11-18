@@ -19,10 +19,20 @@ const config = {
   		}
   	},
   	extend: {
+		boxShadow: {
+			customGray: '0 4px 10px rgba(50, 50, 50, 0.8)', // dark gray shadow
+		},
+		backgroundImage: {
+			'custom-gray-gradient': 'linear-gradient(to right, #D1D5DB, #FFFFFF)', // gray-300 to white
+		  },
   		bottom: {
   			'5p': '5%'
   		},
   		colors: {
+			
+			customBlue: '#3498db',
+        	customGreen: '#2ecc71',
+			customLightGreen: '#b3e6b3',
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'

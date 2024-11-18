@@ -8,19 +8,19 @@ import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 import { heroImages } from '@/constants';
 
 const Hero = () => (
-    <section className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+    <section className={`flex md:flex-row flex-col ${styles.paddingY} bg-transparent`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-dimWhite text-primary ss:leading-[100.8px] leading-[75px]">
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px]">
           <span className="text-gradient">مسار الغربية</span>{" "}
           <br className="sm:block hidden" />
            خيارك الأفضل لحجز{" "}
           </h1>
-          <div className="ss:flex hidden md:mr-4 mr-0">
+          {/* <div className="ss:flex hidden md:mr-4 mr-0 bg-transparent">
             <QuickBook/>
-          </div>
+          </div> */}
         </div>
-        <h1 className="font-poppins font-semibold ss:text-[38px] text-[22px] text-dimWhite text-primary ss:leading-[100.8px] leading-[75px] w-full">
+        <h1 className="font-poppins font-semibold ss:text-[38px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px] w-full">
           خدمات رحلات الحج و العمرة
         </h1>
     <div>

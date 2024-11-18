@@ -4,16 +4,16 @@ import Button from './Button';
 import Image from 'next/image';
 
 const FeatueCard = ({ icon, index, title, content }) => (
-  <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} feature-card`}>
-    <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dark-500`}>
+  <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} p-6 hover:bg-gradient-to-r from-gray-300 to-white hover:shadow-customGray`}>
+    <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dark-600`}>
       {/* <Image src={icon} alt='icon' className='w-[50%] h-[50%] object-contain'/> */}
       {icon}
     </div>
     <div className='flex flex-1 flex-col  mr-3'>
-      <h4 className='font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1'>
+      <h4 className='font-poppins font-semibold text-[18px] leading-[23px] mb-1 text-primary'>
         {title}
       </h4>
-      <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[24px] mb-1'>
+      <p className='font-poppins text-[#6d6d6d] font-bold text-[16px] leading-[24px] mb-1'>
         {content}
       </p>
     </div>
@@ -24,7 +24,7 @@ function HaveToChoose() {
   return (
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
-        <h2 className={styles.heading2}>
+      <h2 className={`${styles.heading2} text-primary`}>
           لماذا عليك أن تختار<br className="sm:block hidden" /> مسار الغربية
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

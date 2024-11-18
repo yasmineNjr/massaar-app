@@ -23,7 +23,7 @@ const PopularHotels = () => {
   return (
     <section className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`${layout.sectionInfo} md:order-2 order-1`}>
-        <h2 className={styles.heading2}>
+        <h2 className={`${styles.heading2} text-primary`}>
             الفنادق الأكثر طلباً
         </h2>
         <div className='w-full md:mt-0 mt-6'>
