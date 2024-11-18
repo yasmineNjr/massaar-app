@@ -14,6 +14,17 @@ export const columns = [
         },
     },
     {
+      accessorKey: "status",
+      header: "الحالة",
+      cell: ({ row }) => {
+        return (
+          <div className="min-w-[75px]  text-center">
+            <StatusBadge status={row.original.status} />
+          </div>
+        );
+      },
+    },
+    {
         accessorKey: "client",
         header: "العميل",
         cell: ({ row }) => <p className="text-14-medium text-center">{row.original.client}</p>,
@@ -22,17 +33,6 @@ export const columns = [
       accessorKey: "phone",
       header: "الجوال",
       cell: ({ row }) => <p className="text-14-medium text-center">{row.original.phone}</p>,
-    },
-    {
-        accessorKey: "status",
-        header: "الحالة",
-        cell: ({ row }) => {
-          return (
-            <div className="min-w-[75px]  text-center">
-              <StatusBadge status={row.original.status} />
-            </div>
-          );
-        },
     },
     {
         accessorKey: "startDate",
