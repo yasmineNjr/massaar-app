@@ -38,6 +38,8 @@ import upload from './upload.svg'
 import model from './model.svg'
 import passenger from './passenger.svg'
 import location from './location.svg'
+import contactus from './contactus.jpg'
+import review from './review.jpg'
 // import carName from './carName'
 
 export {
@@ -80,6 +82,8 @@ export {
   upload,
   model,
   passenger,
-  location
+  location,
+  contactus,
+  review
   // carName
 };
