@@ -19,6 +19,11 @@ export const columns = [
         cell: ({ row }) => <p className="text-14-medium text-center">{row.original.client}</p>,
     },
     {
+      accessorKey: "phone",
+      header: "الجوال",
+      cell: ({ row }) => <p className="text-14-medium text-center">{row.original.phone}</p>,
+    },
+    {
         accessorKey: "status",
         header: "الحالة",
         cell: ({ row }) => {

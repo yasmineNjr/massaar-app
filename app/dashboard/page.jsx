@@ -14,7 +14,8 @@ async function getData() {
       status: "cancelled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - staria"
+      item: "car - staria",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -23,7 +24,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - BMW"
+      item: "car - BMW",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -32,7 +34,8 @@ async function getData() {
       status: "scheduled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - staria"
+      item: "car - staria",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -41,7 +44,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "hotel - clock"
+      item: "hotel - clock",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -50,7 +54,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - BMW"
+      item: "car - BMW",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -59,7 +64,8 @@ async function getData() {
       status: "scheduled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "hotel - clock"
+      item: "hotel - clock",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -68,7 +74,8 @@ async function getData() {
       status: "scheduled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - Ford"
+      item: "car - Ford",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -77,7 +84,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "hotel - anwar"
+      item: "hotel - anwar",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -86,7 +94,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "hotel - marwa"
+      item: "hotel - marwa",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -95,7 +104,8 @@ async function getData() {
       status: "cancelled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - Ford"
+      item: "car - Ford",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -104,7 +114,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - Ford"
+      item: "car - Ford",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -113,7 +124,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - BMW"
+      item: "car - BMW",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -122,7 +134,8 @@ async function getData() {
       status: "pending",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "car - Staria"
+      item: "car - Staria",
+      phone: '+966566633161'
     },
     {
       id: "728ed52f",
@@ -131,89 +144,14 @@ async function getData() {
       status: "scheduled",
       startDate: "Oct 26, 2024, 11:30 PM",
       endDate: "Oct 26, 2024, 11:30 PM",
-      item: "hotel - marwa"
+      item: "hotel - marwa",
+      phone: '+966566633161'
     },
     // ...
   ]
 }
 
 const Dashboard = async() => {
-
-  const lst =[
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    // ...
-  ]
 
   const data = await getData();
 
@@ -231,24 +169,24 @@ const Dashboard = async() => {
                   <p>ابدأ يومك بمعالجة طلبات الحجز</p>
                 </div>
             
-            <section className='mx-auto flex flex-col space-y-14'> 
-                <main className='admin-main'>
-                  <section className='admin-stat'>
+            <section className='mx-auto flex flex-col space-y-14 w-full'> 
+                <main className='admin-main w-full '>
+                  <section className='admin-stat w-full'>
                   <StatCard
                       type="appointments"
-                      count={lst.filter((i) => i.status==='done').length}//{appointments.scheduledCount}
+                      count={data.filter((i) => i.status==='scheduled').length}//{appointments.scheduledCount}
                       label="الطلبات المثبتة"
                       icon={"/assets/appointments.svg"}
                   />
                    <StatCard
                       type="pending"
-                      count={lst.filter((i) => i.status==='pending').length}//{appointments.pendingCount}
+                      count={data.filter((i) => i.status==='pending').length}//{appointments.pendingCount}
                       label="الطلبات المنتظرة"
                       icon={"/assets/pending.svg"}
                   />
                   <StatCard
                       type="cancelled"
-                      count={lst.filter((i) => i.status==='cancelled').length}//{appointments.cancelledCount}
+                      count={data.filter((i) => i.status==='cancelled').length}//{appointments.cancelledCount}
                       label="الطلبات الملغاة"
                       icon={"/assets/cancelled.svg"}
                   />
