@@ -1,8 +1,12 @@
+'use client'
+
 import { hero1 } from '@/public/assets'
 import React from 'react'
 import styles, { layout } from '../style'
 import Image from 'next/image'
 import ClientEvaluationForm from '@/components/forms/ClientEvaluationForm'
+import { reviewList } from '@/constants'
+import ReactStars from "react-rating-stars-component";
 
 const CustomerEvaluations = () => {
   return (
@@ -37,8 +41,23 @@ const CustomerEvaluations = () => {
               </div>
             </div>
 
-            <div className={`${styles.flexCenter}   bg-white`}>
-              evaluation list
+            <div className={`flex flex-col mt-10 text-dimWhite`}>
+              <h1 className={`${styles.heading2}`}>شهادات عملائنا</h1>
+              {
+                reviewList.map((review) => (
+                  <div key={review.id} className='flex flex-col gap-6 mt-5 rounded-md bg-black-gradient-2 p-6 text-white'>
+                    <h2 className='font-bold'>{review.date}</h2>
+                    <ReactStars
+                        count={5}
+                        size={30}
+                        activeColor="#ffd700"
+                        value={5}
+                    />
+                    <p>{review.desc}</p>
+                    <p>{review.client}</p>
+                  </div>
+                ))
+              }
             </div>
 
           </section>

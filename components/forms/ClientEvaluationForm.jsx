@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { Form, FormControl } from "../ui/form"
 import CustomFormField from "../CustomFormFeild";
+import ReactStars from "react-rating-stars-component";
 import Button from "../Button";
 import { useState } from "react";
 
@@ -24,18 +25,29 @@ const ClientEvaluationForm = () => {
         console.log(data);
       };
 
-    const [rating, setRating] = useState(0);
+      const [rating, setRating] = useState(0);
 
-    const handleRating = (value) => {
-    setRating(value);
-    };
+      const handleRatingChange = (newRating) => {
+        setRating(newRating);
+        console.log("New rating:", newRating);
+      };
 
   return (
     <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="font-bold space-y-6 flex flex-1 flex-col w-full text-dimWhite ">
             <div className="flex lg:flex-row flex-col">
                 <div className="w-[100%] px-3 space-y-6">
-                   
+                    <div>
+                        تقييمك لخدماتنا
+                        <ReactStars
+                            count={5}
+                            onChange={handleRatingChange}
+                            size={30}
+                            activeColor="#ffd700"
+                            value={rating}
+                        />
+                    </div>
+                    
                     <CustomFormField
                         fieldType={FormFieldType.INPUT}
                         control={form.control}
