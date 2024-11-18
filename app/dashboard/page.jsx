@@ -170,8 +170,8 @@ const Dashboard = async() => {
                 </div>
             
             <section className='mx-auto flex flex-col space-y-14 w-full'> 
-                <main className='admin-main w-full '>
-                  <section className='admin-stat w-full'>
+                <main className='admin-main'>
+                  <section className='admin-stat w-full '>
                   <StatCard
                       type="appointments"
                       count={data.filter((i) => i.status==='scheduled').length}//{appointments.scheduledCount}
