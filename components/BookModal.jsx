@@ -25,8 +25,8 @@ const BookModal = ({ type, patientId, userId, appointment, title, description })
   return (
     <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-            <Button variant='ghost' className={`capitalize ${type === 'schedule' && 'text-green-500'}`}>
-                {type}
+            <Button variant='ghost' className={`capitalize ${type === 'schedule' ? 'text-green-500 hover:text-green-500' : 'text-red-700 hover:text-red-700'} hover:bg-transparent`}>
+                {typeText}
             </Button>
         </DialogTrigger>
         {/* <DialogContent>

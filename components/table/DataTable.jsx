@@ -35,10 +35,10 @@ export function DataTable({
     getPaginationRowModel: getPaginationRowModel(),
   })
 
-  return (
+  return (//className="hover:shadow-none"
     <div className="data-table">
       <Table className="shad-table">
-        <TableHeader className=" bg-dark-200">
+        <TableHeader className=" bg-dark-200 text-start">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id} className="shad-table-row-header">
               {headerGroup.headers.map((header) => {
@@ -62,6 +62,7 @@ export function DataTable({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
+                className="shad-table-row hover:bg-transparent"
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
@@ -72,8 +73,8 @@ export function DataTable({
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+              <TableCell colSpan={columns.length} className="h-24 text-center" >
+                لا يوجد نتائج.
               </TableCell>
             </TableRow>
           )}

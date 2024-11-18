@@ -1,25 +1,16 @@
 "use client"
 
-  import { Button } from "@/components/ui/button"
-  import { MoreHorizontal } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { MoreHorizontal } from "lucide-react"
 import StatusBadge from "../StatusBadge"
 import BookModal from "../BookModal"
-
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-// export type Payment = {
-//   id: string
-//   amount: number
-//   status: "pending" | "processing" | "success" | "failed"
-//   email: string
-// }
 
 export const columns = [
 
     {
         header: "#",
         cell: ({ row }) => {
-          return <p className="text-14-medium text-center">{row.index + 1}</p>;
+          return <p className="text-14-medium">{row.index + 1}</p>;
         },
     },
     {
@@ -95,7 +86,7 @@ export const columns = [
     id: "actions",
     header: () => <div className="pl-4 text-center">العمليات</div>,
     cell: ({ row }) => {
-      const appointment = row.original;
+      const reservation = row.original;
 
       return (
         <div className="flex gap-1">
