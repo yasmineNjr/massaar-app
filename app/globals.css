@@ -197,7 +197,9 @@
   .table-actions {
     @apply flex w-full items-center justify-between space-x-2 p-4;
   }
-
+  .hover-pause:hover {
+    animation-play-state: paused;
+  }
   /* ===== ALIGNMENTS */
   .flex-center {
     @apply flex items-center justify-center;
@@ -446,7 +448,9 @@
   background-clip: text;
   text-fill-color: transparent;
 } */
-
+.hover-pause:hover {
+  animation-play-state: paused;
+}
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,

@@ -26,6 +26,38 @@ export const heroImages = [
     id: "img-4",
     image: rayhan,
   },
+  {
+    id: "img-5",
+    image: hero1,
+  },
+  {
+    id: "img-6",
+    image: hero2,
+  },
+  {
+    id: "img-7",
+    image: hero3,
+  },
+  {
+    id: "img-8",
+    image: rayhan,
+  },
+  {
+    id: "img-9",
+    image: hero1,
+  },
+  {
+    id: "img-10",
+    image: hero2,
+  },
+  {
+    id: "img-11",
+    image: hero3,
+  },
+  {
+    id: "img-12",
+    image: rayhan,
+  },
 ];
 
 export const navLinks = [

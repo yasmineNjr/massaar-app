@@ -56,7 +56,7 @@ function NavBar() {
           className='w-[28px] h-[28px] object-contain cursor-pointer'
           onClick={clickMenu}
         />
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-gradient-to-r from-gray-300 to-white shadow-customGray text-primary font-poppins font-bold text-[16px]  absolute top-20 left-0 mx-4 my-2 min-width-[140px] rounded-xl sidebar z-[10]`}>
+        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-gradient-to-r from-gray-300 to-white shadow-customGray text-primary font-poppins font-bold text-[16px]  absolute top-20 left-0 mx-4 my-2 min-width-[140px] rounded-xl sidebar z-[50]`}>
           <ul className='list-none flex flex-col justify-end items-center flex-1'>
             {navLinks.map((nav, index) => (
                nav.id !== 'reservations' ?

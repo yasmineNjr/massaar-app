@@ -1,3 +1,16 @@
+function addVariablesForColors({ addBase, theme }) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+	  Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+   
+	addBase({
+	  ":root": newVars,
+	});
+  }
+  
+
+
 /** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -30,7 +43,7 @@ const config = {
   			'5p': '5%'
   		},
   		colors: {
-			
+			customGray: '#6d6d6d',
 			customBlue: '#3498db',
         	customGreen: '#2ecc71',
 			customLightGreen: '#b3e6b3',
@@ -111,6 +124,41 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
+			gradientBorder: {
+				'0%': {
+				  'border-image-source': 'linear-gradient(to right, #FFD700, #FFC107, #FFA000)',
+				},
+				'50%': {
+				  'border-image-source': 'linear-gradient(to right, #FFC107, #FFA000, #FFD700)',
+				},
+				'100%': {
+				  'border-image-source': 'linear-gradient(to right, #FFA000, #FFD700, #FFC107)',
+				},
+			  },
+			bounceText: {
+				'0%, 100%': { transform: 'translateY(0)' },
+				'50%': { transform: 'translateY(-10px)' },
+			  },
+			fadeIn: {
+				'0%': { opacity: '0' },
+				'100%': { opacity: '1' },
+			  },
+			typewriter: {
+				'0%': { width: '0%' },
+				'100%': { width: '100%' },
+			},
+			blink: {
+				'50%': { borderColor: 'transparent' },
+			},
+			slide: {
+				'0%': { transform: 'translateX(0%)' }, // Start fully visible
+				'100%': { transform: 'translateX(-100%)' }, // Slide out completely
+			},
+			scroll: {
+				to: {
+				  transform: "translate(calc(-50% - 0.5rem))",
+				},
+			  },
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -137,9 +185,17 @@ const config = {
   			}
   		},
   		animation: {
+			gradientBorder: 'gradientBorder 3s linear infinite',
+			bounceText: 'bounceText 1s infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'caret-blink': 'caret-blink 1.25s ease-out infinite'
+  			'caret-blink': 'caret-blink 1.25s ease-out infinite',
+			scroll:
+          		"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+		  	slide: 'slide 60s linear infinite',
+			typewriter: 'typewriter 4s steps(20) 1s forwards',
+			blink: 'blink 1s step-end infinite',
+			fadeIn: 'fadeIn 2s ease-in-out',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -157,7 +213,9 @@ const config = {
   	}
   },
   plugins: [require("tailwindcss-animate")],
+	// plugins: [addVariablesForColors],
 } ;
+
 
 export default config;
 
