@@ -19,6 +19,7 @@ const config = {
   		}
   	},
   	extend: {
+		
 		boxShadow: {
 			customGray: '0 4px 10px rgba(50, 50, 50, 0.8)', // dark gray shadow
 		},

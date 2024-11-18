@@ -8,9 +8,12 @@ import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 import { heroImages } from '@/constants';
 
 const Hero = () => (
-    <section className={`flex md:flex-row flex-col ${styles.paddingY} bg-transparent`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className="flex flex-row justify-between items-center w-full">
+    
+<section className={`flex flex-col ${styles.paddingY} bg-transparent`}>
+      {/* md:flex-row  */}
+      <div className={`flex-1 flex justify-center items-center flex-col xl:px-0 sm:px-16 px-6`}>
+      {/* ${styles.flexStart} */}
+        <div className="flex flex-row justify-between items-center w-full text-center">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px]">
           <span className="text-gradient">مسار الغربية</span>{" "}
           <br className="sm:block hidden" />
@@ -20,13 +23,14 @@ const Hero = () => (
             <QuickBook/>
           </div> */}
         </div>
-        <h1 className="font-poppins font-semibold ss:text-[38px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px] w-full">
+        <h1 className="font-poppins font-semibold ss:text-[38px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px] w-full text-center">
           خدمات رحلات الحج و العمرة
         </h1>
-    <div>
-    </div>
+        <div>
+      </div>
         
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`${styles.paragraph} w-full p-10 text-center mt-5`}>
+        {/* max-w-[470px] */}
         نوفر لك خيارات حجز السيارات والفنادق بالقرب من الحرم المكي والمدينة المنورة، لتجربة حج وعمرة مريحة وآمنة. اختر من بين مجموعة واسعة من السيارات والفنادق التي تناسب احتياجاتك، مع خدمات مميزة تضمن لك الراحة وتتيح لك التركيز على رحلتك الروحانية.
         </p>
       </div>
