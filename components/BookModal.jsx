@@ -11,6 +11,7 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog"
 import { Button } from './ui/button'
+import ManageReservationForm from './forms/ManageReservationForm'
 
 const BookModal = ({ type, patientId, userId, appointment, title, description }) => {
 
@@ -42,20 +43,19 @@ const BookModal = ({ type, patientId, userId, appointment, title, description })
 
         <DialogContent className='shad-dialog sm:max-w-md'>
             <DialogHeader className='mb-4 space-y-3'>
-            <DialogTitle className='capitalize text-center'>{typeText} الطلب</DialogTitle>
-            <DialogDescription className='text-center'>
+            <DialogTitle className='capitalize text-center text-white'>{typeText} الطلب</DialogTitle>
+            <DialogDescription className='text-center text-dimWhite'>
                هل أنت متأكد من {typeText} الطلب؟
             </DialogDescription>
             </DialogHeader>
 
-            <Button onClick={setOpen}>موافق</Button>
-            {/* <AppointmentForm
-                userId={userId}
-                patientId={patientId}
-                type={type}
-                appointment={appointment}
+            <ManageReservationForm
+                // userId={userId}
+                // clientId={patientId}
+                // type={type}
+                // appointment={appointment}
                 setOpen={setOpen}
-            /> */}
+            />
         </DialogContent>
     </Dialog>
   )
