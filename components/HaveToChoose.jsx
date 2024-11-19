@@ -15,7 +15,7 @@ const FeatueCard = ({ icon, index, title, content }) => (
       <h4 className='font-poppins font-semibold text-[18px] leading-[23px] mb-1 text-primary'>
         {title}
       </h4>
-      <p className='font-poppins text-[#6d6d6d] font-bold text-[16px] leading-[24px] mb-1'>
+      <p className='font-poppins text-customSecondary font-bold text-[16px] leading-[24px] mb-1'>
         {content}
       </p>
     </div>

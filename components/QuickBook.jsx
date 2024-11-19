@@ -20,7 +20,7 @@ const QuickBook = () => {
     >
       <div className={`${styles.flexCenter} flex-col bg-gradient-to-r from-customLightGreen to-white  w-[100%] h-[100%] rounded-3xl`}>
         <div className={`${styles.flexStart} flex-row`}>
-          <p className="text-[#b89f00] font-poppins font-medium text-[18px] leading-[23.4px] mr-2">
+          <p className="text-customGold font-poppins font-medium text-[18px] leading-[23.4px] mr-2">
             {/* <span className="text-gradient">حجز</span> */}
             حجز سريع
           </p>
