@@ -2,7 +2,8 @@ import {
   mail, instagram, whatsapp, twitter, saudiBussiness, zakatax, BMW, GMC, staria, fordTurus, lobik, alansar, clock, rayhan, shield, send, star, road, appointment, easyBook, services, price,
   hero1,
   hero2,
-  hero3
+  hero3,
+  medinah1, medinah, taif1, jeddah1, jeddah2, mecca1
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -24,40 +25,40 @@ export const heroImages = [
   },
   {
     id: "img-4",
-    image: rayhan,
+    image: medinah1,
   },
   {
     id: "img-5",
-    image: hero1,
+    image: taif1,
   },
   {
     id: "img-6",
-    image: hero2,
+    image: jeddah1,
   },
   {
     id: "img-7",
-    image: hero3,
+    image: medinah,
   },
   {
     id: "img-8",
-    image: rayhan,
+    image: jeddah2,
   },
   {
     id: "img-9",
-    image: hero1,
+    image: mecca1,
   },
-  {
-    id: "img-10",
-    image: hero2,
-  },
-  {
-    id: "img-11",
-    image: hero3,
-  },
-  {
-    id: "img-12",
-    image: rayhan,
-  },
+  // {
+  //   id: "img-10",
+  //   image: hero2,
+  // },
+  // {
+  //   id: "img-11",
+  //   image: hero3,
+  // },
+  // {
+  //   id: "img-12",
+  //   image: rayhan,
+  // },
 ];
 
 export const navLinks = [

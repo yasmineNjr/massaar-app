@@ -40,7 +40,13 @@ import passenger from './passenger.svg'
 import location from './location.svg'
 import contactus from './contactus.jpg'
 import review from './review.jpg'
-// import carName from './carName'
+import medinah1 from './medinah1.jpg'
+import medinah from './medinah.jpg'
+import jeddah1 from './jeddah1.jpg'
+import jeddah2 from './jeddah2.jpg'
+import taif1 from './taif1.jpg'
+import mecca1 from './mecca1.jpg'
+
 
 export {
   logo,
@@ -84,6 +90,11 @@ export {
   passenger,
   location,
   contactus,
-  review
-  // carName
+  review,
+  medinah1,
+  medinah,
+  jeddah1,
+  jeddah2,
+  taif1,
+  mecca1
 };
