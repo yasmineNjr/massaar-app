@@ -46,7 +46,14 @@ import jeddah1 from './jeddah1.jpg'
 import jeddah2 from './jeddah2.jpg'
 import taif1 from './taif1.jpg'
 import mecca1 from './mecca1.jpg'
-
+import snap from './snap.svg'
+import bankTransfer from './bankTransfer.svg'
+import cashPayment from './cashPayment.svg'
+import paymentCard from './paymentCard.svg'
+import onlineDiscount from './onlineDiscount.svg'
+import call from './call.svg'
+import taxNumber from './taxNumber.svg'
+import commericalNum from './commericalNum.svg'
 
 export {
   logo,
@@ -96,5 +103,13 @@ export {
   jeddah1,
   jeddah2,
   taif1,
-  mecca1
+  mecca1,
+  snap,
+  bankTransfer,
+  cashPayment,
+  paymentCard,
+  onlineDiscount,
+  call,
+  taxNumber,
+  commericalNum
 };

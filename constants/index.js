@@ -3,7 +3,15 @@ import {
   hero1,
   hero2,
   hero3,
-  medinah1, medinah, taif1, jeddah1, jeddah2, mecca1
+  medinah1, medinah, taif1, jeddah1, jeddah2, mecca1,
+  snap,
+  bankTransfer,
+  cashPayment,
+  paymentCard,
+  onlineDiscount,
+  call,
+  taxNumber,
+  commericalNum
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -328,18 +336,18 @@ export const footerLinks = [
     links: [
       {
         name: "رقم السجل التجاري-4031281145",
-        image: ''
+        image: commericalNum
       },
       {
         name: "الرقم الضريبي-311164786100003",
-        image: ''
+        image: taxNumber
       },
       {
-        name: "رقم السجل التجاري 4031281145",
+        name: '',
         image: saudiBussiness
       },
       {
-        name: "الرقم الضريبي 311164786100003",
+        name: '',
         image: zakatax
       },
     ],
@@ -349,19 +357,19 @@ export const footerLinks = [
     links: [
       {
         name: "تحويل مصرفي مباشر",
-        image: '',
+        image: bankTransfer,
       },
       {
         name: "الدفع اثناء التوصيل",
-        image: '',
+        image: cashPayment,
       },
       {
         name: " بطاقة ائتمان",
-        image: '',
+        image: paymentCard,
       },
       {
         name: "خصم عبر المدفوعات عبر الإنترنت",
-        image: '',
+        image: onlineDiscount,
       },
     ],
   },
@@ -370,7 +378,7 @@ export const footerLinks = [
     links: [
       {
         name: "966566633161+",
-        image: '',
+        image: call,
       },
     ],
   },
@@ -380,17 +388,19 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    // link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/masartoursim/?hl=ar"
   },
   {
     id: "social-media-2",
     icon: whatsapp,
-    link: "https://wa.me/966566633161",
+    link: "https://wa.me/+966566633161",
   },
   {
     id: "social-media-3",
-    icon: twitter,
-    link: "https://www.twitter.com/",
+    icon: snap,
+    // link: "https://www.twitter.com/",
+    link: "https://www.snapchat.com/add/masar-mix"
   },
   {
     id: "social-media-4",
