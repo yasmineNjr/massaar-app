@@ -2,20 +2,18 @@ import React from 'react'
 import Image from 'next/image';
 import ReactStars from "react-rating-stars-component";
 import { useRouter } from 'next/navigation';
-import { FaWifi } from "react-icons/fa6";
-import { TbAirConditioning } from "react-icons/tb";
-import { MdFreeBreakfast } from "react-icons/md";
-import { IoRestaurant } from "react-icons/io5";
-import { FaLocationDot } from "react-icons/fa6";
+import { MdGpsFixed } from "react-icons/md";
+import { MdOutlineHdrAuto } from "react-icons/md";
+import { FaPerson } from "react-icons/fa6";
 import { PiMoneyWavyFill } from "react-icons/pi";
 
-const ListItem = ({item}) => {
+const CarListItem = ({item}) => {
   
     const router = useRouter();
-  const {id, name, location, description, pricePerHour, rating, wifi, conditioning, breakfast, meal, mainImg, imgs}  = item;
-
+  const {id, name, model, description, pricePerHour,rating, passengers, GPS, automatic, mainImg, imgs}  = item;
+    console.log(item);
   const clickHandler = (id) => {
-    const path = `/hotels/${id}`
+    const path = `/cars/${id}`
     router.push(path);
     }   
 
@@ -30,12 +28,9 @@ const ListItem = ({item}) => {
         </div>
         <div className='p-5'>
             <div className='truncate'>
-                <h1 className='text-xl text-customGold'>{name}</h1>
+                <h1 className='text-xl text-customGold'>{model} - {name}</h1>
             </div>
-            <div className='flex flex-row gap-2 mt-2'>
-                <FaLocationDot/>
-                <p className='text-customSecondary font-semibold'>{location}</p>
-            </div>
+           
             <div className='flex flex-row gap-2 mt-2'>
                 <PiMoneyWavyFill  size={20}/>
                 <h1 className='text-primary font-bold'>{pricePerHour}</h1>
@@ -52,15 +47,20 @@ const ListItem = ({item}) => {
             <div className='truncate'>
                 <p className='ttext-customSecondary font-semibold'>{description}</p>
             </div>
+
+            <div className='flex flex-row gap-2 mt-2'>
+                <FaPerson size={22}/>
+                <p className='text-customSecondary font-semibold'>{passengers}</p>
+            </div>
+
             <div className='flex flex-row items-center justify-start mt-5 gap-2'>
-                {wifi && <FaWifi size={24}/>}
-                {conditioning && <TbAirConditioning size={24}/>}
-                {breakfast && <MdFreeBreakfast size={24}/>}
-                {meal && <IoRestaurant size={24}/>}
+                {GPS && <MdGpsFixed  size={24}/>}
+                {automatic && <MdOutlineHdrAuto  size={24}/>}
             </div>
         </div>
     </div>
+    // <div>xxx</div>
   )
 }
 
-export default ListItem
+export default CarListItem
