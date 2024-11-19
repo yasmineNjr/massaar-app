@@ -124,17 +124,6 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
-			gradientBorder: {
-				'0%': {
-				  'border-image-source': 'linear-gradient(to right, #FFD700, #FFC107, #FFA000)',
-				},
-				'50%': {
-				  'border-image-source': 'linear-gradient(to right, #FFC107, #FFA000, #FFD700)',
-				},
-				'100%': {
-				  'border-image-source': 'linear-gradient(to right, #FFA000, #FFD700, #FFC107)',
-				},
-			  },
 			bounceText: {
 				'0%, 100%': { transform: 'translateY(0)' },
 				'50%': { transform: 'translateY(-10px)' },
@@ -185,7 +174,6 @@ const config = {
   			}
   		},
   		animation: {
-			gradientBorder: 'gradientBorder 3s linear infinite',
 			bounceText: 'bounceText 1s infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',

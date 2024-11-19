@@ -4,7 +4,9 @@ import Button from './Button';
 import Image from 'next/image';
 
 const FeatueCard = ({ icon, index, title, content }) => (
-  <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} p-6 hover:bg-gradient-to-r from-gray-300 to-white hover:shadow-customGray`}>
+  <div 
+    className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} p-6 hover:bg-gradient-to-r from-gray-300 to-white hover:shadow-customGray`}
+  >
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dark-600`}>
       {/* <Image src={icon} alt='icon' className='w-[50%] h-[50%] object-contain'/> */}
       {icon}
@@ -17,6 +19,7 @@ const FeatueCard = ({ icon, index, title, content }) => (
         {content}
       </p>
     </div>
+    
   </div>
 )
 

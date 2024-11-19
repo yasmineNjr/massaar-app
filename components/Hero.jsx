@@ -21,9 +21,7 @@ const Hero = () => (
           <br className="sm:block hidden" />
            خيارك الأفضل لحجز{" "}
           </h1>
-          {/* <div className="ss:flex hidden md:mr-4 mr-0 bg-transparent">
-            <QuickBook/>
-          </div> */}
+          
         </div>
         <h1 className="font-poppins font-semibold ss:text-[38px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px] w-full text-center">
           خدمات رحلات الحج و العمرة
@@ -32,6 +30,11 @@ const Hero = () => (
         <div>
       </div>
         
+      <div className="ss:flex hidden md:mr-4 mr-0 bg-transparent">
+          <QuickBook/>
+        </div>
+        
+
         <p className={`${styles.paragraph} w-full p-10 text-center mt-5`}>
         {/* max-w-[470px] */}
         نوفر لك خيارات حجز السيارات والفنادق بالقرب من الحرم المكي والمدينة المنورة، لتجربة حج وعمرة مريحة وآمنة. اختر من بين مجموعة واسعة من السيارات والفنادق التي تناسب احتياجاتك، مع خدمات مميزة تضمن لك الراحة وتتيح لك التركيز على رحلتك الروحانية.
