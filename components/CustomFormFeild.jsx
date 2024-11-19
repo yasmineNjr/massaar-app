@@ -28,7 +28,7 @@ const RenderField= ({field, props}) => {
     switch(fieldType){
         case FormFieldType.INPUT:
             return(
-                <div className="flex rounded-md border border-bold-500 bg-dark-400">
+                <div className="flex rounded-md border border-customGray bg-transparent">
                     {iconSrc && (
                         <Image
                             src={iconSrc}
@@ -50,7 +50,7 @@ const RenderField= ({field, props}) => {
 
         case FormFieldType.NUMRICINPUT:
             return(
-                <div className="flex rounded-md border border-bold-500 bg-dark-400">
+                <div className="flex rounded-md border border-customGray bg-transparent">
                     {iconSrc && (
                         <Image
                             src={iconSrc}
@@ -100,7 +100,7 @@ const RenderField= ({field, props}) => {
             
         case FormFieldType.DATE_PICKER:
             return(
-                <div className="flex rounded-md border border-dark-500 bg-dark-400">
+                <div className="flex rounded-md border border-customGray bg-transparent">
                     <Image
                         src='/assets/calendar.svg'
                         width={24}
@@ -149,7 +149,7 @@ const RenderField= ({field, props}) => {
                     id={props.name}
                     checked={field.value}
                     onCheckedChange={field.onChange}
-                    className="w-5 h-5 border-dimWhite hover:border-dimWhite focus:ring-2 focus:ring-dimWhite checked:bg-dimWhite checked:border-dimWhite"
+                    className="w-5 h-5 border-customGray hover:border-customGray focus:ring-2 focus:ring-customGray checked:bg-customGray checked:border-customGray"
                     />
                     <label htmlFor={props.name} className="checkbox-label">
                     {props.label}

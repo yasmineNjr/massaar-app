@@ -15,27 +15,26 @@ const CarDetails = ({ params }) => {
 
 
   return (
-    <div className="bg-primary w-full overflow-hidden">
-  
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+  <div className="bg-transparent w-full overflow-hidden ">
+    <div className={`bg-transparent bg-gold ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={`${styles.heading2} text-right`}>
+          <h2 className={`${styles.heading2} text-right text-primary`}>
               حجز سيارة {selectedCar.name}
           </h2>
         </div>
          
-        <section className={layout.section}>
+        <section className={`${layout.section} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}>
             
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative h-[525px] lg:w-[50%] w-[100%] `}>
             <div className="w-full max-w-4xl mx-auto">
               {/* Main Image */}
-              <div className="relative w-full h-64 md:h-96">
+              <div className="relative w-full  min-w-[301px] h-[370px] ">
                 <Image
                   src={main}
                   alt="Main Image"
                   layout="fill"
-                  objectFit="cover"
+                  // objectFit="cover"
                   className="rounded-lg"
                 />
               </div>
@@ -48,7 +47,7 @@ const CarDetails = ({ params }) => {
                       src={car}
                       alt={selectedCar.name}
                       layout="fill"
-                      objectFit="cover"
+                      // objectFit="cover"
                       className="rounded-lg cursor-pointer"
                       onClick={() => setMain(car)}
                     />
@@ -56,6 +55,9 @@ const CarDetails = ({ params }) => {
                 ))}
               </div>
             </div>
+
+            
+            
           </div>
           <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 lg:w-[50%] w-[100%]`}>
             

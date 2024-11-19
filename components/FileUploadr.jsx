@@ -33,7 +33,7 @@ const FileUploader = ({ files, onChange }) => {
             />
             <div className='file-upload_label'>
                 <p className='text-14-regular'>
-                    <span className='text-gold'>انقر للتحميل</span> أو اسحب و أفلت
+                    <span className='text-customGold'>انقر للتحميل</span> أو اسحب و أفلت
                 </p>
                 <p>
                     SVG, PNG, JPG or GIF (الحد الأقصى 800x400)
