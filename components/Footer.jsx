@@ -1,9 +1,17 @@
+'use client'
+
 import styles from '@/app/style';
 import { logo } from '@/public/assets';
 import { footerLinks, socialMedia } from '../constants';
 import Image from 'next/image';
 
-const Footer = () => (
+const Footer = () => {
+
+  const handleClick = () => {
+
+  }
+
+  return(
     <section className={` ${styles.flexCenter} ${styles.paddingY} flex-col`}>
       <div className={` ${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className='flex flex-1 flex-col justify-start ml-10'>
@@ -39,13 +47,19 @@ const Footer = () => (
         <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-[#6d6d6d]">
         © 2024 مسار الغربية . جميع الحقوق محفوظة
         </p>
-        <div className='flex flex-row md:mt-0 mt-6'>
+        <div className='flex flex-row md:mt-0 mt-6' onClick={handleClick}>
           {socialMedia.map((social, index) => (
-            <Image key={social.id} src={social.icon} alt={social.id} className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length-1 ? 'ml-6' : 'ml-0'}`}/>
+            <Image 
+              key={social.id} 
+              src={social.icon} 
+              alt={social.id} 
+              className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length-1 ? 'ml-6' : 'ml-0'}`}
+            />
           ))}
         </div>
       </div>
     </section>
   )
+}
 
 export default Footer

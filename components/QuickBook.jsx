@@ -15,7 +15,7 @@ const QuickBook = () => {
 
   return(
   <div 
-      className={`shadow-customGray ${styles.flexCenter} w-[200px] h-[70px] rounded-3xl bg-gold-gradient p-[2px] cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
+      className={`shadow-customGray ${styles.flexCenter} w-[200px] h-[70px] rounded-3xl bg-gold-gradient p-[2px] cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl mt-5`}
       onClick={quickBookHandler}
     >
       <div className={`${styles.flexCenter} flex-col bg-gradient-to-r from-customLightGreen to-white  w-[100%] h-[100%] rounded-3xl`}>

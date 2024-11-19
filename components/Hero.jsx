@@ -30,7 +30,7 @@ const Hero = () => (
         <div>
       </div>
         
-      <div className="ss:flex hidden md:mr-4 mr-0 bg-transparent">
+      <div className="ss:flex md:mr-4 mr-0 bg-transparent">
           <QuickBook/>
         </div>
         
