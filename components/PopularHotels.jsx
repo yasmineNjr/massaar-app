@@ -51,8 +51,8 @@ const PopularHotels = () => {
               className={`relative rounded-xl group shadow-customGray hover:shadow-cardhover overflow-hidden min-w-[301px] h-[370px]  ${index !== hotel.length-1 ? 'ml-6' : 'ml-0'} flex justify-center items-center cursor-pointer`} key={`gallery_image-${index + 1}`}
               onClick={() => viewDetailsHandler(hotel.id)}
             >
-              <Image src={hotel.img} alt={hotel.name} layout="fill"/>
-              <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-dimWhite absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent  m-2 p-4 rounded-md">
+              <Image src={hotel.mainImg} alt={hotel.name} layout="fill"/>
+              <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-primary font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent  m-2 p-4 rounded-md">
                   <h1 >{hotel.name}</h1>
                   <p className="text-sm overflow-y-auto prompt">{hotel.description}</p>
                   <p className=" text-sm">{hotel.pricePerHour}</p>

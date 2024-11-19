@@ -54,6 +54,10 @@ import onlineDiscount from './onlineDiscount.svg'
 import call from './call.svg'
 import taxNumber from './taxNumber.svg'
 import commericalNum from './commericalNum.svg'
+import wifiIcon from './wifi.svg'
+import conditioningIcon from './conditioning.svg'
+import breakfastIcon from './breakfast.svg'
+import mealIcon from './meal.svg'
 
 export {
   logo,
@@ -111,5 +115,9 @@ export {
   onlineDiscount,
   call,
   taxNumber,
-  commericalNum
+  commericalNum,
+  wifiIcon,  
+  conditioningIcon,
+  breakfastIcon,
+  mealIcon
 };
