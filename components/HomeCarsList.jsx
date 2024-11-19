@@ -1,6 +1,7 @@
 'use client'
 
 import styles, { layout } from '@/app/style'
+import { useRouter } from 'next/navigation';
 import { cars } from '@/constants'
 import React from 'react'
 import Image from 'next/image'
@@ -8,8 +9,12 @@ import Button from './Button'
 
 const HomeCarsList = () => {
 
-    const viewDetailsHandler = () => {
-        console.log('details')
+    const router = useRouter();
+
+    const viewDetailsHandler = (id) => {
+        
+        const path = `/cars/${id}`
+        router.push(path);
     }
 
   return (
@@ -33,8 +38,8 @@ const HomeCarsList = () => {
         {
             cars.map((car) => (
                 <div 
-                    className="rounded-xl group relative shadow-customGray hover:shadow-cardhover min-w-[301px] h-[370px] overflow-hidden"
-                    onClick={viewDetailsHandler}
+                    className="rounded-xl group relative shadow-customGray hover:shadow-cardhover min-w-[301px] h-[370px] overflow-hidden cursor-pointer"
+                    onClick={() => viewDetailsHandler(car.id)}
                 >
                     <Image
                         src={car.mainImg}
