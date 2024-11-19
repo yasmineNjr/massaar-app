@@ -29,12 +29,12 @@ function NavBar() {
         {navLinks.map((nav, index) => (
           nav.id !== 'reservations' ?
             <li key={nav.id} 
-            className={`font-normal cursor-pointer text-[18px] hover:text-green-500  ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
+            className={`font-normal cursor-pointer text-[18px] hover:text-customGold  ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
               <a href={`${nav.link}`}>{nav.title}</a>
             </li> :
              <li
               key={nav.id} 
-              className={`font-normal cursor-pointer text-[18px] hover:text-green-500 ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
+              className={`font-normal cursor-pointer text-[18px] hover:text-customGold ${index === navLinks.length-1 ?' ml-0' : 'ml-10'}`}>
               <DropdownMenu>
                 <DropdownMenuTrigger  className=''>{nav.title}</DropdownMenuTrigger>
                   <DropdownMenuContent className='bg-gradient-to-r from-gray-300 to-white shadow-customGray'>
@@ -61,16 +61,16 @@ function NavBar() {
             {navLinks.map((nav, index) => (
                nav.id !== 'reservations' ?
                 <li key={nav.id} 
-                className={` cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                className={` cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'} hover:text-customGold`}>
                   <a href={`${nav.link}`}>{nav.title}</a>
                 </li> : 
                 <div className='flex flex-col gap-1'>
                    <li key={nav.id} 
-                    className={`font-poppins cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                    className={`font-poppins cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'} hover:text-customGold`}>
                       <a href='/hotels'>حجز فندقي</a>
                     </li>
                     <li key={nav.id} 
-                    className={`font-poppins  cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'}`}>
+                    className={`font-poppins  cursor-pointer ${index === navLinks.length-1 ?' mr-0' : 'mb-4'} hover:text-customGold`}>
                       <a href='/cars'>حجز سيارة</a>
                     </li>
                 </div>
