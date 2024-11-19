@@ -27,7 +27,7 @@ export default function RootLayout({ children, searchParams }) {
       <body
       >
         
-        <div className="bg-primary w-full overflow-hidden bg-gradient-to-r from-customLightGreen to-white">
+        <div className="w-full overflow-hidden bg-gradient-to-r from-customLightGreen to-white">
           {isAdmin && <PasskeyModal/>}
 
           <div className={`${styles.paddingX} ${styles.flexCenter} `}>
