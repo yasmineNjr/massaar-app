@@ -154,6 +154,48 @@ export const navLinks = [
         mainImg: fordTurus,
         imgs: [ staria, BMW, fordTurus]
     },
+    {
+      id: 'car-4',
+      img: staria,
+      name: "staria",
+      model: "model-1",
+      description: "معلومات إضافية عن السيارة ستاريا",
+      pricePerHour: '$100',
+      rating: 'rating-1',
+      passengers: '4',
+      GPS: 'no',
+      automatic: 'yes',
+      mainImg: staria,
+      imgs: [ staria, BMW, fordTurus]
+  },
+  {
+      id: 'car-5',
+      img: BMW,
+      name: "BMW",
+      model: "model-2",
+      description: "معلومات إضافية عن السيارة BMW",
+      pricePerHour: '$100',
+      rating: 'rating-2',
+      passengers: '6',
+      GPS: 'yes',
+      automatic: 'yes',
+      mainImg: BMW,
+      imgs: [ staria, BMW, fordTurus]
+  },
+  {
+      id: 'car-6',
+      img: fordTurus,
+      name: "fordTurus",
+      model: "model-3",
+      description: "معلومات إضافية عن السيارة فورد",
+      pricePerHour: '$100',
+      rating: 'rating-3',
+      passengers: '4',
+      GPS: 'no',
+      automatic: 'no',
+      mainImg: fordTurus,
+      imgs: [ staria, BMW, fordTurus]
+  },
 ];
 
 export const hotels = [

@@ -8,6 +8,7 @@ import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import HaveToChoose from '../components/HaveToChoose';
 import PasskeyModal from "@/components/PasskeyModal";
+import HomeCarsList from "@/components/HomeCarsList";
 
 export default function Home() { 
 
@@ -23,7 +24,8 @@ export default function Home() {
       <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats />
-          <PopularCars/>
+          <HomeCarsList/>
+          {/* <PopularCars/> */}
           <PopularHotels/>
           <HaveToChoose/>
           <Testimonials/>

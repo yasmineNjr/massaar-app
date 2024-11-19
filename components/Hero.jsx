@@ -48,11 +48,11 @@ const Hero = () => (
           {/* Images */}
           {
             heroImages.map((img, idx) => (
-              <div className="w-[400px] h-[400px] flex-shrink-0">
+              <div className='relative min-w-[420px] h-[370px] rounded-xl overflow-hidden shadow-customGray'>
               <Image
                   src={img.image}
                   alt={img.id}
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  layout="fill"
                 />
             </div>
             ))}
@@ -64,29 +64,3 @@ const Hero = () => (
   )
 
 export default Hero
-
-
-
-// <div className={`flex-1 flex ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 relative`}>
-//         {/* <Image src={hero1} alt='hero' className='w-[100%] h-[100%] relative z-[5]'/> */}
-       
-//         <div class="overflow-hidden w-full  mt-10">
-//           <div class="flex animate-slide hover-pause shadow-customGray gap-6">
-//             {
-//               heroImages.map((img) => (
-//                  <div key={img.id} className="w-[500px] mx-2 bg-blue-500 rounded-lg shadow-md">
-//                     {/* <Image src={img.image} alt="Image 1" class="rounded-lg" /> */}
-//                     <Image src={img.image} alt={img.id} className='w-[100%] h-[100%] relative z-[5] rounded-lg'/>
-//                   </div>
-                  
-//               ))
-//             }
-           
-//           </div>
-//         </div>
-
-//           {/* for gradient background  */}
-//         <div className='absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient'/>
-//         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
-//         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 white__gradient" />
-//       </div>
