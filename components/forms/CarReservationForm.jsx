@@ -127,7 +127,7 @@ const formSchema = z.object({
                 {PaymentOptions.map((option, i) => (
                   <div key={option + i} 
                   className="flex flex-row-reverse items-center space-x-reverse space-x-2">
-                    <RadioGroupItem value={option} id={option} //className="relative border-dimWhite hover:border-dimWhite focus:ring-2 focus:ring-dimWhite checked:border-dimWhite checked:bg-dimWhite"
+                    <RadioGroupItem value={option} id={option} 
                       className="relative w-5 h-5 border-2 border-customSecondary rounded-full checked:border-customSecondary" >
                       <span
                         className="absolute w-2.5 h-2.5 bg-transparent rounded-full transform scale-0 data-[state=checked]:scale-100"

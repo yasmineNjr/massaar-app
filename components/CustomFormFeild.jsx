@@ -66,6 +66,7 @@ const RenderField= ({field, props}) => {
                             {...field}
                             className="shad-input border-0 text-customSecondary"
                             type="number"
+                            min="1" 
                         />
                     </FormControl>
                 </div>
@@ -93,16 +94,14 @@ const RenderField= ({field, props}) => {
                         withCountryCallingCode
                         value={field.value}
                         onChange={field.onChange}
-                        className="input-phone bg-transparent text-customSecondary"
-                        // className="bg-gray-100 dark:bg-gray-800 focus:bg-gray-200 focus:ring-2 focus:ring-blue-500" 
-
+                        className="input-phone bg-transparent text-customSecondary "
                     />
                 </FormControl>
             )
             
         case FormFieldType.DATE_PICKER:
             return(
-                <div className="flex rounded-md border border-customGray bg-transparent text-customSecondary">
+                <div className="flex rounded-md border border-customGray text-customSecondary">
                     <Image
                         src='/assets/calendar.svg'
                         width={24}
@@ -116,7 +115,7 @@ const RenderField= ({field, props}) => {
                                     dateFormat={dateFormat ?? 'MM/dd/yyyy'}
                                     showTimeSelect={showTimeSelect ?? false}
                                     timeInputLabel="Time:"
-                                    wrapperClassName='date-picker bg-transparent'
+                                    wrapperClassName='date-picker'
                                     />
                     </FormControl>
                 </div>
