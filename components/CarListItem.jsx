@@ -59,7 +59,6 @@ const CarListItem = ({item}) => {
             </div>
         </div>
     </div>
-    // <div>xxx</div>
   )
 }
 
