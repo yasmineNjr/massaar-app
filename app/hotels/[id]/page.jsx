@@ -24,7 +24,7 @@ const HotelDetails = ({ params }) => {
           </h2>
         </div>
          
-        <section className={layout.section}>
+        <section className={`${layout.section} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}>
             
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative h-[525px] lg:w-[50%] w-[100%] `}>
             <div className="w-full max-w-4xl mx-auto">

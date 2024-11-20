@@ -21,7 +21,7 @@ const CustomerEvaluations = () => {
 
           <section className={`flex flex-col`}>
 
-            <div className='flex flex-col lg:flex-row  w-full shadow-customGray overflow-hidden rounded-xl text-customGray transition-transform duration-300 bg-gradient-to-r from-transparent via-gray-400 to-transparent'>
+            <div className='flex flex-col lg:flex-row  w-full shadow-customGray shadow-2xl overflow-hidden rounded-xl text-customGray transition-transform duration-300 bg-gradient-to-r from-transparent via-gray-400 to-transparent'>
                   <div className="relative h-70 md:h-75 w-full lg:w-[50%]">
                     <Image
                       src={review}

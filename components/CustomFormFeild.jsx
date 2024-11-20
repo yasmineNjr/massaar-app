@@ -94,6 +94,8 @@ const RenderField= ({field, props}) => {
                         value={field.value}
                         onChange={field.onChange}
                         className="input-phone bg-transparent text-customSecondary"
+                        // className="bg-gray-100 dark:bg-gray-800 focus:bg-gray-200 focus:ring-2 focus:ring-blue-500" 
+
                     />
                 </FormControl>
             )
