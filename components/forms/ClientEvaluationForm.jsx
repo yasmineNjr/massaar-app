@@ -37,7 +37,7 @@ const ClientEvaluationForm = () => {
         <form onSubmit={form.handleSubmit(onSubmit)} className="font-bold space-y-6 flex flex-1 flex-col w-full text-dimWhite ">
             <div className="flex lg:flex-row flex-col">
                 <div className="w-[100%] px-3 space-y-6">
-                    <div>
+                    <div className="text-primary font-semibold text-lg">
                         تقييمك لخدماتنا
                         <ReactStars
                             count={5}
@@ -45,6 +45,7 @@ const ClientEvaluationForm = () => {
                             size={30}
                             activeColor="#ffd700"
                             value={rating}
+                            classNames='mt-5'
                         />
                     </div>
                     

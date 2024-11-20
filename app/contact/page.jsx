@@ -6,11 +6,11 @@ import ContactUsForm from '@/components/forms/ContactUsForm'
 
 const ContactUs = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className="bg-transparent w-full overflow-hidden">
+      <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <div className="text-center my-5 lg:my-10">
-            <h2 className={`${styles.heading2} text-right`}>
+            <h2 className={`${styles.heading2} text-right text-primary`}>
                 اتصل بنا
             </h2>
           </div>

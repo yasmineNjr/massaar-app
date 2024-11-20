@@ -10,18 +10,18 @@ import ReactStars from "react-rating-stars-component";
 
 const CustomerEvaluations = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className="bg-transparent w-full overflow-hidden">
+      <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <div className="text-center my-5 lg:my-10">
-            <h2 className={`${styles.heading2} text-right`}>
+            <h2 className={`${styles.heading2} text-right text-primary`}>
                 تقييم العملاء
             </h2>
           </div>
 
-          <section className={`${styles.paddingY} flex flex-col`}>
+          <section className={`flex flex-col`}>
 
-            <div className='flex flex-col lg:flex-row  w-full'>
+            <div className='flex flex-col lg:flex-row  w-full shadow-customGray overflow-hidden rounded-xl text-customGray transition-transform duration-300 bg-gradient-to-r from-transparent via-gray-400 to-transparent'>
                   <div className="relative h-70 md:h-75 w-full lg:w-[50%]">
                     <Image
                       src={review}
@@ -31,16 +31,17 @@ const CustomerEvaluations = () => {
                       // className="rounded-lg"
                     />
                   </div>
-              <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 w-full lg:w-[50%]`}>
+              <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 py-10 md:my-0 my-10 w-full lg:w-[50%]`}>
                 <ClientEvaluationForm/>             
               </div>
             </div>
 
-            <div className={`flex flex-col mt-10 text-dimWhite`}>
-              <h1 className={`${styles.heading2}`}>شهادات عملائنا</h1>
+            <div className={`flex flex-col mt-20`}>
+              <h1 className={`${styles.heading2} text-primary`}>شهادات عملائنا</h1>
               {
                 reviewList.map((review) => (
-                  <div key={review.id} className='flex flex-col gap-6 mt-5 rounded-md bg-black-gradient-2 p-6 text-white'>
+                  <div key={review.id} className='flex flex-col gap-8 mt-10 rounded-xl p-5 bg-gradient-to-r from-gray-300 to-white shadow-customGray'>
+                     {/* transition-transform duration-300 hover: */}
                     <h2 className='font-bold'>{review.date}</h2>
                     <ReactStars
                         count={5}
