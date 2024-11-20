@@ -28,7 +28,7 @@ const CarListItem = ({item}) => {
         </div>
         <div className='p-5'>
             <div className='truncate'>
-                <h1 className='text-xl text-[#ffd700]'>{model} - {name}</h1>
+                <h1 className='text-xl font-bold text-[#ffd700]'>{model} - {name}</h1>
             </div>
            
             <div className='flex flex-row gap-2 mt-2'>
