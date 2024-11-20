@@ -16,7 +16,7 @@ const List = ({items, destination}) => {
     }
    
   return (
-    <div className="flex flex-wrap flex-row items-center justify-center gap-x-24 gap-y-8">
+    <div className="flex flex-wrap flex-row items-center justify-center gap-x-24 gap-y-8 w-full">
         {lst.map((item) => (
             destination === 'hotel' ? <ListItem item={item}/>  : <CarListItem item={item}/>
         ))
