@@ -84,7 +84,6 @@ const formSchema = z.object({
               showTimeSelect
               dateFormat="MM/dd/yyyy  -  h:mm aa"
           />
-
             
           <CustomFormField
               fieldType={FormFieldType.NUMRICINPUT}
@@ -129,12 +128,12 @@ const formSchema = z.object({
                   <div key={option + i} 
                   className="flex flex-row-reverse items-center space-x-reverse space-x-2">
                     <RadioGroupItem value={option} id={option} //className="relative border-dimWhite hover:border-dimWhite focus:ring-2 focus:ring-dimWhite checked:border-dimWhite checked:bg-dimWhite"
-                      className="relative w-5 h-5 border-2 border-gray-400 rounded-full checked:border-blue-500" >
+                      className="relative w-5 h-5 border-2 border-customSecondary rounded-full checked:border-customSecondary" >
                       <span
-                        className="absolute w-2.5 h-2.5 bg-dimWhite rounded-full transform scale-0 data-[state=checked]:scale-100"
+                        className="absolute w-2.5 h-2.5 bg-transparent rounded-full transform scale-0 data-[state=checked]:scale-100"
                       />
                     </RadioGroupItem>
-                    <Label htmlFor={option} className="cursor-pointer">
+                    <Label htmlFor={option} className="cursor-pointer text-customSecondary font-semibold">
                       {option}
                     </Label>
                   </div>
@@ -158,7 +157,7 @@ const formSchema = z.object({
             )}
             />
           }
-          <div className="flex flex-1 justify-center items-center w-fill text-customSecondary">
+          <div className="flex flex-1 justify-center items-center w-fill text-primary">
             <h2>الكلفة الإجمالية: {totalCost}</h2>
          </div>
          <div className="flex flex-1 justify-center items-center w-fill">

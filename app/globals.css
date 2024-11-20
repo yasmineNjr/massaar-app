@@ -167,7 +167,7 @@
   }
 
   .checkbox-label {
-    @apply cursor-pointer text-sm font-medium text-customGray peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+    @apply cursor-pointer text-sm font-semibold text-primary peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
   }
 
   /* ==== File Upload */

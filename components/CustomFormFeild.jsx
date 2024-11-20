@@ -42,7 +42,7 @@ const RenderField= ({field, props}) => {
                         <Input
                             placeholder={placeholder}
                             {...field}
-                            className="shad-input border-0"
+                            className="shad-input border-0 text-customSecondary"
                         />
                     </FormControl>
                 </div>
@@ -64,7 +64,7 @@ const RenderField= ({field, props}) => {
                         <Input
                             placeholder={placeholder}
                             {...field}
-                            className="shad-input border-0"
+                            className="shad-input border-0 text-customSecondary"
                             type="number"
                         />
                     </FormControl>
@@ -77,7 +77,7 @@ const RenderField= ({field, props}) => {
                    <Textarea
                     placeholder={placeholder}
                     {...field}
-                    className="shad-textArea"
+                    className="shad-textArea text-customSecondary"
                     disabled={props.disabled}
                    />
                 </FormControl>
@@ -93,14 +93,14 @@ const RenderField= ({field, props}) => {
                         withCountryCallingCode
                         value={field.value}
                         onChange={field.onChange}
-                        className="input-phone"
+                        className="input-phone bg-transparent text-customSecondary"
                     />
                 </FormControl>
             )
             
         case FormFieldType.DATE_PICKER:
             return(
-                <div className="flex rounded-md border border-customGray bg-transparent">
+                <div className="flex rounded-md border border-customGray bg-transparent text-customSecondary">
                     <Image
                         src='/assets/calendar.svg'
                         width={24}
@@ -114,7 +114,7 @@ const RenderField= ({field, props}) => {
                                     dateFormat={dateFormat ?? 'MM/dd/yyyy'}
                                     showTimeSelect={showTimeSelect ?? false}
                                     timeInputLabel="Time:"
-                                    wrapperClassName='date-picker'
+                                    wrapperClassName='date-picker bg-transparent'
                                     />
                     </FormControl>
                 </div>
@@ -133,11 +133,11 @@ const RenderField= ({field, props}) => {
                         onValueChange={field.onChange}
                     >
                         <FormControl>
-                           <SelectTrigger className="shad-select-trigger">
+                           <SelectTrigger className="shad-select-trigger text-customSecondary">
                             <SelectValue placeholder={placeholder}/>
                            </SelectTrigger> 
                         </FormControl>
-                        <SelectContent className="shad-select-content">{props.children}</SelectContent>
+                        <SelectContent className="shad-select-content ">{props.children}</SelectContent>
                     </Select>
                 </FormControl>
             )
@@ -149,9 +149,9 @@ const RenderField= ({field, props}) => {
                     id={props.name}
                     checked={field.value}
                     onCheckedChange={field.onChange}
-                    className="w-5 h-5 border-customGray hover:border-customGray focus:ring-2 focus:ring-customGray checked:bg-customGray checked:border-customGray"
+                    className="w-5 h-5 bg-transparent border-customSecondary hover:border-customSecondary focus:ring-2 focus:ring-customSecondary checked:bg-transparent checked:border-customSecondary"
                     />
-                    <label htmlFor={props.name} className="checkbox-label">
+                    <label htmlFor={props.name} className="checkbox-label text-customSecondary">
                     {props.label}
                     </label>
                 </div>
@@ -173,7 +173,7 @@ const CustomFormField = ( props) => {
         render={({ field }) => (
         <FormItem className="flex-1">
            {fieldType !== FormFieldType.CHECKBOX && label &&(
-            <FormLabel>{label}</FormLabel>
+            <FormLabel className='text-primary font-semibold text-lg'>{label}</FormLabel>
            )}
 
            <RenderField field={field} props={props}/>

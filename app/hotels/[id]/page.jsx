@@ -14,13 +14,13 @@ const HotelDetails = ({ params }) => {
 
 
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-transparent w-full overflow-hidden">
   
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={`${styles.heading2} text-right`}>
-              حجز الفندق {selectedHotel.name}
+          <h2 className={`${styles.heading2} text-right text-primary`}>
+              حجز في الفندق {selectedHotel.name}
           </h2>
         </div>
          
