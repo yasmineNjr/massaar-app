@@ -181,7 +181,7 @@
 
   /* ==== Stat Card */
   .stat-card {
-    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-cover p-6 shadow-lg;
+    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-cover bg-gradient-to-r from-gray-300 to-white p-6 shadow-xl;
   }
 
   /* ==== Status Badge */
@@ -191,7 +191,7 @@
 
   /* Data Table */
   .data-table {
-    @apply z-10 w-full overflow-hidden rounded-lg border border-dark-400 shadow-lg;
+    @apply z-10 w-full overflow-hidden rounded-lg border border-customGray shadow-lg;
   }
 
   .table-actions {
@@ -260,7 +260,7 @@
   }
 
   .shad-gray-btn {
-    @apply border border-dark-500 cursor-pointer bg-dark-400 text-white !important;
+    @apply border border-dark-500 cursor-pointer bg-customSecondary text-white !important;
   }
 
   .shad-input-label {
@@ -296,7 +296,7 @@
   }
 
   .shad-dialog {
-    @apply bg-dark-400 border-dark-500 !important;
+    @apply bg-gradient-to-r from-gray-300 to-white border-dark-500 !important;
   }
 
   .shad-dialog button {
@@ -312,11 +312,11 @@
   }
 
   .shad-table-row-header {
-    @apply border-b border-dark-400 text-light-200 hover:bg-transparent !important;
+    @apply border-b border-customSecondary text-customSecondary hover:bg-transparent !important;
   }
 
   .shad-table-row {
-    @apply border-b border-dark-400 text-light-200 !important;
+    @apply border-b border-customSecondary text-customSecondary font-semibold !important;
   }
 
   .shad-otp {

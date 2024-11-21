@@ -43,8 +43,8 @@ const BookModal = ({ type, patientId, userId, appointment, title, description })
 
         <DialogContent className='shad-dialog sm:max-w-md'>
             <DialogHeader className='mb-4 space-y-3'>
-            <DialogTitle className='capitalize text-center text-white'>{typeText} الطلب</DialogTitle>
-            <DialogDescription className='text-center text-dimWhite'>
+            <DialogTitle className='capitalize text-center text-customSecondart'>{typeText} الطلب</DialogTitle>
+            <DialogDescription className='text-center text-customSecondary'>
                هل أنت متأكد من {typeText} الطلب؟
             </DialogDescription>
             </DialogHeader>

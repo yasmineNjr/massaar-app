@@ -161,7 +161,7 @@ const Dashboard = async() => {
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <div className="text-center">
-                    <h2 className={`${styles.heading2} text-right`}>
+                    <h2 className={`${styles.heading2} text-right text-primary`}>
                     إدارة الطلبات    
                     </h2>
                 </div>

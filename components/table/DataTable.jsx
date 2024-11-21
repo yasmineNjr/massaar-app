@@ -31,14 +31,14 @@ export function DataTable({
   })
 
   return (//className="hover:shadow-none"
-    <div className="data-table">
+    <div className="data-table shadow-customGray">
       <Table className="shad-table">
-        <TableHeader className=" bg-dark-200 text-start">
+        <TableHeader className=" bg-customGray text-start ">
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="shad-table-row-header">
+            <TableRow key={headerGroup.id} className="shad-table-row-header ">
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} className='text-dimWhite text-center font-semibold'>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -82,7 +82,7 @@ export function DataTable({
           size="sm"
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
-          className="shad-gray-btn"
+          className="shad-gray-btn font-bold"
         >
           <Image
             src="/assets/arrow.svg"

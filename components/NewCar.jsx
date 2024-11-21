@@ -9,7 +9,7 @@ const NewCar = () => {
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <div className="text-center">
-                    <h2 className={`${styles.heading2} text-right`}>
+                    <h2 className={`${styles.heading2} text-right text-customSecondary`}>
                         إضافة سيارة جديدة
                     </h2>
                 </div>

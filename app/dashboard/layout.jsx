@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }) {
     return (
       <div className="flex min-h-screen lg:flex-row flex-col">
         {/* Sidebar */}
-        <aside className="lg:w-64 w-full bg-dark text-white p-4">
+        <aside className="lg:w-64 w-full bg-transparent text-customSecondary p-4">
           <h2 className="text-lg font-bold">أهلا بك في لوحة التحكم</h2>
           <ul className="flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 lg:w-auto w-full lg:justify-start justify-between">
             {menuItems.map((item) => (
@@ -24,8 +24,8 @@ export default function DashboardLayout({ children }) {
                 key={item.name}
                 className={`px-4 py-2 cursor-pointer ${
                     selectedItem === item.name
-                    ? "bg-gray-700 font-bold"
-                    : "hover:bg-gray-600"
+                    ? "bg-customGray font-bold text-dimWhite"
+                    : "hover:bg-customGray font-semibold"
                 }`}
                 >
                 <Link
@@ -42,7 +42,7 @@ export default function DashboardLayout({ children }) {
         </aside>
   
         {/* Main Content */}
-        <main className="flex-1 p-6 bg-dark-400 text-dimWhite">
+        <main className="flex-1 p-6 bg-transparent text-primary font-semibold">
           {children}
         </main>
       </div>

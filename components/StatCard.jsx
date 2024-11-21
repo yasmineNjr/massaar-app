@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const StatCard = ({ count = 0, label, icon, type }) => {
   return (
-    <div className={clsx('stat-card', {
+    <div className={clsx('stat-card text-customSecondary font-bold ', {
         "bg-appointments": type === "appointments",
         "bg-pending": type === "pending",
         "bg-cancelled": type === "cancelled",
@@ -18,10 +18,10 @@ const StatCard = ({ count = 0, label, icon, type }) => {
             className='size-8 w-fit'
             alt={label}
           />
-          <h2 className='text-32-bold text-white'>{count}</h2>
+          <h2 className='text-32-bold text-customSecondary'>{count}</h2>
         </div>
   
-        <p className='text-14-regular'>{label}</p>
+        <p className='text-14-bold'>{label}</p>
       </div>
   )
 }
