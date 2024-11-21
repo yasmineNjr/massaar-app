@@ -46,7 +46,7 @@ const HomeCarsList = () => {
                         alt={car.name}
                         layout='fill'
                     />
-                    <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-[#b3e6b3] font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent  m-2 p-4 rounded-md">
+                    <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-customSecondary font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-300 to-white m-2 p-4 rounded-md">
                         <h1 >{car.model} - {car.name}</h1>
                         <p className="text-sm overflow-y-auto prompt">{car.description}</p>
                         <p className=" text-sm">{car.pricePerHour}</p>

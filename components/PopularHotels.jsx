@@ -52,7 +52,8 @@ const PopularHotels = () => {
               onClick={() => viewDetailsHandler(hotel.id)}
             >
               <Image src={hotel.mainImg} alt={hotel.name} layout="fill"/>
-              <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-[#b3e6b3] font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent  m-2 p-4 rounded-md">
+              <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-customSecondary font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-300 to-white  m-2 p-4 rounded-md">
+              {/* bg-gradient-to-r from-transparent via-gray-400 to-transparent */}
                   <h1 >{hotel.name}</h1>
                   <p className="text-sm overflow-y-auto prompt">{hotel.description}</p>
                   <p className=" text-sm">{hotel.pricePerHour}</p>
@@ -61,8 +62,8 @@ const PopularHotels = () => {
           ))}
         </div>
         <div className="w-[100%] flex justify-between items-center absolute py-0 px-4 bottom-10">
-          <BsArrowRightShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-dark-300" onClick={() => scroll('right')} />
-          <BsArrowLeftShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-dark-300" onClick={() => scroll('left')} />
+          <BsArrowRightShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-gradient-to-r from-transparent via-gray-400 to-transparent " onClick={() => scroll('right')} />
+          <BsArrowLeftShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-gradient-to-r from-transparent via-gray-400 to-transparent " onClick={() => scroll('left')} />
         </div>
       </div>
     </section>
