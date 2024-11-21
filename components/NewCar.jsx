@@ -14,7 +14,7 @@ const NewCar = () => {
                     </h2>
                 </div>
             
-            <section className='sm:py-10 py-0'> 
+            <section className='sm:py-10 py-0 shadow-customGray shadow-2xl overflow-hidden rounded-xl text-customGray transition-transform duration-300 bg-gradient-to-r from-transparent via-gray-400 to-transparent'> 
                 <CarAddForm/>
             </section> 
       </div>
