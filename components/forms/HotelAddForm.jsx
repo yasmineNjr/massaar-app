@@ -68,7 +68,7 @@ const HotelAddForm = () => {
                             name="persons"
                             label="عدد الأشخاص"
                             placeholder="4"
-                            iconSrc="/assets/passenger.svg"
+                            iconSrc="/assets/person.svg"
                             iconAlt="passengers"
                         />
                         <div className="flex flex-1 w-full flex-row justify-between mt-3">

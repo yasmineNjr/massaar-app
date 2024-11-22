@@ -43,7 +43,7 @@ const CarAddForm = () => {
                             name="model"
                             label="الموديل"
                             placeholder="2023"
-                            iconSrc="/assets/model.svg"
+                            iconSrc="/assets/carName.svg"
                             iconAlt="model"
                         />
                         <CustomFormField
@@ -68,7 +68,7 @@ const CarAddForm = () => {
                             name="passengers"
                             label="عدد الركاب"
                             placeholder="4"
-                            iconSrc="/assets/passenger.svg"
+                            iconSrc="/assets/person.svg"
                             iconAlt="passengers"
                         />
                         <div className="flex flex-1 w-full flex-row justify-between mt-3">
