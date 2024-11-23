@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import PasskeyModal from "@/components/PasskeyModal";
 import RouteSpinner from "@/components/RouteSpinner";
+import Transition from "./transition";
 
 
 const fontSans = Plus_Jakarta_Sans({
