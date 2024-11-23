@@ -6,6 +6,8 @@ import styles from "./style";
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import PasskeyModal from "@/components/PasskeyModal";
+import RouteSpinner from "@/components/RouteSpinner";
+
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -35,9 +37,7 @@ export default function RootLayout({ children, searchParams }) {
               <NavBar/>
             </div>
           </div>
-
-          {children}
-
+            {children}
           <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
               <Footer/>
