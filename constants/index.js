@@ -120,6 +120,52 @@ export const navLinks = [
     },
   ];
 
+  export const messages = [
+    {
+      id: 'msg-1',
+      name: 'محمد',
+      mobile: '+966566633156',
+      email: 'client1@mail.com',
+      message: 'رسالة من العميل أحمد'
+    },
+    {
+      id: 'msg-2',
+      name: 'علاء',
+      mobile: '+966566633155',
+      email: 'client2@mail.com',
+      message: 'رسالة من العميل علاء'
+    },
+    {
+      id: 'msg-1',
+      name: 'عثمان',
+      mobile: '+966566633154',
+      email: 'client3@mail.com',
+      message: 'رسالة من العميل عثمان'
+    },
+  ]
+  export const evaluations = [
+    {
+      id: 'ev-1',
+      date: '2024-02-06',
+      rating: 5,
+      text: 'اهنيكم على الخدمه والدقه في المواعيد افضل واسعار مناسبه ومميزه',
+      client: 'شادي الريمي'
+    },
+    {
+      id: 'ev-2',
+      date: '2023-10-31',
+      rating: 5,
+      text: 'تم التعامل مع مسار الغربية- اشكر الاستاذ ابو ناصر على ترتيب كامل الرحلة الى مكة وسرعة التجاوب لأي استفسار',
+      client: 'ابو خليفه'
+    },
+    {
+      id: 'ev-3',
+      date: '2023-03-1',
+      rating: 5,
+      text: 'اريحية كبيرة ،حرفية التزام واحساس بالمسؤلية. راحة تامة في التعامل.ربنا يوفقك مستر. حسن. نتمنى لك. المزيد من النجاح والتالق.',
+      client: 'لويال تورز'
+    },
+  ]
   export const cars = [
     {
         id: 'car-1',
@@ -436,4 +482,162 @@ export const quickBookHandler = () => {
   const message = "مرحباً. كيف يمكنني مساعدتك";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
+}
+
+export const dashboardMenuItems = [
+  { name: "إدارة الطلبات", href: "/dashboard" },
+  { name: "إدارة السيارات", href: "/dashboard/manage-cars" },
+  { name: "إدارة الفنادق", href: "/dashboard/manage-hotels" },
+  { name: "تعليقات العملاء", href: "/dashboard/manage-evaluations" },
+  { name: "رسائل العملاء", href: "/dashboard/manage-messages" },
+  { name: "سيارة جديدة", href: "/dashboard/new-car" },
+  { name: "فندق جديد", href: "/dashboard/new-hotel" },
+  { name: "إعدادات", href: "/dashboard/settings" },
+];
+
+export async function getData() {
+  // Fetch data from your API here.
+  return [
+    {
+      id: "728ed52f",
+      client: 'xxx',
+      amount: 100,
+      status: "cancelled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - staria",
+      phone: '+966566633156'
+    },
+    {
+      id: "728ed52f",
+      client: 'qqq',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - BMW",
+      phone: '+966566633157'
+    },
+    {
+      id: "728ed52f",
+      client: 'ddd',
+      amount: 100,
+      status: "scheduled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - staria",
+      phone: '+966566633158'
+    },
+    {
+      id: "728ed52f",
+      client: 'bbb',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "hotel - clock",
+      phone: '+966566633159'
+    },
+    {
+      id: "728ed52f",
+      client: 'aaa',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - BMW",
+      phone: '+966566633160'
+    },
+    {
+      id: "728ed52f",
+      client: 'sss',
+      amount: 100,
+      status: "scheduled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "hotel - clock",
+      phone: '+966566633169'
+    },
+    {
+      id: "728ed52f",
+      client: 'kkk',
+      amount: 100,
+      status: "scheduled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - Ford",
+      phone: '+966566633168'
+    },
+    {
+      id: "728ed52f",
+      client: 'ooo',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "hotel - anwar",
+      phone: '+966566633167'
+    },
+    {
+      id: "728ed52f",
+      client: 'mmm',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "hotel - marwa",
+      phone: '+966566633166'
+    },
+    {
+      id: "728ed52f",
+      client: 'nnn',
+      amount: 100,
+      status: "cancelled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - Ford",
+      phone: '+966566633165'
+    },
+    {
+      id: "728ed52f",
+      client: 'www',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - Ford",
+      phone: '+966566633164'
+    },
+    {
+      id: "728ed52f",
+      client: 'yyy',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - BMW",
+      phone: '+966566633163'
+    },
+    {
+      id: "728ed52f",
+      client: 'www',
+      amount: 100,
+      status: "pending",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "car - Staria",
+      phone: '+966566633161'
+    },
+    {
+      id: "728ed52f",
+      client: 'zzz',
+      amount: 100,
+      status: "scheduled",
+      startDate: "Oct 26, 2024, 11:30 PM",
+      endDate: "Oct 26, 2024, 11:30 PM",
+      item: "hotel - marwa",
+      phone: '+966566633162'
+    },
+    // ...
+  ]
 }

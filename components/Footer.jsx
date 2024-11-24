@@ -13,7 +13,7 @@ const Footer = () => {
   }
 
   return(
-    <section className={` ${styles.flexCenter} ${styles.paddingY} flex-col bg-gold mt-10`}>
+    <section className={` ${styles.flexCenter} ${styles.paddingY} flex-col mt-10`}>
       <div className={` ${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className='flex flex-1 flex-col justify-start ml-10'>
           <Image src={logo} alt='hoobank' className='w-[300px] h-[100px] object-contain'/>

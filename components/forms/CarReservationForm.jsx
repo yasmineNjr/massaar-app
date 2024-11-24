@@ -158,10 +158,10 @@ const formSchema = z.object({
             )}
             />
           }
-          <div className="flex flex-1 justify-center items-center w-fill text-primary">
+          <div className="flex flex-1 justify-center items-center w-full text-primary">
             <h2>الكلفة الإجمالية: {totalCost}</h2>
          </div>
-         <div className="flex flex-1 justify-center items-center w-fill gap-6">
+         <div className="flex flex-1 justify-center items-center w-full gap-6">
             <Button styles='w-[50%]' title='التقدم لإتمام الطلب'/>
             <Button styles='w-[50%]' title='حجز سريع' onClickHandler={quickBookHandler}/>
          </div>

@@ -19,14 +19,28 @@ const BookModal = ({ type, patientId, userId, appointment, title, description })
   let typeText = '';
   if(type === 'schedule'){
     typeText = 'تثبيت'
-  }else if(type === 'cancel'){
+  }else if(type === 'update'){
+    typeText = 'تعديل'
+  }else if(type === 'delete'){
+    typeText = 'حذف'
+  }
+  else if(type === 'cancel'){
     typeText = 'إلغاء'
   }
 
+  let style; 
+  if(type === 'schedule') {
+    style = 'text-green-500 hover:text-green-500'
+  }else if(type === 'update') {
+    style = 'text-green-500 hover:text-green-500'
+  }else{
+    style = 'text-red-700 hover:text-red-700';
+  } 
+  
   return (
     <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-            <Button variant='ghost' className={`capitalize ${type === 'schedule' ? 'text-green-500 hover:text-green-500' : 'text-red-700 hover:text-red-700'} hover:bg-transparent`}>
+            <Button variant='ghost' className={`capitalize ${style} hover:bg-transparent`}>
                 {typeText}
             </Button>
         </DialogTrigger>
@@ -45,7 +59,8 @@ const BookModal = ({ type, patientId, userId, appointment, title, description })
             <DialogHeader className='mb-4 space-y-3'>
             <DialogTitle className='capitalize text-center text-customSecondart'>{typeText} الطلب</DialogTitle>
             <DialogDescription className='text-center text-customSecondary'>
-               هل أنت متأكد من {typeText} الطلب؟
+               {/* هل أنت متأكد من {typeText} الطلب؟ */}
+               {description}
             </DialogDescription>
             </DialogHeader>
 

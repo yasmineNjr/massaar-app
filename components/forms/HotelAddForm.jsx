@@ -133,7 +133,7 @@ const HotelAddForm = () => {
                     </div>
                </div>
                 
-               <div className="flex flex-1 justify-center items-center w-fill mt-6">
+               <div className="flex flex-1 justify-center items-center w-full mt-6">
                     <Button styles='lg:w-[50%] w-[100%]' title='إدخال'/>
                 </div>
             </form>

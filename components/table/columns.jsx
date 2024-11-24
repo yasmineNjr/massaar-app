@@ -101,7 +101,7 @@ export const columns = [
             // appointment={appointment}
             type="schedule"
             title="تثبيت الطلب"
-            // description="Please confirm the following details to schedule."
+            description="هل أنت متأكد من تثبيت الطلب؟"
           />
           <BookModal
             // patientId={appointment.patient.$id}
