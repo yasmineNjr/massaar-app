@@ -1,5 +1,8 @@
+'use client'
+
 import styles from '@/app/style';
 import Button from './Button';
+import { quickBookHandler } from '@/constants';
 
 const CTA = () => (
     <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col rounded-[20px] bg-gradient-to-r from-gray-300 to-white shadow-customGray`}>
@@ -11,7 +14,7 @@ const CTA = () => (
       </div>
 
       <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-        <Button title='حجز سريع'/>
+        <Button title='حجز سريع' onClickHandler={quickBookHandler}/>
       </div>
     </section>
   )

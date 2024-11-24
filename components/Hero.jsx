@@ -31,9 +31,8 @@ const Hero = () => (
       </div>
         
       <div className="ss:flex md:mr-4 mr-0 bg-transparent">
-          <QuickBook/>
-        </div>
-        
+        <QuickBook/>
+      </div>
 
         <p className={`${styles.paragraph} w-full p-10 text-center mt-5`}>
         {/* max-w-[470px] */}

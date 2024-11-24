@@ -1,7 +1,8 @@
-import { features } from '../constants';
+'use client'
+
+import { features, quickBookHandler } from '../constants';
 import styles, { layout } from '@/app/style';
 import Button from './Button';
-import Image from 'next/image';
 
 const FeatueCard = ({ icon, index, title, content }) => (
   <div 
@@ -33,7 +34,7 @@ function HaveToChoose() {
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         نحن ندرك أن رحلة الحج والعمرة هي تجربة روحانية مهمة وتتطلب التخطيط الجيد لضمان الراحة والطمأنينة. من هذا المنطلق، عملنا على تصميم خدماتنا لتلبية احتياجاتك بأعلى مستويات الجودة والمصداقية، لضمان تجربة لا تُنسى من البداية إلى النهاية.
         </p>
-        <Button styles='mt-10' title='اطلب الآن'/>
+        <Button styles='mt-10' title='اطلب الآن' onClickHandler={quickBookHandler}/>
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>

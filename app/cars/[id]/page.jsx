@@ -11,6 +11,7 @@ import { MdOutlineHdrAuto } from "react-icons/md";
 import { FaPerson } from "react-icons/fa6";
 import { PiMoneyWavyFill } from "react-icons/pi";
 import ReactStars from "react-rating-stars-component";
+import { QuickBook } from "@/components";
 
 const CarDetails = ({ params }) => {
 
@@ -43,8 +44,8 @@ const CarDetails = ({ params }) => {
             
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative h-full lg:w-[50%] w-[100%] `}>
             <div className="w-full max-w-4xl mx-auto">
-            {/* Main Image */}
-            <div className="relative rounded-xl w-full h-80 md:h-96 mb-5 shadow-customGray overflow-hidden">
+              {/* Main Image */}
+              <div className="relative rounded-xl w-full h-80 md:h-96 mb-5 shadow-customGray overflow-hidden">
                 <Image
                   src={main}
                   alt="Main Image"
@@ -87,7 +88,6 @@ const CarDetails = ({ params }) => {
                   activeColor="#ffd700"
                   value={selectedCar.rating}
               />
-            
 
               <div>
                   <p className='ttext-customSecondary font-semibold'>{selectedCar.description}</p>
@@ -102,14 +102,13 @@ const CarDetails = ({ params }) => {
                   {selectedCar.GPS && <MdGpsFixed  size={24}/>}
                   {selectedCar.automatic && <MdOutlineHdrAuto  size={24}/>}
               </div>
+            </div>
+           
+            
           </div>
-            
-            
-          </div>
-          <div className={`${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-10 lg:w-[50%] w-[100%]`}>
-            
-            <CarReservationForm item={selectedCar}/>
 
+          <div className={`${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-6 md:my-0 my-10 lg:w-[50%] w-[100%]`}>
+            <CarReservationForm item={selectedCar}/>
           </div>
 
         </section>

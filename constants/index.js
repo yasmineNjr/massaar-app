@@ -430,3 +430,10 @@ export const reviewList = [
     client: 'لويال تورز'
   },
 ]
+
+export const quickBookHandler = () => {
+  const phoneNumber = "+966566633161"; // Replace with your number
+  const message = "مرحباً. كيف يمكنني مساعدتك";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}

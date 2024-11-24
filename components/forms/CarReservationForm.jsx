@@ -12,6 +12,7 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import FileUploader from "../FileUploadr"
 import { useState } from "react"
 import Button from "../Button"
+import { quickBookHandler } from "@/constants"
 
 
 export const FormFieldType = {
@@ -160,8 +161,9 @@ const formSchema = z.object({
           <div className="flex flex-1 justify-center items-center w-fill text-primary">
             <h2>الكلفة الإجمالية: {totalCost}</h2>
          </div>
-         <div className="flex flex-1 justify-center items-center w-fill">
-            <Button styles='w-full' title='التقدم لإتمام الطلب'/>
+         <div className="flex flex-1 justify-center items-center w-fill gap-6">
+            <Button styles='w-[50%]' title='التقدم لإتمام الطلب'/>
+            <Button styles='w-[50%]' title='حجز سريع' onClickHandler={quickBookHandler}/>
          </div>
           
 

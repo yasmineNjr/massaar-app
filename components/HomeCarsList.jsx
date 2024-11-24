@@ -6,6 +6,7 @@ import { cars } from '@/constants'
 import React from 'react'
 import Image from 'next/image'
 import Button from './Button'
+import { quickBookHandler } from '@/constants';
 
 const HomeCarsList = () => {
 
@@ -27,8 +28,9 @@ const HomeCarsList = () => {
           <p className={`${styles.paragraph} w-[100%] lg:w-[50%]`}>
           استكشف قائمة السيارات الأكثر طلبًا لدينا، حيث نوفر لك أفضل الخيارات من حيث الراحة، والأداء، والاعتمادية. اختر من بين مجموعة من السيارات المفضلة للعملاء والمناسبة لكافة الاحتياجات. قم بالحجز الآن للاستمتاع بتجربة قيادة سلسة وآمنة مع السيارات الأعلى تقييمًا لدينا!
           </p>
-          <div className="mt-6  w-[100%] lg:w-[50%]">
-            <Button title='حجز سريع'/>
+          <div 
+            className="mt-6  w-[100%] lg:w-[50%]">
+            <Button title='حجز سريع'  onClickHandler={quickBookHandler}/>
           </div>
         </div>
         

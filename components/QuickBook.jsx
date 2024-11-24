@@ -3,16 +3,10 @@
 import styles from '@/app/style';
 import { arrowUp } from '../public/assets'
 import Image from 'next/image';
+import { quickBookHandler } from '@/constants';
 
 const QuickBook = () => {
   
-  const quickBookHandler = () => {
-    const phoneNumber = "+966566633161"; // Replace with your number
-    const message = "مرحباً. كيف يمكنني مساعدتك";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  }
-
   return(
   <div 
       className={`shadow-customGray ${styles.flexCenter} w-[200px] h-[70px] rounded-3xl bg-gold-gradient p-[2px] cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl mt-5`}

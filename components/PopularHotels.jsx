@@ -19,6 +19,12 @@ const PopularHotels = () => {
         router.push(path);
     }
 
+    const viewAllHandler = () => {
+        
+      const path = `/hotels`
+      router.push(path);
+    }
+
     const scroll = (direction) => {
       const { current } = scrollRef;
       if(direction === 'left'){
@@ -39,8 +45,8 @@ const PopularHotels = () => {
         نقدم لك قائمة بأفضل الفنادق التي تحظى بأعلى معدلات الحجز والطلب من قبل الحجاج والمعتمرين. تم اختيار هذه الفنادق بعناية بناءً على تقييمات الزوار، الموقع الاستراتيجي القريب من الحرمين الشريفين، والخدمات المتكاملة التي توفرها لتلبية احتياجات ضيوف الرحمن. ستجد مجموعة من الخيارات التي تناسب مختلف الميزانيات. احجز الآن لتضمن مكانك، وتمتع بتجربة روحانية مميزة .
         </p>
         </div>
-        <div className="mt-6">
-            <Button title='عرض الكل'/>
+        <div className="mt-6" >
+          <Button title='عرض الكل' onClickHandler={viewAllHandler}/>
         </div>
       </div>
       
