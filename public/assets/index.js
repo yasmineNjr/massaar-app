@@ -58,6 +58,9 @@ import wifiIcon from './wifi.svg'
 import conditioningIcon from './conditioning.svg'
 import breakfastIcon from './breakfast.svg'
 import mealIcon from './meal.svg'
+import adminCode from './adminCode.svg'
+import hotelOffer from './hotelOffer.svg'
+import carOffer from './carOffer.svg'
 
 export {
   logo,
@@ -119,5 +122,8 @@ export {
   wifiIcon,  
   conditioningIcon,
   breakfastIcon,
-  mealIcon
+  mealIcon,
+  adminCode,
+  hotelOffer,
+  carOffer
 };
