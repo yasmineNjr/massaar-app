@@ -25,11 +25,11 @@ export default function Home() {
   
       <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Stats />
           <HomeCarsList/>
           {/* <PopularCars/> */}
           <PopularHotels/>
           <HaveToChoose/>
+          <Stats />
           <Testimonials/>
           <CTA/>
         </div>
