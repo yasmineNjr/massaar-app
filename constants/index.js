@@ -477,9 +477,9 @@ export const reviewList = [
   },
 ]
 
-export const quickBookHandler = () => {
+export const quickBookHandler = (msg) => {
   const phoneNumber = "+966566633161"; // Replace with your number
-  const message = "مرحباً. كيف يمكنني مساعدتك";
+  const message = msg;
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }

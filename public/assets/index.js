@@ -61,6 +61,8 @@ import mealIcon from './meal.svg'
 import adminCode from './adminCode.svg'
 import hotelOffer from './hotelOffer.svg'
 import carOffer from './carOffer.svg'
+import whatsappIcon from './whatsappIcon.svg'
+import callIcon from './callIcon.svg'
 
 export {
   logo,
@@ -125,5 +127,7 @@ export {
   mealIcon,
   adminCode,
   hotelOffer,
-  carOffer
+  carOffer,
+  whatsappIcon,
+  callIcon
 };
