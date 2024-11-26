@@ -14,7 +14,7 @@ const CTA = () => (
       </div>
 
       <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-        <Button title='حجز سريع' onClickHandler={quickBookHandler}/>
+        <Button title='حجز سريع' onClickHandler={() => quickBookHandler("مرحباً, هل يمكنك مساعدتي في عملية الحجز؟")}/>
       </div>
     </section>
   )

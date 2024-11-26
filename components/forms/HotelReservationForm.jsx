@@ -36,7 +36,7 @@ const formSchema = z.object({
 
   const PaymentOptions = [ 'الدفع باستخدام بطاقة ائتمان أو خصم عبر المدفوعات عبر الانترنت' , 'الدفع أثناء التوصيل' , 'تحويل مصرفي مباشر', ]
 
-  const CarReservationForm = ( item ) => {
+  const CarReservationForm = ( {item} ) => {
     
     const form = useForm();
     const [payment, setPayment] = useState('تحويل مصرفي مباشر')
@@ -161,7 +161,7 @@ const formSchema = z.object({
         </div>
         <div className="flex flex-1 justify-center items-center w-full gap-6">
             <Button styles='w-[50%]' title='التقدم لإتمام الطلب'/>
-            <Button styles='w-[50%]' title='حجز سريع' onClickHandler={quickBookHandler}/>
+            <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز الفندق ${item.name}؟`)}/>
          </div>
           
       </form>

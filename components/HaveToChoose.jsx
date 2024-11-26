@@ -34,7 +34,7 @@ function HaveToChoose() {
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         نحن ندرك أن رحلة الحج والعمرة هي تجربة روحانية مهمة وتتطلب التخطيط الجيد لضمان الراحة والطمأنينة. من هذا المنطلق، عملنا على تصميم خدماتنا لتلبية احتياجاتك بأعلى مستويات الجودة والمصداقية، لضمان تجربة لا تُنسى من البداية إلى النهاية.
         </p>
-        <Button styles='mt-10' title='اطلب الآن' onClickHandler={quickBookHandler}/>
+        <Button styles='mt-10' title='اطلب الآن' onClickHandler={() => quickBookHandler("مرحباً, هل يمكنك مساعدتي في عملية الحجز؟")}/>
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>
