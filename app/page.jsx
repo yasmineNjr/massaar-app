@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "./style";
 // import { Hero, Stats, PopularCars, PopularHotels, Testimonials, CTA, HaveToChoose } from '../components';
 import Hero from '../components/Hero';

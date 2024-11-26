@@ -17,6 +17,7 @@ export default function DashboardLayout({ children }) {
             {dashboardMenuItems.map((item) => (
                 <li
                 key={item.name}
+                onClick={() => setSelectedItem(item.name)}
                 className={`px-4 py-2 cursor-pointer min-w-[110px] ${
                     selectedItem === item.name
                     ? "bg-customGray font-bold text-dimWhite"
@@ -25,7 +26,6 @@ export default function DashboardLayout({ children }) {
                 >
                 <Link
                     href={item.href}
-                    onClick={() => setSelectedItem(item.name)}
                     className="block" // Ensures full area is clickable
                 >
                     {item.name}
