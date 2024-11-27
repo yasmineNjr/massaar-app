@@ -9,6 +9,7 @@ import PasskeyModal from "@/components/PasskeyModal";
 import { ActivePathProvider } from "@/components/ActivePathProvider";
 import FloatingContactIcon from "@/components/FloatingContactIcon";
 import { socialMedia } from "@/constants";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -47,7 +48,9 @@ export default function RootLayout({ children, searchParams }) {
                 ))
               }
               </div>
-             
+              <div className="fixed bottom-12 left-5 flex flex-col gap-2">
+                <ScrollToTop /> {/* Floating "Go to Top" button */}
+              </div>
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <Footer/>

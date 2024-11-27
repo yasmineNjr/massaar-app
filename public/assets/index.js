@@ -66,6 +66,7 @@ import hotelOffer from './hotelOffer.svg'
 import carOffer from './carOffer.svg'
 import whatsappIcon from './whatsappIcon.svg'
 import callIcon from './callIcon.svg'
+import scrollUp from './scrollUp.svg'
 
 export {
   logo,
@@ -135,5 +136,6 @@ export {
   hotelOffer,
   carOffer,
   whatsappIcon,
-  callIcon
+  callIcon,
+  scrollUp
 };
