@@ -9,11 +9,13 @@ import quotes from "./quotes.svg"
 import star from "./star.svg"
 import facebook from './facebook.svg'
 import instagram from './instagram.svg'
+import instagramIcon from './instagramIcon.svg'
 import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import saudiBussiness from './saudi-bussiness.png'
 import zakatax from './zakat-tax.jpg'
 import mail from './mail.svg'
+import mailIcon from './mailIcon.svg'
 import whatsapp from './whatsapp.svg'
 import GMC from './GMC.jpg'
 import staria from './staria.jpg'
@@ -47,6 +49,7 @@ import jeddah2 from './jeddah2.jpg'
 import taif1 from './taif1.jpg'
 import mecca1 from './mecca1.jpg'
 import snap from './snap.svg'
+import snapIcon from './snapIcon.svg'
 import bankTransfer from './bankTransfer.svg'
 import cashPayment from './cashPayment.svg'
 import paymentCard from './paymentCard.svg'
@@ -76,11 +79,13 @@ export {
   star,
   facebook,
   instagram,
+  instagramIcon,
   linkedin,
   twitter,
   saudiBussiness,
   zakatax,
   mail,
+  mailIcon,
   whatsapp,
   GMC,
   staria,
@@ -114,6 +119,7 @@ export {
   taif1,
   mecca1,
   snap,
+  snapIcon,
   bankTransfer,
   cashPayment,
   paymentCard,

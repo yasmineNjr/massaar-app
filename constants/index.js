@@ -11,7 +11,12 @@ import {
   onlineDiscount,
   call,
   taxNumber,
-  commericalNum
+  commericalNum,
+  whatsappIcon,
+  instagramIcon,
+  snapIcon,
+  callIcon,
+  mailIcon
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -443,25 +448,33 @@ export const footerLinks = [
 export const socialMedia = [
   {
     id: "social-media-1",
-    icon: instagram,
-    // link: "https://www.instagram.com/",
-    link: "https://www.instagram.com/masartoursim/?hl=ar"
+    icon: instagramIcon,
+    link: "https://www.instagram.com/masartoursim/?hl=ar",
+    isFloating: false,
   },
   {
     id: "social-media-2",
-    icon: whatsapp,
+    icon: whatsappIcon,
     link: "https://wa.me/+966566633161",
+    isFloating: true,
   },
   {
     id: "social-media-3",
-    icon: snap,
-    // link: "https://www.twitter.com/",
-    link: "https://www.snapchat.com/add/masar-mix"
+    icon: snapIcon,
+    link: "https://www.snapchat.com/add/masar-mix",
+    isFloating: false,
   },
   {
     id: "social-media-4",
-    icon: mail,
+    icon: mailIcon,
     link: "mailto:admin@alaglaan.com/",
+    isFloating: true,
+  },
+  {
+    id: "social-media-5",
+    icon: callIcon,
+    link: "tel:+966566633161",
+    isFloating: true,
   },
 ];
 

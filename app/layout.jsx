@@ -7,6 +7,8 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import PasskeyModal from "@/components/PasskeyModal";
 import { ActivePathProvider } from "@/components/ActivePathProvider";
+import FloatingContactIcon from "@/components/FloatingContactIcon";
+import { socialMedia } from "@/constants";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -37,6 +39,15 @@ export default function RootLayout({ children, searchParams }) {
               </div>
             </div>
               {children}
+              <div className="fixed bottom-12 right-5 flex flex-col gap-2">
+              {
+                socialMedia.map((item , index) => (
+                  item.isFloating &&
+                  <FloatingContactIcon item={item}/>
+                ))
+              }
+              </div>
+             
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <Footer/>
