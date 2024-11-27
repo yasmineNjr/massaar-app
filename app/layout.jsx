@@ -40,7 +40,7 @@ export default function RootLayout({ children, searchParams }) {
               </div>
             </div>
               {children}
-              <div className="fixed bottom-12 right-5 flex flex-col gap-2">
+              <div className="fixed bottom-12 right-5 flex flex-col gap-2 -z-15">
               {
                 socialMedia.map((item , index) => (
                   item.isFloating &&
@@ -48,7 +48,7 @@ export default function RootLayout({ children, searchParams }) {
                 ))
               }
               </div>
-              <div className="fixed bottom-12 left-5 flex flex-col gap-2">
+              <div className="fixed bottom-12 left-5 flex flex-col gap-2 -z-15">
                 <ScrollToTop /> {/* Floating "Go to Top" button */}
               </div>
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
