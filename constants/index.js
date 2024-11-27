@@ -75,15 +75,30 @@ export const navLinks = [
       link: "/",
       title: "الرئيسية",
     },
+    // {
+    //   id: "reservations",
+    //   link: "/cars",
+    //   title: "الحجوزات",
+    // },
     {
-      id: "reservations",
+      id: "cars",
       link: "/cars",
-      title: "الحجوزات",
+      title: "حجز سيارة",
+    },
+    {
+      id: "hotels",
+      link: "/hotels",
+      title: "حجز فندقي",
     },
     {
         id: "evaluations",
         link: "/evaluations",
         title: "تقييم العملاء",
+    },
+    {
+      id: "questions",
+      link: "/questions",
+      title: "الأسئلة المتكررة",
     },
     {
       id: "contact",

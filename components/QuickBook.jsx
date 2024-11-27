@@ -14,21 +14,15 @@ const QuickBook = () => {
     >
       <div className={`${styles.flexCenter} flex-col bg-gradient-to-r from-customLightGreen to-white  w-[100%] h-[100%] rounded-3xl`}>
         <div className={`${styles.flexStart} flex-row justify-between items-center gap-3`}>
-          <p className="text-customGold font-poppins font-medium text-[18px] leading-[23.4px] mr-2">
-            {/* <span className="text-gradient">حجز</span> */}
+          <p className="text-customGold font-poppins font-bold text-[22px] leading-[23.4px] mr-2">
             حجز سريع
           </p>
-          {/* <Image src={arrowUp} alt='arrow' className='w-[23px] h-[23px] object-contain'/> */}
           <Image 
             src={whatsapp} 
             alt='whatsapp' 
             className={`object-contain cursor-pointer `}
-            // onClick={(e) => {e.stopPropagation(); quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز السيارة ${car.name}`)}}
           />
         </div>
-        {/* <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-            <span className="text-gradient">سريع</span>
-          </p> */}
       </div>
     </div>
   )
