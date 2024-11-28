@@ -10,6 +10,7 @@ import { ActivePathProvider } from "@/components/ActivePathProvider";
 import FloatingContactIcon from "@/components/FloatingContactIcon";
 import { socialMedia } from "@/constants";
 import ScrollToTop from "@/components/ScrollToTop";
+import FloatingIconsWithFooterCheck from "@/components/FloatingIconsWithFooterCheck";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -39,18 +40,25 @@ export default function RootLayout({ children, searchParams }) {
                 <NavBar/>
               </div>
             </div>
+
+            <div className="relative">
               {children}
-              <div className="fixed bottom-12 right-5 flex flex-col gap-2 -z-15">
+              {/* <div className="fixed bottom-12 right-5 flex flex-col gap-2 -z-15">
               {
                 socialMedia.map((item , index) => (
                   item.isFloating &&
-                  <FloatingContactIcon item={item}/>
+                  <FloatingContactIcon key={index} item={item}/>
                 ))
               }
-              </div>
+              </div> */}
+               {/* Floating Icons */}
+               <FloatingIconsWithFooterCheck socialMedia={socialMedia} />
+
               <div className="fixed bottom-12 left-5 flex flex-col gap-2 -z-15">
                 <ScrollToTop /> {/* Floating "Go to Top" button */}
               </div>
+            </div>
+
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <Footer/>

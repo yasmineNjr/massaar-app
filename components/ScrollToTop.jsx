@@ -24,7 +24,7 @@ const ScrollToTop = () => {
   return (
     <button
         onClick={scrollToTop}
-        className={` text-white p-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:bg-dimWhite ${
+        className={` text-white p-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-125 hover:shadow-2xl bg-dimWhite hover:bg-[#D1D5DB] ${
             isVisible ? "block" : "hidden"
           }`}
       
