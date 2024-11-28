@@ -52,12 +52,13 @@ const HotelDetails = ({ params }) => {
             <div className="w-full max-w-4xl mx-auto">
               {/* Main Image */}
               {/* <div className="relative rounded-xl w-full h-80 md:h-96 mb-5 shadow-customGray overflow-hidden"> */}
-              <div className="relative rounded-xl w-full h-[500px] md:h-[600px] mb-5 shadow-customGray overflow-hidden">
+              <div className="relative rounded-xl w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mb-5 shadow-customGray overflow-hidden">
                 <Image
                   src={main}
                   alt="Main Image"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="cover" // Ensures better filling on larger screens
+                  // className="object-cover sm:object-contain" // Responsive object fit
                 />
               </div>
 

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState, useEffect, useRef } from "react";
 import FloatingContactIcon from "./FloatingContactIcon";
@@ -33,8 +33,11 @@ const FloatingIconsWithFooterCheck = ({ socialMedia }) => {
           )}
         </div>
       )}
-      {/* Hidden Footer Ref */}
-      <div ref={footerRef} className="footer-observer" />
+      {/* Footer Observer Div */}
+      <div
+        ref={footerRef}
+        className="footer-observer w-full h-2 bg-transparent" // Visible for debugging
+      />
     </>
   );
 };
