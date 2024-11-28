@@ -35,8 +35,6 @@ const formSchema = z.object({
 
   const CarReservationForm = ( {item} ) => {
 
-    console.log(item.name)
-    
     const form = useForm();
     const [payment, setPayment] = useState('تحويل مصرفي مباشر')
     const [totalCost, setTotalCost] = useState(0)
@@ -164,7 +162,7 @@ const formSchema = z.object({
             <h2>الكلفة الإجمالية: {totalCost}</h2>
          </div>
          <div className="flex flex-1 justify-center items-center w-full gap-6">
-            <Button styles='w-[50%]' title='التقدم لإتمام الطلب'/>
+            <Button styles='w-[50%]' title='إتمام'/>
             <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز السيارة ${item.name}؟`)}/>
          </div>
           
