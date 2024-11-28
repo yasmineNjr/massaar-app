@@ -459,30 +459,35 @@ export const socialMedia = [
     icon: instagramIcon,
     link: "https://www.instagram.com/masartoursim/?hl=ar",
     isFloating: false,
+    title: 'Instagram'
   },
   {
     id: "social-media-2",
     icon: whatsappIcon,
     link: "https://wa.me/+966566633161",
     isFloating: true,
+    title: 'Whatsapp'
   },
   {
     id: "social-media-3",
     icon: snapIcon,
     link: "https://www.snapchat.com/add/masar-mix",
     isFloating: false,
+    title: 'Snapchat'
   },
   {
     id: "social-media-4",
     icon: mailIcon,
     link: "mailto:admin@alaglaan.com/",
     isFloating: true,
+    title: 'Email'
   },
   {
     id: "social-media-5",
     icon: callIcon,
     link: "tel:+966566633161",
     isFloating: true,
+    title: 'Call'
   },
 ];
 
