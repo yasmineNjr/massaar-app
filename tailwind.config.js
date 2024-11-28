@@ -126,6 +126,19 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
+			circularShake: {
+				'0%': { transform: 'translate(0, 0)' },
+				'25%': { transform: 'translate(2px, -2px)' },
+				'50%': { transform: 'translate(0, -4px)' },
+				'75%': { transform: 'translate(-2px, -2px)' },
+				'100%': { transform: 'translate(0, 0)' },
+			  },
+			shake: {
+				'0%, 100%': { transform: 'translateX(0)' },
+				'25%': { transform: 'translateX(-5px)' },
+				'50%': { transform: 'translateX(5px)' },
+				'75%': { transform: 'translateX(-5px)' },
+			  },
 			bounceText: {
 				'0%, 100%': { transform: 'translateY(0)' },
 				'50%': { transform: 'translateY(-10px)' },
@@ -176,6 +189,8 @@ const config = {
   			}
   		},
   		animation: {
+			circularShake: 'circularShake 0.8s ease-in-out infinite',
+			shake: 'shake 0.5s ease-in-out',
 			bounceText: 'bounceText 1s infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',

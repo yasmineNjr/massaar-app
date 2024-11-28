@@ -11,6 +11,7 @@ import CTA from '../components/CTA';
 import HaveToChoose from '../components/HaveToChoose';
 import PasskeyModal from "@/components/PasskeyModal";
 import HomeCarsList from "@/components/HomeCarsList";
+import OurServices from "@/components/OurServices";
 
 export default function Home() { 
 
@@ -25,6 +26,7 @@ export default function Home() {
   
       <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
+          <OurServices/>
           <HomeCarsList/>
           {/* <PopularCars/> */}
           <PopularHotels/>

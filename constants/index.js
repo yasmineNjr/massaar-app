@@ -22,6 +22,13 @@ import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { FaCalendarAlt } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
+import { FaRoad } from "react-icons/fa";
+import { LuCalendarClock } from "react-icons/lu";
+import { FaWifi } from "react-icons/fa";
+import { BiSolidCarGarage } from "react-icons/bi";
+import { MdCarRental } from "react-icons/md";
+import { GiJourney } from "react-icons/gi";
+import { FaMosque } from "react-icons/fa";
 
 export const heroImages = [
   {
@@ -120,119 +127,81 @@ export const navLinks = [
       link: "/dashboard",
       title: "لوحة التحكم",
     },
-  ];
+];
   
-  export const stats = [
-    {
-      id: "stats-1",
-      title: "حجز فندقي",
-      value: "3800+",
-    },
-    {
-      id: "stats-3",
-      title: "حجز سيارة",
-      value: "4500+",
-    },
-    {
-      id: "stats-2",
-      title: "موثوق به من قبل الشركة",
-      value: "230+",
-    },
-  ];
+export const stats = [
+  {
+    id: "stats-1",
+    title: "حجز فندقي",
+    value: "3800+",
+  },
+  {
+    id: "stats-3",
+    title: "حجز سيارة",
+    value: "4500+",
+  },
+  {
+    id: "stats-2",
+    title: "موثوق به من قبل الشركة",
+    value: "230+",
+  },
+];
 
-  export const messages = [
-    {
-      id: 'msg-1',
-      name: 'محمد',
-      mobile: '+966566633156',
-      email: 'client1@mail.com',
-      message: 'رسالة من العميل أحمد'
-    },
-    {
-      id: 'msg-2',
-      name: 'علاء',
-      mobile: '+966566633155',
-      email: 'client2@mail.com',
-      message: 'رسالة من العميل علاء'
-    },
-    {
-      id: 'msg-1',
-      name: 'عثمان',
-      mobile: '+966566633154',
-      email: 'client3@mail.com',
-      message: 'رسالة من العميل عثمان'
-    },
-  ]
-  export const evaluations = [
-    {
-      id: 'ev-1',
-      date: '2024-02-06',
-      rating: 5,
-      text: 'اهنيكم على الخدمه والدقه في المواعيد افضل واسعار مناسبه ومميزه',
-      client: 'شادي الريمي'
-    },
-    {
-      id: 'ev-2',
-      date: '2023-10-31',
-      rating: 5,
-      text: 'تم التعامل مع مسار الغربية- اشكر الاستاذ ابو ناصر على ترتيب كامل الرحلة الى مكة وسرعة التجاوب لأي استفسار',
-      client: 'ابو خليفه'
-    },
-    {
-      id: 'ev-3',
-      date: '2023-03-1',
-      rating: 5,
-      text: 'اريحية كبيرة ،حرفية التزام واحساس بالمسؤلية. راحة تامة في التعامل.ربنا يوفقك مستر. حسن. نتمنى لك. المزيد من النجاح والتالق.',
-      client: 'لويال تورز'
-    },
-  ]
-  export const cars = [
-    {
-        id: 'car-1',
-        name: "staria",
-        model: "model-1",
-        description: "معلومات إضافية عن السيارة ستاريا",
-        pricePerHour: '$100',
-        rating: 5,
-        passengers: '4',
-        GPS: false,
-        automatic: true,
-        mainImg: staria,
-        imgs: [ staria, BMW, fordTurus]
-    },
-    {
-        id: 'car-2',
-        name: "BMW",
-        model: "model-2",
-        description: "معلومات إضافية عن السيارة BMW",
-        pricePerHour: '$100',
-        rating: 4,
-        passengers: '6',
-        GPS: true,
-        automatic: true,
-        mainImg: BMW,
-        imgs: [ staria, BMW, fordTurus]
-    },
-    {
-        id: 'car-3',
-        name: "fordTurus",
-        model: "model-3",
-        description: "معلومات إضافية عن السيارة فورد",
-        pricePerHour: '$100',
-        rating: 5,
-        passengers: '4',
-        GPS: false,
-        automatic: true,
-        mainImg: fordTurus,
-        imgs: [ staria, BMW, fordTurus]
-    },
-    {
-      id: 'car-4',
+export const messages = [
+  {
+    id: 'msg-1',
+    name: 'محمد',
+    mobile: '+966566633156',
+    email: 'client1@mail.com',
+    message: 'رسالة من العميل أحمد'
+  },
+  {
+    id: 'msg-2',
+    name: 'علاء',
+    mobile: '+966566633155',
+    email: 'client2@mail.com',
+    message: 'رسالة من العميل علاء'
+  },
+  {
+    id: 'msg-1',
+    name: 'عثمان',
+    mobile: '+966566633154',
+    email: 'client3@mail.com',
+    message: 'رسالة من العميل عثمان'
+  },
+]
+
+export const evaluations = [
+  {
+    id: 'ev-1',
+    date: '2024-02-06',
+    rating: 5,
+    text: 'اهنيكم على الخدمه والدقه في المواعيد افضل واسعار مناسبه ومميزه',
+    client: 'شادي الريمي'
+  },
+  {
+    id: 'ev-2',
+    date: '2023-10-31',
+    rating: 5,
+    text: 'تم التعامل مع مسار الغربية- اشكر الاستاذ ابو ناصر على ترتيب كامل الرحلة الى مكة وسرعة التجاوب لأي استفسار',
+    client: 'ابو خليفه'
+  },
+  {
+    id: 'ev-3',
+    date: '2023-03-1',
+    rating: 5,
+    text: 'اريحية كبيرة ،حرفية التزام واحساس بالمسؤلية. راحة تامة في التعامل.ربنا يوفقك مستر. حسن. نتمنى لك. المزيد من النجاح والتالق.',
+    client: 'لويال تورز'
+  },
+]
+export const cars = [
+  {
+      id: 'car-1',
       name: "staria",
       model: "model-1",
       description: "معلومات إضافية عن السيارة ستاريا",
       pricePerHour: '$100',
-      rating: 3,
+      rating: 5,
       passengers: '4',
       GPS: false,
       automatic: true,
@@ -240,12 +209,12 @@ export const navLinks = [
       imgs: [ staria, BMW, fordTurus]
   },
   {
-      id: 'car-5',
+      id: 'car-2',
       name: "BMW",
       model: "model-2",
       description: "معلومات إضافية عن السيارة BMW",
       pricePerHour: '$100',
-      rating: 5,
+      rating: 4,
       passengers: '6',
       GPS: true,
       automatic: true,
@@ -253,18 +222,57 @@ export const navLinks = [
       imgs: [ staria, BMW, fordTurus]
   },
   {
-      id: 'car-6',
+      id: 'car-3',
       name: "fordTurus",
       model: "model-3",
       description: "معلومات إضافية عن السيارة فورد",
       pricePerHour: '$100',
-      rating: 4,
+      rating: 5,
       passengers: '4',
       GPS: false,
-      automatic: false,
+      automatic: true,
       mainImg: fordTurus,
       imgs: [ staria, BMW, fordTurus]
   },
+  {
+    id: 'car-4',
+    name: "staria",
+    model: "model-1",
+    description: "معلومات إضافية عن السيارة ستاريا",
+    pricePerHour: '$100',
+    rating: 3,
+    passengers: '4',
+    GPS: false,
+    automatic: true,
+    mainImg: staria,
+    imgs: [ staria, BMW, fordTurus]
+},
+{
+    id: 'car-5',
+    name: "BMW",
+    model: "model-2",
+    description: "معلومات إضافية عن السيارة BMW",
+    pricePerHour: '$100',
+    rating: 5,
+    passengers: '6',
+    GPS: true,
+    automatic: true,
+    mainImg: BMW,
+    imgs: [ staria, BMW, fordTurus]
+},
+{
+    id: 'car-6',
+    name: "fordTurus",
+    model: "model-3",
+    description: "معلومات إضافية عن السيارة فورد",
+    pricePerHour: '$100',
+    rating: 4,
+    passengers: '4',
+    GPS: false,
+    automatic: false,
+    mainImg: fordTurus,
+    imgs: [ staria, BMW, fordTurus]
+},
 ];
 
 export const hotels = [
@@ -477,6 +485,49 @@ export const socialMedia = [
     isFloating: true,
   },
 ];
+
+export const ourServices = [
+  {
+    id: 'service-1',
+    icon: <GiJourney size={75} color='#2ecc71'/>,
+    text: 'تجربة رائعة',
+  },
+  {
+    id: 'service-2',
+    icon: <FaRoad size={75} color= '#76828D'/>,
+    text: 'راحة في الطريق',
+  },
+  {
+    id: 'service-3',
+    icon: <LuCalendarClock size={75} color="#F24E43"/>,
+    text: 'التزام في المواعيد',
+  },
+  {
+    id: 'service-4',
+    icon: <IoShieldCheckmark size={75} color="#3498db"/>,
+    text: 'مصداقية',
+  },
+  {
+    id: 'service-5',
+    icon: <MdCarRental size={75} color='#F37877'/>,
+    text: 'حجز مسبق للعودة',
+  },
+  {
+    id: 'service-6',
+    icon: <BiSolidOffer size={75} color='#ffd700'/>,
+    text: 'أسعار منافسة',
+  },
+  {
+    id: 'service-7',
+    icon: <FaWifi size={75} color="#ABB8C4"/>,
+    text: 'انترنت واي فاي',
+  },
+  {
+    id: 'service-8',
+    icon: <BiSolidCarGarage size={75} color="#3E1716"/>,
+    text: 'عازل حراري',
+  },
+]
 
 export const StatusIcon = {
   scheduled: "/assets/check.svg",

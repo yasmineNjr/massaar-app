@@ -10,12 +10,12 @@ import { PiMoneyWavyFill } from "react-icons/pi";
 const CarListItem = ({item}) => {
   
     const router = useRouter();
-  const {id, name, model, description, pricePerHour,rating, passengers, GPS, automatic, mainImg, imgs}  = item;
-    console.log(item);
-  const clickHandler = (id) => {
-    const path = `/cars/${id}`
-    router.push(path);
-    }   
+    const {id, name, model, description, pricePerHour,rating, passengers, GPS, automatic, mainImg, imgs}  = item;
+       
+    const clickHandler = (id) => {
+        const path = `/cars/${id}`
+        router.push(path);
+        }   
 
     return (
      <div 
