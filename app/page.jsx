@@ -12,6 +12,7 @@ import HaveToChoose from '../components/HaveToChoose';
 import PasskeyModal from "@/components/PasskeyModal";
 import HomeCarsList from "@/components/HomeCarsList";
 import OurServices from "@/components/OurServices";
+import Location from "@/components/Location";
 
 export default function Home() { 
 
@@ -33,6 +34,7 @@ export default function Home() {
           <HaveToChoose/>
           <Stats />
           <Testimonials/>
+          <Location/>
           <CTA/>
         </div>
       </div>
