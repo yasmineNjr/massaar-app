@@ -16,7 +16,7 @@ import { socialMedia } from "@/constants";
 const CustomMarkerIcon = L.divIcon({
   className: "custom-icon", // Add class for styling if needed
   html: renderToString(
-    <svg width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg width="82" height="82" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" style={{ stopColor: "blue", stopOpacity: 1 }} />
@@ -29,7 +29,7 @@ const CustomMarkerIcon = L.divIcon({
   </svg>
 
   ),
-  iconSize: [40, 40],
+  iconSize: [82, 82],
   iconAnchor: [20, 40], // Anchor for proper positioning
 });
 

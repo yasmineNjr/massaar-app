@@ -1,10 +1,10 @@
 'use client'
 
 import styles from "./style";
+import dynamic from "next/dynamic";
 // import { Hero, Stats, PopularCars, PopularHotels, Testimonials, CTA, HaveToChoose } from '../components';
 import Hero from '../components/Hero';
 import Stats from '../components/Stats';
-import PopularCars from '../components/PopularCars';
 import PopularHotels from '../components/PopularHotels';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
@@ -12,7 +12,8 @@ import HaveToChoose from '../components/HaveToChoose';
 import PasskeyModal from "@/components/PasskeyModal";
 import HomeCarsList from "@/components/HomeCarsList";
 import OurServices from "@/components/OurServices";
-import Location from "@/components/Location";
+const Location = dynamic(() => import('@/components/Location'), { ssr: false });
+// import Location from "@/components/Location";
 
 export default function Home() { 
 
