@@ -17,7 +17,7 @@ const Footer = () => {
       <div className={` ${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className='flex flex-1 flex-col justify-center ml-10 w-full'>
           <Image src={logoDark} alt='logo' className='w-[360px] h-[160px] object-contain'/>
-          <p className={` font-poppins text-[20px] leading-[30.8px] mt-4 max-w-[310px] text-dimWhite font-bold`}>
+          <p className={` font-poppins text-[18px] leading-[30.8px] mt-4 max-w-[310px] text-dimWhite font-bold`}>
           طريقة جديدة لجعل رحلتك إلى الأراضي المقدسة سهلة وموثوقة وآمنة.
           </p>
         </div>
@@ -25,10 +25,10 @@ const Footer = () => {
         <div className='flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10'>
           {footerLinks.map((footerLink) => (
             <div key={footerLink.key} className='flex flex-col ss:my-0 my-4 min-w-[150px] '>
-              <h4 className="font-poppins font-bold text-[20px] leading-[27px] text-primary-foreground">{footerLink.title}</h4>
+              <h4 className="font-poppins font-bold text-[18px] leading-[27px] text-primary-foreground">{footerLink.title}</h4>
               <ul className="list-none mt-4 mb-4">
                 {footerLink.links.map((link, index) => (
-                  <li key={link.name} className={`font-poppins font-bold text-[18px] leading-[24px] text-dimWhite hover:text-light-200 ${//#808080 text-[#3F3E45] hover:text-[#292D32]
+                  <li key={link.name} className={`font-poppins font-bold text-[16px] leading-[24px] text-dimWhite hover:text-light-200 ${//#808080 text-[#3F3E45] hover:text-[#292D32]
                     index !== footerLink.links.length - 1 ? "mb-4" : "mb-0"
                   }`}>
                    { 
