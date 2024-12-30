@@ -13,6 +13,7 @@ import PasskeyModal from "@/components/PasskeyModal";
 import HomeCarsList from "@/components/HomeCarsList";
 import OurServices from "@/components/OurServices";
 import Licenses from "@/components/Licenses";
+import Contact from "@/components/Contact";
 const Location = dynamic(() => import('@/components/Location'), { ssr: false });
 // import Location from "@/components/Location";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Licenses/>
+          <Contact/>
           <OurServices/>
           <HomeCarsList/>
           {/* <PopularCars/> */}
