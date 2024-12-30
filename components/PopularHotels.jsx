@@ -56,7 +56,7 @@ const PopularHotels = () => {
       {/* <div className={`${layout.sectionImg} w-[100%] md:order-1 order-2`}> */}
       <div className={`${layout.sectionImg} w-[100%]`}>
         <div className="flex flex-row overflow-x-scroll no-scrollbar overflow-auto" ref={scrollRef}>
-          {hotels.map((hotel, index) => (
+          {hotels.filter((h) => h.rating === 5).map((hotel, index) => (
             <div 
               className={`relative rounded-xl group shadow-customGray hover:shadow-cardhover overflow-hidden min-w-[301px] h-[370px]  ${index !== hotel.length-1 ? 'ml-6' : 'ml-0'} flex justify-center items-center cursor-pointer`} key={`gallery_image-${index + 1}`}
               onClick={() => viewDetailsHandler(hotel.id)}
