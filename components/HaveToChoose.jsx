@@ -6,17 +6,17 @@ import Button from './Button';
 
 const FeatueCard = ({ icon, index, title, content }) => (
   <div 
-    className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} p-6 hover:bg-gradient-to-r from-gray-300 to-white hover:shadow-customGray`}
+    className={`group flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? "mb-2" : "mb-0"} p-6 hover:bg-gradient-to-r from-gray-300 to-white hover:shadow-customGray`}
   >
-    <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dark-600`}>
+    <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dark-500 `}>
       {/* <Image src={icon} alt='icon' className='w-[50%] h-[50%] object-contain'/> */}
       {icon}
     </div>
     <div className='flex flex-1 flex-col  mr-3'>
-      <h4 className='font-poppins font-semibold text-[18px] leading-[23px] mb-1 text-primary'>
+      <h4 className='font-poppins font-semibold text-[18px] leading-[23px] mb-1 text-customGold'>
         {title}
       </h4>
-      <p className='font-poppins text-dimWhite font-bold text-[16px] leading-[24px] mb-1'>
+      <p className='font-poppins font-bold text-[16px] leading-[24px] mb-1  text-dimWhite group-hover:text-dark-500'>
         {content}
       </p>
     </div>
