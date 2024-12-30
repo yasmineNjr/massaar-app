@@ -30,9 +30,9 @@ export default function RootLayout({ children, searchParams }) {
   return (
     <html lang="en" dir="rtl">
       <ActivePathProvider>
-         <body
-        >
-          <div className="w-full overflow-hidden bg-gradient-to-r from-customLightGreen to-white">
+         <body>
+          {/* bg-gradient-to-r from-customLightGreen to-white */}
+          <div className="w-full overflow-hidden bg-transparent">
             {isAdmin && <PasskeyModal/>}
 
             <div className={`${styles.paddingX} ${styles.flexCenter} `}>

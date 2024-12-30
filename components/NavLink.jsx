@@ -17,7 +17,7 @@ const NavLink = ({ item, idx, length }) => {
       // }`}
       className={`font-normal cursor-pointer text-[18px] transition-transform duration-300 hover:scale-105 
         ${idx === length-1 ?' ml-0' : 'ml-10'}
-        ${state === item.link ? "border-b-2 border-primary" : ""}`}
+        ${state === item.link ? "border-b-2 border-primary-foreground" : ""}`}
     >
       {item.title}
     </Link>

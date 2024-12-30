@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { close, logo, menu } from '../public/assets'
+import { close, logo, logoDark, logoLight, menu } from '../public/assets'
 import { navLinks } from '../constants';
 import Image from 'next/image';
 import NavLink from './NavLink';
@@ -24,8 +24,8 @@ function NavBar() {
   }
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar bg-transparent text-primary font-bold'>
-      <Image src={logo} alt='algharbia' className='w-[80px] h=[32px]'/>
+    <nav className='w-full flex py-6 justify-between items-center navbar bg-transparent text-primary-foreground font-bold'>
+      <Image src={logoDark} alt='algharbia' className='w-[80px]'/>
       <ul className='list-none md:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
           <NavLink item={nav} idx={index} length={navLinks.length}/>

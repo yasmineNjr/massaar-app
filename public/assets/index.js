@@ -68,6 +68,8 @@ import whatsappIcon from './whatsappIcon.svg'
 import callIcon from './callIcon.svg'
 import scrollUp from './scrollUp.svg'
 import home from './home.jpg'
+import logoDark from './logoDark.png'
+import logoLight from './logoLight.png'
 
 export {
   logo,
@@ -139,5 +141,7 @@ export {
   whatsappIcon,
   callIcon,
   scrollUp,
-  home
+  home,
+  logoDark,
+  logoLight
 };

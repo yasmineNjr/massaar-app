@@ -50,7 +50,7 @@ const PopularHotels = () => {
           <Button title='عرض الكل' onClickHandler={viewAllHandler}/>
         </div>
       </div> */}
-       <h2 className={`${styles.heading2} text-primary mb-5`}>
+       <h2 className={`${styles.heading2} text-primary-foreground mb-5`}>
           احجز فندقك من عندنا
       </h2>
       {/* <div className={`${layout.sectionImg} w-[100%] md:order-1 order-2`}> */}
@@ -94,7 +94,7 @@ const PopularHotels = () => {
         </div>
       </div>
       <div className='w-full mt-10'>
-        <p className={`${styles.paragraph}`}>
+        <p className={`${styles.paragraph} text-dimWhite`}>
         نقدم لك قائمة بأفضل الفنادق التي تحظى بأعلى معدلات الحجز والطلب من قبل الحجاج والمعتمرين. تم اختيار هذه الفنادق بعناية بناءً على تقييمات الزوار، الموقع الاستراتيجي القريب من الحرمين الشريفين، والخدمات المتكاملة التي توفرها لتلبية احتياجات ضيوف الرحمن. ستجد مجموعة من الخيارات التي تناسب مختلف الميزانيات. احجز الآن لتضمن مكانك، وتمتع بتجربة روحانية مميزة .
         </p>
         <div className="mt-6" >

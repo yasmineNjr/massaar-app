@@ -11,6 +11,7 @@ import { logo } from "@/public/assets";
 import Link from "next/link";
 import Image from "next/image";
 import { socialMedia } from "@/constants";
+import styles from "@/app/style";
 
 // Convert React Icon to HTML string
 const CustomMarkerIcon = L.divIcon({
@@ -35,50 +36,57 @@ const CustomMarkerIcon = L.divIcon({
 
 function Location() {
   return (
-    <MapContainer
-      center={[21.4225,  39.8262]} // Initial coordinates
-      style={{ height: "500px", width: "100%" }} // Map size
-      zoom={10} 
-      scrollWheelZoom={false} 
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker
-        position={[21.4225,  39.8262]} // Marker position
-        icon={CustomMarkerIcon} // Use custom icon
-      >
-        <Popup>
-           <div className="flex flex-col gap-6 w-[200px]">
-            <div className="flex flex-row w-full">
-              <div className="flex flex-col justify-between text-right w-[160px] mt-4">
-                <Link href={`/`}>مسار الغربية</Link>
-                <span>لتنظيم الرحلات السياحية</span>
-              </div>
-              <Image
-                src={logo}
-                alt="Logo"
-                className="w-[60px] h-[60px] object-cover rounded-xl"
-              />
-            </div>
-            <div className='flex flex-row md:mt-0 mt-6' >
-              {socialMedia.map((social, index) => (
-                  <Image 
-                    key={social.id} 
-                    src={social.icon} 
-                    alt={social.id} 
-                    className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length-1 ? 'ml-6' : 'ml-0'} transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
-                    onClick={() => handleClick(social.link)}
+    <section className={`flex flex-1 flex-col  bg-transparent ${styles.paddingY} `}>
+      <h2 className={`${styles.heading2} text-primary-foreground`}>
+          موقع شركتنا
+      </h2>
+       <div className="rounded-2xl overflow-hidden">
+        <MapContainer
+          center={[21.4225,  39.8262]} // Initial coordinates
+          style={{ height: "500px", width: "100%" }} // Map size
+          zoom={10} 
+          scrollWheelZoom={false} 
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker
+            position={[21.4225,  39.8262]} // Marker position
+            icon={CustomMarkerIcon} // Use custom icon
+          >
+            <Popup>
+              <div className="flex flex-col gap-6 w-[200px]">
+                <div className="flex flex-row w-full">
+                  <div className="flex flex-col justify-between text-right w-[160px] mt-4">
+                    <Link href={`/`}>مسار الغربية</Link>
+                    <span>لتنظيم الرحلات السياحية</span>
+                  </div>
+                  <Image
+                    src={logo}
+                    alt="Logo"
+                    className="w-[60px] h-[60px] object-cover rounded-xl"
                   />
-              ))}
-            </div> 
-          </div>
-             
-           
-         </Popup>
-      </Marker>
-    </MapContainer>
+                </div>
+                <div className='flex flex-row md:mt-0 mt-6' >
+                  {socialMedia.map((social, index) => (
+                      <Image 
+                        key={social.id} 
+                        src={social.icon} 
+                        alt={social.id} 
+                        className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length-1 ? 'ml-6' : 'ml-0'} transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
+                        onClick={() => handleClick(social.link)}
+                      />
+                  ))}
+                </div> 
+              </div>
+            </Popup>
+          </Marker>
+        </MapContainer>
+       </div>
+      
+    </section>
+    
   );
 }
 

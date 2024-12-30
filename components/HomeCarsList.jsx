@@ -22,7 +22,7 @@ const HomeCarsList = () => {
   return (
     <section className={`flex flex-col ${styles.paddingY}`}>
       <div className={layout.sectionInfo}>
-        <h2 className={`${styles.heading2} text-primary`}>
+        <h2 className={`${styles.heading2} text-primary-foreground`}>
             سياراتنا في خدمتكم
         </h2>
         {/* <div className='w-full md:mt-0 mt-6 flex-col lg:flex-row'>

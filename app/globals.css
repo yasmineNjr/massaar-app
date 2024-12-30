@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  display: flex;
+}
 /* ========================================== TAILWIND STYLES */
 @layer base {
   /* Remove scrollbar */

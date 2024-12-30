@@ -1,7 +1,7 @@
 import styles from '@/app/style';
 import Image from "next/image";
 import QuickBook from './QuickBook';
-import { logo } from '@/public/assets';
+import { commericalNum, logo, logoDark, saudiBussiness, taxNumber, zakatax } from '@/public/assets';
 
 const Hero = () => (
   <>
@@ -13,15 +13,16 @@ const Hero = () => (
           <Image src={logo} alt='algharbia' className='w-full max-w-[370px] h-auto'/>
         </div>
             
-        <div className="ss:flex md:mr-4 mr-0 bg-transparent">
+        {/* <div className="ss:flex md:mr-4 mr-0 bg-transparent">
           <QuickBook/>
-        </div>
+        </div> */}
 
     </section>
 
-    <p className={`${styles.paragraph} w-full p-10 text-center mt-5 text-primary font-bold text-[22px]`}>
+    <p className={`${styles.paragraph} w-full p-10 text-center mt-5 text-dimWhite font-bold text-[22px]`}>
       نوفر لك خيارات حجز السيارات والفنادق بالقرب من الحرم المكي والمدينة المنورة، لتجربة حج وعمرة مريحة وآمنة. اختر من بين مجموعة واسعة من السيارات والفنادق التي تناسب احتياجاتك، مع خدمات مميزة تضمن لك الراحة وتتيح لك التركيز على رحلتك الروحانية.
     </p>
+
     </>
   )
 

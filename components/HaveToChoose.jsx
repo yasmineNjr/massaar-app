@@ -16,7 +16,7 @@ const FeatueCard = ({ icon, index, title, content }) => (
       <h4 className='font-poppins font-semibold text-[18px] leading-[23px] mb-1 text-primary'>
         {title}
       </h4>
-      <p className='font-poppins text-customSecondary font-bold text-[16px] leading-[24px] mb-1'>
+      <p className='font-poppins text-dimWhite font-bold text-[16px] leading-[24px] mb-1'>
         {content}
       </p>
     </div>
@@ -28,10 +28,10 @@ function HaveToChoose() {
   return (
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
-      <h2 className={`${styles.heading2} text-primary`}>
+      <h2 className={`${styles.heading2} text-primary-foreground`}>
           لماذا عليك أن تختار<br className="sm:block hidden" /> مسار الغربية
         </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5 text-dimWhite`}>
         نحن ندرك أن رحلة الحج والعمرة هي تجربة روحانية مهمة وتتطلب التخطيط الجيد لضمان الراحة والطمأنينة. من هذا المنطلق، عملنا على تصميم خدماتنا لتلبية احتياجاتك بأعلى مستويات الجودة والمصداقية، لضمان تجربة لا تُنسى من البداية إلى النهاية.
         </p>
         <Button styles='mt-10' title='اطلب الآن' onClickHandler={() => quickBookHandler("مرحباً, هل يمكنك مساعدتي في عملية الحجز؟")}/>
