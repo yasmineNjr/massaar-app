@@ -67,6 +67,10 @@ const RenderField= ({field, props}) => {
                             className="shad-input border-0 text-customSecondary"
                             type="number"
                             min="1" 
+                            onChange={(e) => {
+                                field.onChange(e); // Ensure react-hook-form updates its state
+                                props.onChange?.(e); // Trigger the external onChange handler if provided
+                              }}
                         />
                     </FormControl>
                 </div>
@@ -145,15 +149,20 @@ const RenderField= ({field, props}) => {
         case FormFieldType.CHECKBOX:
             return (
                 <FormControl>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-1">
                     <Checkbox
-                    id={props.name}
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    className="w-5 h-5 bg-transparent border-customSecondary hover:border-customSecondary focus:ring-2 focus:ring-customSecondary checked:bg-transparent checked:border-customSecondary"
+                        id={props.name}
+                        checked={field.value}
+                        //onCheckedChange={field.onChange}
+                        onCheckedChange={(checked) => {
+                            field.onChange(checked);
+                            props.onCheckedChange?.(checked); // Call the parent's handler if provided
+                          }}
+                        className="w-5 h-5 bg-transparent border-customSecondary hover:border-customSecondary focus:ring-2 focus:ring-customSecondary checked:bg-transparent checked:border-customSecondary"
                     />
+          
                     <label htmlFor={props.name} className="checkbox-label text-customSecondary">
-                    {props.label}
+                        {props.label}
                     </label>
                 </div>
                 </FormControl>

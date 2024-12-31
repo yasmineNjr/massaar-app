@@ -2,7 +2,7 @@
 
 import styles, { layout } from "@/app/style"
 import CarReservationForm from "@/components/forms/CarReservationForm";
-import { cars } from "@/constants";
+import { cars, quickBookHandler } from "@/constants";
 import Image from "next/image"
 import { useRef, useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
@@ -11,6 +11,7 @@ import { MdOutlineHdrAuto } from "react-icons/md";
 import { FaPerson } from "react-icons/fa6";
 import { PiMoneyWavyFill } from "react-icons/pi";
 import ReactStars from "react-rating-stars-component";
+import { callIcon, whatsappIcon } from "@/public/assets";
 
 const CarDetails = ({ params }) => {
 
@@ -33,12 +34,12 @@ const CarDetails = ({ params }) => {
     <div className={`bg-transparent bg-gold ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={`${styles.heading2} text-right text-primary`}>
+          <h2 className={`${styles.heading2} text-right text-primary-foreground`}>
               حجز سيارة {selectedCar.name}
           </h2>
         </div>
-        
-        <section className={`flex flex-col ${styles.paddingY} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}>
+        {/* bg-gradient-to-r from-transparent via-gray-400 to-transparent */}
+        <section className={`flex flex-col ${styles.paddingY} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-gray-500 to-white`}>
             
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative w-full `}>
             <div className="w-full max-w-4xl mx-auto">
@@ -73,12 +74,12 @@ const CarDetails = ({ params }) => {
 
             <div className='p-5 w-full max-w-4xl mx-auto'>
               <div>
-                  <h1 className='text-xl text-customSecondary'>{selectedCar.model} - {selectedCar.name}</h1>
+                  <h1 className='text-xl text-primary font-bold'>{selectedCar.name} - {selectedCar.model}</h1>
               </div>
             
               <div className='flex flex-row gap-2 mt-2'>
                   <PiMoneyWavyFill  size={20}/>
-                  <h1 className='text-primary font-bold'>{selectedCar.pricePerHour}</h1>
+                  <h1 className='text-gray-700 font-bold'>{selectedCar.pricePerHour}</h1>
               </div>
               
               <ReactStars
@@ -89,12 +90,12 @@ const CarDetails = ({ params }) => {
               />
 
               <div>
-                  <p className='ttext-customSecondary font-semibold'>{selectedCar.description}</p>
+                  <p className='text-gray-700 font-semibold'>{selectedCar.description}</p>
               </div>
 
               <div className='flex flex-row gap-2 mt-2'>
                   <FaPerson size={22}/>
-                  <p className='text-customSecondary font-semibold'>{selectedCar.passengers}</p>
+                  <p className='text-gray-700 font-semibold'>{selectedCar.passengers}</p>
               </div>
 
               <div className='flex flex-row items-center justify-start mt-5 gap-5'>
@@ -102,10 +103,29 @@ const CarDetails = ({ params }) => {
                   {selectedCar.automatic && <MdOutlineHdrAuto  size={24}/>}
               </div>
             </div>
+            <div className="flex flex-row justify-between p-5 w-full md:w-[50%] mb-3">
+                <Image 
+                    src={whatsappIcon} 
+                    alt='whatsapp' 
+                    width={75}
+                    className={`object-contain cursor-pointer transition-transform duration-300 hover:scale-125 `}
+                    onClick={(e) => {e.stopPropagation(); quickBookHandler(`مرحباً, هل يمكنك مساعدتي في عملية حجز السيارة ${selectedCar.name} `)}}
+                />
+                <a href="tel:+966566633161" target="_blank" rel="noopener noreferrer">
+                  <Image 
+                      src={callIcon} 
+                      alt='call' 
+                      width={75}
+                      className={`object-contain cursor-pointer transition-transform duration-300 hover:scale-125 `}
+                      onClick={(e) => {e.stopPropagation();}}
+                  />
+                </a>
+            </div>
+            
           </div>
 
           <div className={`${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-6 md:my-0 my-10 w-full max-w-4xl mx-auto`}>
-            <CarReservationForm item={selectedCar}/>
+            <CarReservationForm item={selectedCar} />
           </div>
 
         </section>

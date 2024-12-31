@@ -12,7 +12,7 @@ import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import FileUploader from "../FileUploadr"
 import { useState } from "react"
 import Button from "../Button"
-import { quickBookHandler } from "@/constants"
+import { quickBookHandler, trips } from "@/constants"
 
 
 export const FormFieldType = {
@@ -34,13 +34,42 @@ const formSchema = z.object({
   const PaymentOptions = [ 'الدفع باستخدام بطاقة ائتمان أو خصم عبر المدفوعات عبر الانترنت' , 'الدفع أثناء التوصيل' , 'تحويل مصرفي مباشر', ]
 
   const CarReservationForm = ( {item} ) => {
-
+    
     const form = useForm();
     const [payment, setPayment] = useState('تحويل مصرفي مباشر')
+    const [bookWay, setBookWay] = useState('book')
     const [totalCost, setTotalCost] = useState(0)
+    const [selectedTrips, setSelectedTrips] = useState({});
+    const [waitingHours, setWaitingHours] = useState(0);
 
     const onSubmit = (data) => {
       console.log(data);
+    };
+
+    const waitingHoursHandler = (value) => {
+      const hours = Number(value) || 0; // Ensure value is a number
+      setWaitingHours(hours);
+  
+      // Update total cost based on waiting hours
+      setTotalCost((prev) => {
+        const previousWaitingCost = waitingHours *  item.hours;
+        const newWaitingCost = hours * item.hours;
+  
+        return prev - previousWaitingCost + newWaitingCost;
+      });
+    };
+  
+
+    const handleTripChange = (id, cost, checked) => {
+      // Update the selected trips
+      setSelectedTrips((prev) => ({
+        ...prev,
+        [id]: checked,
+      }));
+  
+      // Update the total cost
+      setTotalCost((prev) => (checked ? prev + cost : prev - cost));
+      // console.log(cost)
     };
    
     return (
@@ -94,6 +123,7 @@ const formSchema = z.object({
               placeholder="12"
               iconSrc="/assets/clock.svg"
               iconAlt="hours"
+              onChange={(e) => waitingHoursHandler(e.target.value)}
           />
                
           {/* NOTES & DRIVER */}
@@ -104,13 +134,70 @@ const formSchema = z.object({
             label="معلومات إضافية(إختياري)"
             placeholder="ملاحظات حول الطلب."
           />
-
+          {/* 
           <CustomFormField
             fieldType={FormFieldType.CHECKBOX}
             control={form.control}
             name="treatmentConsent"
             label="مع سائق"
-          />
+          /> */}
+
+          <CustomFormField
+              fieldType={FormFieldType.SKELETON}
+              control={form.control}
+              name="reservationWay"
+              label="طريقة الحجز"
+              renderSkeleton={(field) => (
+            <FormControl>
+              <RadioGroup
+                className="flex flex-row-reverse space-x-6 justify-start"
+                onValueChange={setBookWay}
+                defaultValue={bookWay}
+              >
+                 <div className="flex flex-row-reverse items-center space-x-reverse space-x-2">
+                    <RadioGroupItem value='book' id={1} 
+                      className="relative w-5 h-5 border-2 border-customSecondary rounded-full checked:border-customSecondary" >
+                      <span
+                        className="absolute w-2.5 h-2.5 bg-transparent rounded-full transform scale-0 data-[state=checked]:scale-100"
+                      />
+                    </RadioGroupItem>
+                    <Label htmlFor='book' className="cursor-pointer text-customSecondary font-semibold">
+                      بدون رحلة
+                    </Label>
+                  </div>
+                  <div className="flex flex-row-reverse items-center space-x-reverse space-x-2">
+                    <RadioGroupItem value='trip' id={2} 
+                      className="relative w-5 h-5 border-2 border-customSecondary rounded-full checked:border-customSecondary" >
+                      <span
+                        className="absolute w-2.5 h-2.5 bg-transparent rounded-full transform scale-0 data-[state=checked]:scale-100"
+                      />
+                    </RadioGroupItem>
+                    <Label htmlFor='trip' className="cursor-pointer text-customSecondary font-semibold">
+                      رحلة
+                    </Label>
+                  </div>
+              </RadioGroup>
+            </FormControl>
+          )}
+        />
+
+        {
+          bookWay === 'trip' && 
+          <div className="mr-5">
+            { trips.map((trip) => (
+              <CustomFormField
+                key={trip.id}
+                id={trip.id}
+                fieldType={FormFieldType.CHECKBOX}
+                control={form.control}
+                name={trip.id}
+                label={trip.title}
+                onCheckedChange={(checked) => handleTripChange(trip.id, Number(trip.price[item.title]), checked)}
+              />
+            
+            ))}
+          </div>
+        }
 
           {/* Payment */}
           <CustomFormField
@@ -163,7 +250,7 @@ const formSchema = z.object({
          </div>
          <div className="flex flex-1 justify-center items-center w-full gap-6">
             <Button styles='w-[50%]' title='إتمام'/>
-            <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز السيارة ${item.name}؟`)}/>
+            {/* <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز السيارة ${item.name}؟`)}/> */}
          </div>
           
 
