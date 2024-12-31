@@ -1,9 +1,5 @@
 import { 
-  mail, instagram, whatsapp, twitter, saudiBussiness, zakatax, BMW, GMC, staria, fordTurus, lobik, alansar, clock, rayhan, shield, send, star, road, appointment, easyBook, services, price,
-  hero1,
-  hero2,
-  hero3,
-  medinah1, medinah, taif1, jeddah1, jeddah2, mecca1,
+  mail, instagram, whatsapp, twitter, saudiBussiness, zakatax, staria, clock,  shield, send, star, road, appointment, easyBook, services, price,
   snap,
   bankTransfer,
   cashPayment,
@@ -16,7 +12,26 @@ import {
   instagramIcon,
   snapIcon,
   callIcon,
-  mailIcon
+  mailIcon,
+  leczes,
+  torus,
+  jems,
+  superpan,
+  hais,
+  bmw,
+  bmw1,
+  special,
+  special1,
+  mercides,
+  coster,
+  coster1,
+  staria1,
+  torus1,
+  leczes1,
+  superpan1,
+  hais1,
+  sonata,
+  sonata1
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -30,56 +45,56 @@ import { MdCarRental } from "react-icons/md";
 import { GiJourney } from "react-icons/gi";
 import { FaMosque } from "react-icons/fa";
 
-export const heroImages = [
-  {
-    id: "img-1",
-    image: hero1,
-  },
-  {
-    id: "img-2",
-    image: hero2,
-  },
-  {
-    id: "img-3",
-    image: hero3,
-  },
-  {
-    id: "img-4",
-    image: medinah1,
-  },
-  {
-    id: "img-5",
-    image: taif1,
-  },
-  {
-    id: "img-6",
-    image: jeddah1,
-  },
-  {
-    id: "img-7",
-    image: medinah,
-  },
-  {
-    id: "img-8",
-    image: jeddah2,
-  },
-  {
-    id: "img-9",
-    image: mecca1,
-  },
-  // {
-  //   id: "img-10",
-  //   image: hero2,
-  // },
-  // {
-  //   id: "img-11",
-  //   image: hero3,
-  // },
-  // {
-  //   id: "img-12",
-  //   image: rayhan,
-  // },
-];
+// export const heroImages = [
+//   {
+//     id: "img-1",
+//     image: hero1,
+//   },
+//   {
+//     id: "img-2",
+//     image: hero2,
+//   },
+//   {
+//     id: "img-3",
+//     image: hero3,
+//   },
+//   {
+//     id: "img-4",
+//     image: medinah1,
+//   },
+//   {
+//     id: "img-5",
+//     image: taif1,
+//   },
+//   {
+//     id: "img-6",
+//     image: jeddah1,
+//   },
+//   {
+//     id: "img-7",
+//     image: medinah,
+//   },
+//   {
+//     id: "img-8",
+//     image: jeddah2,
+//   },
+//   {
+//     id: "img-9",
+//     image: mecca1,
+//   },
+//   // {
+//   //   id: "img-10",
+//   //   image: hero2,
+//   // },
+//   // {
+//   //   id: "img-11",
+//   //   image: hero3,
+//   // },
+//   // {
+//   //   id: "img-12",
+//   //   image: rayhan,
+//   // },
+// ];
 
 export const navLinks = [
     {
@@ -194,85 +209,151 @@ export const evaluations = [
     client: 'لويال تورز'
   },
 ]
+
 export const cars = [
   {
-      id: 'car-1',
-      name: "staria",
-      model: "model-1",
-      description: "معلومات إضافية عن السيارة ستاريا",
-      pricePerHour: '$100',
-      rating: 5,
-      passengers: '4',
-      GPS: false,
-      automatic: true,
-      mainImg: staria,
-      imgs: [ staria, BMW, fordTurus]
-  },
-  {
-      id: 'car-2',
-      name: "BMW",
-      model: "model-2",
-      description: "معلومات إضافية عن السيارة BMW",
-      pricePerHour: '$100',
-      rating: 4,
-      passengers: '6',
-      GPS: true,
-      automatic: true,
-      mainImg: BMW,
-      imgs: [ staria, BMW, fordTurus]
-  },
-  {
-      id: 'car-3',
-      name: "fordTurus",
-      model: "model-3",
-      description: "معلومات إضافية عن السيارة فورد",
-      pricePerHour: '$100',
-      rating: 5,
-      passengers: '4',
-      GPS: false,
-      automatic: true,
-      mainImg: fordTurus,
-      imgs: [ staria, BMW, fordTurus]
-  },
-  {
-    id: 'car-4',
-    name: "staria",
-    model: "model-1",
-    description: "معلومات إضافية عن السيارة ستاريا",
-    pricePerHour: '$100',
-    rating: 3,
+    id: '1',
+    name: "سوناتا",
+    model: "2024",
+    description: "سيارة وسط تتسع الى 4 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
     passengers: '4',
+    GPS: false,
+    automatic: true,
+    mainImg: sonata,
+    imgs: [ sonata, sonata1, sonata1]
+  },
+  {
+    id: '2',
+    name: "فورد تورس",
+    model: "2024",
+    description: "سيارة وسط تتسع الى 4 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '4',
+    GPS: false,
+    automatic: true,
+    mainImg: torus,
+    imgs: [ torus, torus1, torus1]
+  },
+  {
+    id: '3',
+    name: "لكزس",
+    model: "ES250 – 2024",
+    description: "سيارة وسط vip تتسع الى 4 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '4',
+    GPS: false,
+    automatic: true,
+    mainImg: leczes,
+    imgs: [ leczes, leczes1, leczes1]
+  },
+  {
+    id: '4',
+    name: "جمس",
+    model: "( XL ) 2024",
+    description: "سيارة كبيرة تتسع الى 7 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '7',
+    GPS: false,
+    automatic: true,
+    mainImg: jems,
+    imgs: [ jems, jems, jems]
+  },
+  {
+    id: '5',
+    name: "سوبربان ",
+    model: "( XL ) 2024",
+    description: "سيارة كبيرة تتسع الى 7 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '7',
+    GPS: false,
+    automatic: true,
+    mainImg: superpan,
+    imgs: [ superpan, superpan1, superpan1]
+  },
+  {
+    id: '6',
+    name: "ستاريا",
+    model: "2025",
+    description: "سيارة كبيرة عائلية تتسع الى 8 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '8',
     GPS: false,
     automatic: true,
     mainImg: staria,
-    imgs: [ staria, BMW, fordTurus]
-},
-{
-    id: 'car-5',
-    name: "BMW",
-    model: "model-2",
-    description: "معلومات إضافية عن السيارة BMW",
-    pricePerHour: '$100',
+    imgs: [ staria, staria1, staria1]
+  },
+  {
+    id: '7',
+    name: "هايس",
+    model: "قبه 2024",
+    description: "سيارة كبيرة عائلية تتسع الى 12 اشخاص",
+    pricePerHour: '$10',
     rating: 5,
-    passengers: '6',
-    GPS: true,
+    passengers: '12',
+    GPS: false,
     automatic: true,
-    mainImg: BMW,
-    imgs: [ staria, BMW, fordTurus]
-},
-{
-    id: 'car-6',
-    name: "fordTurus",
-    model: "model-3",
-    description: "معلومات إضافية عن السيارة فورد",
-    pricePerHour: '$100',
-    rating: 4,
+    mainImg: hais,
+    imgs: [ hais, hais1, hais1]
+  },
+  {
+    id: '8',
+    name: "بي ام دبيلو",
+    model: "2024",
+    description: "سيارة وسط vip تتسع الى 4 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
     passengers: '4',
     GPS: false,
-    automatic: false,
-    mainImg: fordTurus,
-    imgs: [ staria, BMW, fordTurus]
-},
+    automatic: true,
+    mainImg: bmw,
+    imgs: [ bmw, bmw1, bmw1]
+  },
+  {
+    id: '9',
+    name: "H1",
+    model: "للإحتياجات الخاصة 2024",
+    description: "باصات 42 راكب 2024",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '42',
+    GPS: false,
+    automatic: true,
+    mainImg: special,
+    imgs: [ special, special1, special1]
+  },
+  {
+    id: '10',
+    name: "مرسيدس",
+    model: "الجوهره موديل 2022",
+    description: "سيارة وسط تتسع الى 4 اشخاص",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '4',
+    GPS: false,
+    automatic: true,
+    mainImg: mercides,
+    imgs: [ mercides, mercides, mercides]
+  },
+  {
+    id: '11',
+    name: "كوستر",
+    model: "2024",
+    description: "كوستر 20 راكب بالعفش موديل حديث",
+    pricePerHour: '$10',
+    rating: 5,
+    passengers: '20',
+    GPS: false,
+    automatic: true,
+    mainImg: coster,
+    imgs: [ coster, coster1, coster1]
+  },
 ];
 
 export const hotels = [
@@ -288,7 +369,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 2,
@@ -302,7 +383,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 3,
@@ -316,7 +397,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 4,
@@ -330,7 +411,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 5,
@@ -344,7 +425,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 6,
@@ -358,7 +439,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 7,
@@ -372,7 +453,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 8,
@@ -386,7 +467,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 9,
@@ -400,7 +481,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 10,
@@ -414,7 +495,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 11,
@@ -428,7 +509,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 12,
@@ -442,7 +523,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 13,
@@ -456,7 +537,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 14,
@@ -470,7 +551,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 15,
@@ -484,7 +565,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 16,
@@ -498,7 +579,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 17,
@@ -512,7 +593,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 18,
@@ -526,7 +607,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 19,
@@ -540,7 +621,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 20,
@@ -554,7 +635,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 21,
@@ -568,7 +649,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 22,
@@ -582,7 +663,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 23,
@@ -596,7 +677,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 24,
@@ -610,7 +691,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 25,
@@ -624,7 +705,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 26,
@@ -638,7 +719,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 27,
@@ -652,7 +733,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 28,
@@ -666,7 +747,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 29,
@@ -680,7 +761,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 30,
@@ -694,7 +775,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 31,
@@ -708,7 +789,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 32,
@@ -722,7 +803,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 33,
@@ -736,7 +817,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 34,
@@ -750,7 +831,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 35,
@@ -764,7 +845,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 36,
@@ -778,7 +859,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 37,
@@ -792,7 +873,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 38,
@@ -806,7 +887,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 39,
@@ -820,7 +901,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 40,
@@ -834,7 +915,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 41,
@@ -848,7 +929,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 42,
@@ -862,7 +943,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 43,
@@ -876,7 +957,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 44,
@@ -890,7 +971,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 45,
@@ -904,7 +985,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 46,
@@ -918,7 +999,7 @@ export const hotels = [
     breakfast: true,
     meal: true,
     mainImg: clock,
-    imgs: [ clock, lobik, rayhan]
+    // imgs: [ clock, lobik, rayhan]
   },
 ];
 
@@ -1428,4 +1509,85 @@ export async function getData() {
 // meal: true,
 // mainImg: alansar,
 // imgs: [ clock, lobik, rayhan]
+// },
+
+
+//cars
+// {
+//   id: 'car-1',
+//   name: "staria",
+//   model: "model-1",
+//   description: "معلومات إضافية عن السيارة ستاريا",
+//   pricePerHour: '$100',
+//   rating: 5,
+//   passengers: '4',
+//   GPS: false,
+//   automatic: true,
+//   mainImg: staria,
+//   imgs: [ staria, BMW, fordTurus]
+// },
+// {
+//   id: 'car-2',
+//   name: "BMW",
+//   model: "model-2",
+//   description: "معلومات إضافية عن السيارة BMW",
+//   pricePerHour: '$100',
+//   rating: 4,
+//   passengers: '6',
+//   GPS: true,
+//   automatic: true,
+//   mainImg: BMW,
+//   imgs: [ staria, BMW, fordTurus]
+// },
+// {
+//   id: 'car-3',
+//   name: "fordTurus",
+//   model: "model-3",
+//   description: "معلومات إضافية عن السيارة فورد",
+//   pricePerHour: '$100',
+//   rating: 5,
+//   passengers: '4',
+//   GPS: false,
+//   automatic: true,
+//   mainImg: fordTurus,
+//   imgs: [ staria, BMW, fordTurus]
+// },
+// {
+// id: 'car-4',
+// name: "staria",
+// model: "model-1",
+// description: "معلومات إضافية عن السيارة ستاريا",
+// pricePerHour: '$100',
+// rating: 3,
+// passengers: '4',
+// GPS: false,
+// automatic: true,
+// mainImg: staria,
+// imgs: [ staria, BMW, fordTurus]
+// },
+// {
+//   id: 'car-5',
+//   name: "BMW",
+//   model: "model-2",
+//   description: "معلومات إضافية عن السيارة BMW",
+//   pricePerHour: '$100',
+//   rating: 5,
+//   passengers: '6',
+//   GPS: true,
+//   automatic: true,
+//   mainImg: BMW,
+//   imgs: [ staria, BMW, fordTurus]
+// },
+// {
+//   id: 'car-6',
+//   name: "fordTurus",
+//   model: "model-3",
+//   description: "معلومات إضافية عن السيارة فورد",
+//   pricePerHour: '$100',
+//   rating: 4,
+//   passengers: '4',
+//   GPS: false,
+//   automatic: false,
+//   mainImg: fordTurus,
+//   imgs: [ staria, BMW, fordTurus]
 // },

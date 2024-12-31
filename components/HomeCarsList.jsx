@@ -41,14 +41,17 @@ const HomeCarsList = () => {
         {
             cars.map((car) => (
                 <div 
-                    className="rounded-xl group relative shadow-customGray hover:shadow-cardhover min-w-[301px] h-[430px] overflow-hidden cursor-pointer"
+                    className="bg-white relative rounded-xl group  shadow-customGray hover:shadow-cardhover min-w-[301px] h-[430px] overflow-hidden cursor-pointer"
                     onClick={() => viewDetailsHandler(car.id)}
                 >
-                    <Image
-                        src={car.mainImg}
-                        alt={car.name}
-                        layout='fill'
-                    />
+                    <div className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]'>
+                      <Image
+                          src={car.mainImg}
+                          alt={car.name}
+                          layout='fill'
+                          objectFit='contain'
+                      />
+                    </div>
                     <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-customSecondary font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-300 to-white m-2 p-4 rounded-md">
                         <h1 >{car.model} - {car.name}</h1>
                         <p className="text-sm overflow-y-auto prompt">{car.description}</p>

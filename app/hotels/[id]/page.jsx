@@ -27,7 +27,7 @@ const HotelDetails = ({ params }) => {
     }
   }
 
-  const selectedHotel= hotels.find((hotel) => (hotel.id === params.id));
+  const selectedHotel= hotels.find((hotel) => (hotel.id === Number(params.id)));
 
   const [main, setMain] = useState(selectedHotel.mainImg);
 
@@ -62,7 +62,7 @@ const HotelDetails = ({ params }) => {
                 />
               </div>
 
-              <div className={`${layout.sectionImg} w-full h-30 `}>
+              {/* <div className={`${layout.sectionImg} w-full h-30 `}>
                 <div className="flex flex-row overflow-x-scroll no-scrollbar overflow-auto" ref={scrollRef}>
                   {selectedHotel.imgs.map((hotel, index) => (
                     <div 
@@ -77,7 +77,7 @@ const HotelDetails = ({ params }) => {
                   <BsArrowRightShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-dark-300" onClick={() => scroll('right')} />
                   <BsArrowLeftShort className="text-secondary ss:text-[38px] text-[22px] cursor-pointer rounded-xl bg-dark-300" onClick={() => scroll('left')} />
                 </div>
-              </div>
+              </div> */}
 
               <div className='p-5'>
                 <div >

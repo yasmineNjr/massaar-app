@@ -11,12 +11,11 @@ import { MdOutlineHdrAuto } from "react-icons/md";
 import { FaPerson } from "react-icons/fa6";
 import { PiMoneyWavyFill } from "react-icons/pi";
 import ReactStars from "react-rating-stars-component";
-import { QuickBook } from "@/components";
 
 const CarDetails = ({ params }) => {
 
   const scrollRef = useRef(null);
-
+  
   const scroll = (direction) => {
     const { current } = scrollRef;
     if(direction === 'left'){
@@ -29,7 +28,6 @@ const CarDetails = ({ params }) => {
 
   const [main, setMain] = useState(selectedCar.mainImg);
 
-
   return (
   <div className="bg-transparent w-full overflow-hidden ">
     <div className={`bg-transparent bg-gold ${styles.paddingX} ${styles.flexCenter}`}>
@@ -39,7 +37,7 @@ const CarDetails = ({ params }) => {
               حجز سيارة {selectedCar.name}
           </h2>
         </div>
-         
+        
         <section className={`flex flex-col ${styles.paddingY} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}>
             
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative w-full `}>
@@ -112,9 +110,11 @@ const CarDetails = ({ params }) => {
 
         </section>
       </div>
-    </div>
+      </div>
   </div>
   )
 }
 
 export default CarDetails
+
+

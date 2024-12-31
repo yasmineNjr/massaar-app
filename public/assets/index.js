@@ -17,14 +17,7 @@ import zakatax from './zakat-tax.jpg'
 import mail from './mail.svg'
 import mailIcon from './mailIcon.svg'
 import whatsapp from './whatsapp.svg'
-import GMC from './GMC.jpg'
-import staria from './staria.jpg'
-import BMW from './BMW.jpg'
-import fordTurus from './ford-turus.jpg'
-import lobik from './almadinah-lobik.jpg'
-import alansar from './madinah-alansar.jpg'
 import clock from './makka-clock.jpg'
-import rayhan from './makka-rayhan.jpg'
 import shield from './Shield.svg'
 import send from './Send.svg'
 import road from './road.svg'
@@ -42,12 +35,6 @@ import passenger from './passenger.svg'
 import location from './location.svg'
 import contactus from './contactus.jpg'
 import review from './review.jpg'
-import medinah1 from './medinah1.jpg'
-import medinah from './medinah.jpg'
-import jeddah1 from './jeddah1.jpg'
-import jeddah2 from './jeddah2.jpg'
-import taif1 from './taif1.jpg'
-import mecca1 from './mecca1.jpg'
 import snap from './snap.svg'
 import snapIcon from './snapIcon.svg'
 import bankTransfer from './bankTransfer.svg'
@@ -70,6 +57,26 @@ import scrollUp from './scrollUp.svg'
 import home from './home.jpg'
 import logoDark from './logoDark.png'
 import logoLight from './logoLight.png'
+import sonata from './sonata.jpg'
+import sonata1 from './sonata1.jpg'
+import torus from './torus.jpg'
+import torus1 from './torus1.jpg'
+import leczes from './leczes.jpg'
+import leczes1 from './leczes1.jpg'
+import jems from './jems.jpg'
+import superpan from './superpan.jpg'
+import superpan1 from './superpan1.jpg'
+import staria from './staria.jpg'
+import staria1 from './staria1.jpg'
+import hais from './hais.jpg'
+import hais1 from './hais1.jpg'
+import bmw from './bmw.jpg'
+import bmw1 from './bmw1.jpg'
+import special from './special.jpg'
+import special1 from './special1.jpg'
+import mercides from './mercides.png'
+import coster from './coster.jpg'
+import coster1 from './coster1.jpg'
 
 export {
   logo,
@@ -91,14 +98,7 @@ export {
   mail,
   mailIcon,
   whatsapp,
-  GMC,
-  staria,
-  BMW,
-  fordTurus,
-  lobik,
-  alansar,
   clock,
-  rayhan,
   shield,
   send,
   road,
@@ -116,12 +116,6 @@ export {
   location,
   contactus,
   review,
-  medinah1,
-  medinah,
-  jeddah1,
-  jeddah2,
-  taif1,
-  mecca1,
   snap,
   snapIcon,
   bankTransfer,
@@ -143,5 +137,25 @@ export {
   scrollUp,
   home,
   logoDark,
-  logoLight
+  logoLight,
+  sonata,
+  sonata1,
+  torus,
+  torus1,
+  leczes,
+  leczes1,
+  jems,
+  superpan,
+  superpan1,
+  staria,
+  staria1,
+  hais,
+  hais1,
+  bmw,
+  bmw1,
+  special,
+  special1,
+  mercides,
+  coster,
+  coster1
 };
