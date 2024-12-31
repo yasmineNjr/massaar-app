@@ -21,8 +21,8 @@ const ListItem = ({item}) => {
 
     return (
      <div 
-        key={id} 
-        className='flex flex-col mt-10 w-[340px] h-[600px] shadow-customGray overflow-hidden rounded-xl text-customGray cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-transparent via-gray-400 to-transparent'
+        key={id} //bg-gradient-to-r from-transparent via-gray-400 to-transparent
+        className='flex flex-col mt-10 w-[340px] h-[600px] shadow-customGray overflow-hidden rounded-xl text-customGray cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl  bg-gradient-to-r from-gray-500 to-white'
         onClick={() => clickHandler(id)}
     >
         <div className='rounded-xl relative min-w-[301px] h-[370px]'>
@@ -30,7 +30,7 @@ const ListItem = ({item}) => {
         </div>
         <div className='p-5'>
             <div className='truncate'>
-                <h1 className='text-xl font-bold text-[#ffd700]'>{name}</h1>
+                <h1 className='text-xl font-bold text-primary'>{name}</h1>
             </div>
             <div className='flex flex-row gap-2 mt-2'>
                 <FaLocationDot/>

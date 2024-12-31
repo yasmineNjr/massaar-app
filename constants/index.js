@@ -1,6 +1,5 @@
 import { 
-  mail, instagram, whatsapp, twitter, saudiBussiness, zakatax, staria, clock,  shield, send, star, road, appointment, easyBook, services, price,
-  snap,
+  saudiBussiness, zakatax, staria, clock, 
   bankTransfer,
   cashPayment,
   paymentCard,

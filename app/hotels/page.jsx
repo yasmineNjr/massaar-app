@@ -12,8 +12,8 @@ const HotelsList = () => {
           <section className={`flex flex-col ${styles.paddingY} `}>
             <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
               <div className="flex flex-row justify-between items-center w-full">
-                <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px]">
-                يتوفر لدينا {hotels.length} فنادق
+                <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary-foreground ss:leading-[100.8px] leading-[75px]">
+                يتوفر لدينا {hotels.length - 1} فنادق
                 </h1>
                 {/* <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-dimWhite ss:leading-[100.8px] leading-[75px]">
                   فرز حسب
