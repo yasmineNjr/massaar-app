@@ -161,7 +161,7 @@ const formSchema = z.object({
         </div>
         <div className="flex flex-1 justify-center items-center w-full gap-6">
             <Button styles='w-[50%]' title='إتمام'/>
-            <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز الفندق ${item.name}؟`)}/>
+            {/* <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز الفندق ${item.name}؟`)}/> */}
          </div>
           
       </form>
