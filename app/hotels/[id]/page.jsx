@@ -2,7 +2,7 @@
 
 import styles, { layout } from "@/app/style"
 import HotelReservationForm from "@/components/forms/HotelReservationForm";
-import { hotels } from "@/constants";
+import { hotels, quickBookHandler } from "@/constants";
 import Image from "next/image"
 import { useRef, useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
@@ -13,6 +13,7 @@ import { IoRestaurant } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { PiMoneyWavyFill } from "react-icons/pi";
 import ReactStars from "react-rating-stars-component";
+import { callIcon, whatsappIcon } from "@/public/assets";
 
 const HotelDetails = ({ params }) => {
 
@@ -38,13 +39,13 @@ const HotelDetails = ({ params }) => {
     <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={`${styles.heading2} text-right text-primary`}>
+          <h2 className={`${styles.heading2} text-right text-primary-foreground`}>
               حجز في الفندق {selectedHotel.name}
           </h2>
         </div>
          
         {/* <section className={`${layout.section} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}> */}
-        <section className={`flex flex-col ${styles.paddingY} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-transparent via-gray-400 to-transparent`}>
+        <section className={`flex flex-col ${styles.paddingY} rounded-xl shadow-customGray mb-10 bg-gradient-to-r from-gray-500 to-white`}>
             
           {/* <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative h-full lg:w-[50%] w-[100%] `}> */}
           <div className={`flex-1 flex flex-col ${styles.flexCenter} xl:px-0 sm:px-16 px-6 md:my-0 my-5 relative w-full `}>
@@ -81,7 +82,7 @@ const HotelDetails = ({ params }) => {
 
               <div className='p-5'>
                 <div >
-                    <h1 className='text-xl text-customSecondary'>{selectedHotel.name}</h1>
+                    <h1 className='text-xl text-primary font-bold'>{selectedHotel.name}</h1>
                 </div>
                 <div className='flex flex-row gap-2 mt-2'>
                     <FaLocationDot/>
@@ -109,7 +110,28 @@ const HotelDetails = ({ params }) => {
                     {selectedHotel.breakfast && <MdFreeBreakfast size={24}/>}
                     {selectedHotel.meal && <IoRestaurant size={24}/>}
                 </div>
-            </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex flex-row justify-between p-5 w-full md:w-[50%] mb-3">
+                  <Image 
+                      src={whatsappIcon} 
+                      alt='whatsapp' 
+                      width={75}
+                      className={`object-contain cursor-pointer transition-transform duration-300 hover:scale-125 `}
+                      onClick={(e) => {e.stopPropagation(); quickBookHandler(`مرحباً, هل يمكنك مساعدتي في عملية حجز الفندق ${selectedHotel.name} `)}}
+                  />
+                  <a href="tel:+966566633161" target="_blank" rel="noopener noreferrer">
+                    <Image 
+                        src={callIcon} 
+                        alt='call' 
+                        width={75}
+                        className={`object-contain cursor-pointer transition-transform duration-300 hover:scale-125 `}
+                        onClick={(e) => {e.stopPropagation();}}
+                    />
+                  </a>
+                </div>
+              </div>
+               
 
 
             </div>
