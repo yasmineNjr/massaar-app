@@ -16,7 +16,7 @@ const PopularQuestions = () => {
           <section className={`flex flex-col ${styles.paddingY} sm:py-16 py-6 `}>
             <div className={`flex-1 flex flex-col xl:px-0 sm:px-16 px-6 `}>
               <div className="flex flex-col w-full text-right">
-                <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary ss:leading-[100.8px] leading-[75px]">
+                <h1 className="flex-1 font-poppins font-semibold ss:text-[42px] text-[22px] text-primary-foreground ss:leading-[100.8px] leading-[75px]">
                 الأسئلة المتكررة
                 </h1>
                 <p className={`${styles.paragraph}`}>

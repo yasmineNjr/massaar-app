@@ -59,8 +59,12 @@ import logoDark from './logoDark.png'
 import logoLight from './logoLight.png'
 import sonata from './sonata.jpg'
 import sonata1 from './sonata1.jpg'
+import sonata2 from './sonata2.jpg'
+import sonata3 from './sonata3.jpg'
 import torus from './torus.jpg'
 import torus1 from './torus1.jpg'
+import torus2 from './torus2.jpeg'
+import torus3 from './torus3.jpg'
 import leczes from './leczes.jpg'
 import leczes1 from './leczes1.jpg'
 import jems from './jems.jpg'
@@ -140,8 +144,12 @@ export {
   logoLight,
   sonata,
   sonata1,
+  sonata2,
+  sonata3,
   torus,
   torus1,
+  torus2,
+  torus3,
   leczes,
   leczes1,
   jems,

@@ -5,6 +5,8 @@ import { close, logo, logoDark, logoLight, menu } from '../public/assets'
 import { navLinks } from '../constants';
 import Image from 'next/image';
 import NavLink from './NavLink';
+import { GiShoppingCart } from "react-icons/gi";
+import { useRouter } from 'next/navigation';
 // import {
 //   DropdownMenu,
 //   DropdownMenuContent,
@@ -17,10 +19,15 @@ import NavLink from './NavLink';
 function NavBar() {
 
   const [toggle, setToggle] = useState(false);
+  const router = useRouter();
   
   const clickMenu = () => {
     setToggle((prev) => !prev)
     console.log('click')
+  }
+
+  const orderHndler = () => {
+    router.push('/orders');
   }
 
   return (
@@ -50,7 +57,12 @@ function NavBar() {
        
         
       </ul>
-     
+
+      <div className='p-5 mb-1 mr-2 cursor-pointer transition-transform duration-300 hover:scale-125 hover:shadow-2xl'
+            onClick={orderHndler}>
+        <GiShoppingCart size={24}/>
+      </div>
+
       <div className='md:hidden flex flex-1 justify-end items-center'>
           
         <Image 

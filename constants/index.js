@@ -30,7 +30,11 @@ import {
   superpan1,
   hais1,
   sonata,
-  sonata1
+  sonata1,
+  sonata2,
+  sonata3,
+  torus2,
+  torus3
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -126,21 +130,21 @@ export const navLinks = [
       link: "/questions",
       title: "الأسئلة المتكررة",
     },
-    {
-      id: "contact",
-      link: "/contact",
-      title: "اتصل بنا",
-    },
+    // {
+    //   id: "contact",
+    //   link: "/contact",
+    //   title: "اتصل بنا",
+    // },
     // {
     //   id: "signin",
     //   link: "/contact",
     //   title: "تسجيل الدخول",
     // },
-    {
-      id: "dashboard",
-      link: "/dashboard",
-      title: "لوحة التحكم",
-    },
+    // {
+    //   id: "dashboard",
+    //   link: "/dashboard",
+    //   title: "لوحة التحكم",
+    // },
 ];
   
 export const stats = [
@@ -497,7 +501,7 @@ export const cars = [
     GPS: false,
     automatic: true,
     mainImg: sonata,
-    imgs: [ sonata, sonata1, sonata1],
+    imgs: [ sonata1, sonata2, sonata3],
     hours: '80'
   },
   {
@@ -512,7 +516,7 @@ export const cars = [
     GPS: false,
     automatic: true,
     mainImg: torus,
-    imgs: [ torus, torus1, torus1],
+    imgs: [ torus1, torus2, torus3],
     hours: '80'
   },
   {
