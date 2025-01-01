@@ -21,18 +21,18 @@ function NavBar() {
 
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
-  // const { orders } = useOrders(); // Get orders from context
+  const { orders } = useOrders(); // Get orders from context
   const [isClient, setIsClient] = useState(false);
-  const [ordersCount, setOrdersCount] = useState(0);
+  // const [ordersCount, setOrdersCount] = useState(0);
 
-  useEffect(() => {
-    setIsClient(true);
+  // useEffect(() => {
+  //   setIsClient(true);
 
-    if (typeof window !== "undefined") {
-      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-      setOrdersCount(orders.length);
-    }
-  }, []);
+  //   if (typeof window !== "undefined") {
+  //     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+  //     setOrdersCount(orders.length);
+  //   }
+  // }, []);
   
   const clickMenu = () => {
     setToggle((prev) => !prev)
@@ -76,9 +76,9 @@ function NavBar() {
         onClick={orderHndler}
       >
         <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
-        {isClient && ordersCount > 0 && (
+        {orders.length > 0 && (
           <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-            {ordersCount}
+            {orders.length}
           </span>
         )}
       </div>
@@ -89,11 +89,11 @@ function NavBar() {
           onClick={orderHndler}
         >
           <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
-          {isClient && ordersCount > 0 && (
-            <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-              {ordersCount}
-            </span>
-          )}
+          {orders.length > 0 && (
+          <span className="absolute top-1 right-1.5 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            {orders.length}
+          </span>
+        )}
         </div>
         <Image 
           src={toggle ? close : menu} 

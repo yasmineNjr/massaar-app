@@ -9,20 +9,20 @@ import { useOrders } from '@/context/AppContext'
 
 const page = () => {
 
-  const { clearOrders } = useOrders();
-  const [isClient, setIsClient] = useState(false);
-  const [ordersLst, setOrdersLst] = useState([]);
+  const { clearOrders, orders } = useOrders();
+  // const [isClient, setIsClient] = useState(false);
+  // const [ordersLst, setOrdersLst] = useState([]);
 
-  useEffect(() => {
-    setIsClient(true);
+  // useEffect(() => {
+  //   setIsClient(true);
 
-    if (typeof window !== "undefined") {
-      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-      setOrdersLst(orders);
-    }
-  }, []);
+  //   if (typeof window !== "undefined") {
+  //     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+  //     setOrdersLst(orders);
+  //   }
+  // }, []);
 
-  const data = ordersLst;
+  const data = orders;
 
   return(
   <div className="bg-transparent w-full overflow-hidden">

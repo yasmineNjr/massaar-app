@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
@@ -10,22 +10,31 @@ export const useOrders = () => useContext(OrderContext);
 
 // Provider component
 export const OrderProvider = ({ children }) => {
-  const [orders, setOrders] = useState(() => {
-    // Initialize from localStorage
-    const savedOrders = localStorage.getItem('orders');
-    return savedOrders ? JSON.parse(savedOrders) : [];
-  });
+  const [orders, setOrders] = useState([]);
+  const [isInitialized, setIsInitialized] = useState(false); // Tracks if localStorage has been read
 
-  // Update localStorage when orders change
+  // Load orders from localStorage on the first render
   useEffect(() => {
-    localStorage.setItem('orders', JSON.stringify(orders));
-  }, [orders]);
+    if (typeof window !== 'undefined') {
+      const savedOrders = localStorage.getItem('orders');
+      if (savedOrders) {
+        setOrders(JSON.parse(savedOrders));
+      }
+      setIsInitialized(true); // Mark initialization complete
+    }
+  }, []);
+
+  // Update localStorage whenever the orders state changes
+  useEffect(() => {
+    if (isInitialized && typeof window !== 'undefined') {
+      localStorage.setItem('orders', JSON.stringify(orders));
+    }
+  }, [orders, isInitialized]);
 
   // Add order function
   const addOrder = (order) => {
     setOrders((prevOrders) => [...prevOrders, order]);
   };
-
 
   // Delete an order by ID
   const deleteOrder = (orderId) => {
