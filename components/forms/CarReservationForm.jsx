@@ -94,6 +94,7 @@ const formSchema = z.object({
     const handleAddOrder = () => {
       const newOrder = {
         id: Date.now(),
+        type: 'car',
         product: "السيارة "+ item.name,
         name: name,
         phone: phone,

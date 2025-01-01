@@ -13,12 +13,13 @@ const page = () => {
   const { clearOrders, orders } = useOrders();
   const router = useRouter()
   const data = orders;
-  console.log(data)
+  
   const formatOrder = (order) => {
     const trips = Array.isArray(order.trips)
-    ? order.trips.map((trip) => `الوجهة: ${trip.name}`).join('\n    ')
+    ? order.trips.map((trip) => trip.title).join(', ')
     : 'لا يوجد';
-    return `
+    const result = order.type === 'car' ?
+    `
     المنتج: ${order.product}
     الاسم: ${order.name}
     الهاتف: ${order.phone}
@@ -31,7 +32,21 @@ const page = () => {
     ${trips}
     السعر: ${order.price}
     الكمية: ${order.quantity}
+    `
+    :
+    `
+    المنتج: ${order.product}
+    الاسم: ${order.name}
+    الهاتف: ${order.phone}
+    البريد الإلكتروني: ${order.email}
+    التاريخ: ${order.date}
+    الأيام: ${order.hours}
+    الملاحظات: ${order.notes}
+    الدفع: ${order.payment}
+    السعر: ${order.price}
+    الكمية: ${order.quantity}
     `;
+    return result;
   };
   
   const completeOrderHandler = () => {

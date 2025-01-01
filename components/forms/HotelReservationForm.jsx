@@ -44,13 +44,27 @@ const formSchema = z.object({
     const router = useRouter();
     const [payment, setPayment] = useState('تحويل مصرفي مباشر')
     const [totalCost, setTotalCost] = useState(0)
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [date, setDate] = useState('');
+    const [notes, setNotes] = useState('');
+    const [days, setDays] = useState(0);
 
     const { addOrder } = useOrders();
     
     const handleAddOrder = () => {
       const newOrder = {
         id: Date.now(),
+        type: 'hotel',
         product: "الفندق "+ item.name,
+        name: name,
+        phone: phone,
+        email: email,
+        date: date,
+        days: days,
+        notes: notes,
+        payment: payment,
         price: '0',
         quantity: '1',
       };
@@ -61,7 +75,24 @@ const formSchema = z.object({
     const onSubmit = (data) => {
       console.log(data);
     };
-
+    const handlePhoneChange = (value) => {
+      setPhone(value);
+    };
+    const handleDateChange = (value) => {
+      setDate(value);
+    };
+    const daysHandler = (value) => {
+      const days = Number(value) || 0; // Ensure value is a number
+      setDays(days);
+  
+      // // Update total cost based on waiting hours
+      // setTotalCost((prev) => {
+      //   const previousWaitingCost = waitingHours *  item.hours;
+      //   const newWaitingCost = hours * item.hours;
+  
+      //   return prev - previousWaitingCost + newWaitingCost;
+      // });
+    };
    
     return (
     <Form {...form}>
@@ -75,6 +106,7 @@ const formSchema = z.object({
             placeholder="John Doe"
             iconSrc="/assets/user.svg"
             iconAlt="user"
+            onChange={(e) => setName(e.target.value)}
           />
 
           {/* EMAIL & PHONE */}
@@ -84,6 +116,7 @@ const formSchema = z.object({
               name="phone"
               label="رقم الجوال"
               placeholder="(555) 123-4567"
+              onChange={handlePhoneChange} 
           /> 
 
           <CustomFormField
@@ -94,6 +127,7 @@ const formSchema = z.object({
               placeholder="johndoe@gmail.com"
               iconSrc="/assets/email.svg"
               iconAlt="email"
+              onChange={(e) => setEmail(e.target.value)}
           />
 
           {/* HOURS & DATE */}
@@ -104,6 +138,8 @@ const formSchema = z.object({
             label="تاريخ الحجز"
             showTimeSelect
             dateFormat="MM/dd/yyyy  -  h:mm aa"
+            selected={date}
+            onChange={handleDateChange} 
           />
 
           
@@ -115,6 +151,7 @@ const formSchema = z.object({
               placeholder="12"
               iconSrc="/assets/clock.svg"
               iconAlt="hours"
+              onChange={(e) => daysHandler(e.target.value)}
           />
                 
 
@@ -125,6 +162,7 @@ const formSchema = z.object({
             name="details"
             label="معلومات إضافية(إختياري)"
             placeholder="ملاحظات حول الطلب."
+            onChange={(e) => setNotes(e.target.value)}
           />
 
 
