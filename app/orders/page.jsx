@@ -14,14 +14,34 @@ const page = () => {
   const router = useRouter()
   const data = orders;
   console.log(data)
+  const formatOrder = (order) => {
+    const trips = Array.isArray(order.trips)
+    ? order.trips.map((trip) => `الوجهة: ${trip.name}`).join('\n    ')
+    : 'لا يوجد';
+    return `
+    المنتج: ${order.product}
+    الاسم: ${order.name}
+    الهاتف: ${order.phone}
+    البريد الإلكتروني: ${order.email}
+    التاريخ: ${order.date}
+    ساعات الانتظار: ${order.hours}
+    الملاحظات: ${order.notes}
+    الدفع: ${order.payment}
+    الرحلات: 
+    ${trips}
+    السعر: ${order.price}
+    الكمية: ${order.quantity}
+    `;
+  };
+  
   const completeOrderHandler = () => {
-   
     const phoneNumber = "+963988032201"; // Replace with your number
     const message = orders.map(formatOrder).join('\n\n'); // Combine all orders
     const encodedMessage = encodeURIComponent(message); // Encode for URL
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    clearOrders();
-    router.push('/');
+    window.open(url, '_blank'); // Open WhatsApp
+    // clearOrders();
+    // router.push('/');
   }
 
   return(

@@ -102,7 +102,7 @@ const formSchema = z.object({
         hours: waitingHours,
         notes: notes,
         payment: payment,
-        trips: selectedTrips,
+        trips: Array.isArray(selectedTrips) ? selectedTrips : [selectedTrips],
         price: totalCost,
         quantity: '1',
       };
