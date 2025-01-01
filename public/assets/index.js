@@ -81,6 +81,10 @@ import special1 from './special1.jpg'
 import mercides from './mercides.png'
 import coster from './coster.jpg'
 import coster1 from './coster1.jpg'
+import mecca1 from './mecca1.jpg'
+import mecca2 from './mecca2.jpg'
+import medina1 from './medina1.jpg'
+import medina2 from './medina2.jpg'
 
 export {
   logo,
@@ -165,5 +169,9 @@ export {
   special1,
   mercides,
   coster,
-  coster1
+  coster1,
+  mecca1,
+  mecca2,
+  medina1,
+  medina2
 };

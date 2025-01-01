@@ -34,7 +34,12 @@ import {
   sonata2,
   sonata3,
   torus2,
-  torus3
+  torus3,
+  mecca1,
+  mecca2,
+  medinah1,
+  medina1,
+  medina2
 } from "@/public/assets";
 import { GrServices } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
@@ -668,7 +673,7 @@ export const hotels = [
     conditioning : true,
     breakfast: true,
     meal: true,
-    mainImg: clock,
+    mainImg: mecca1,
     // imgs: [ clock, lobik, rayhan]
   },
   {
@@ -766,25 +771,11 @@ export const hotels = [
     conditioning : true,
     breakfast: true,
     meal: true,
-    mainImg: clock,
+    mainImg: mecca2,
     // imgs: [ clock, lobik, rayhan]
   },
   {
     id: 9,
-    name: "ابراج مكة",
-    location: "مكة المكرمة",
-    description: "امام المسجد الحرام",
-    pricePerHour: '$100',
-    rating: 5,
-    wifi: true,
-    conditioning : true,
-    breakfast: true,
-    meal: true,
-    mainImg: clock,
-    // imgs: [ clock, lobik, rayhan]
-  },
-  {
-    id: 10,
     name: "ابراج مكة",
     location: "مكة المكرمة",
     description: "امام المسجد الحرام",
@@ -1032,7 +1023,7 @@ export const hotels = [
     conditioning : true,
     breakfast: true,
     meal: true,
-    mainImg: clock,
+    mainImg: medina1,
     // imgs: [ clock, lobik, rayhan]
   },
   {
@@ -1046,7 +1037,7 @@ export const hotels = [
     conditioning : true,
     breakfast: true,
     meal: true,
-    mainImg: clock,
+    mainImg: medina2,
     // imgs: [ clock, lobik, rayhan]
   },
   {
@@ -1055,7 +1046,7 @@ export const hotels = [
     location: "المدينه المنورة",
     description: "الجهة الشماليه من الحرم -  صف أول",
     pricePerHour: '$100',
-    rating: 5,
+    rating: 4,
     wifi: true,
     conditioning : true,
     breakfast: true,
@@ -1083,7 +1074,7 @@ export const hotels = [
     location: "المدينه المنورة",
     description: "الجهة الشماليه من الحرم - صف أول",
     pricePerHour: '$100',
-    rating: 5,
+    rating: 4,
     wifi: true,
     conditioning : true,
     breakfast: true,
@@ -1111,7 +1102,7 @@ export const hotels = [
     location: "المدينه المنورة",
     description: "الجهة الشماليه من الحرم - صف أول",
     pricePerHour: '$100',
-    rating: 5,
+    rating: 4,
     wifi: true,
     conditioning : true,
     breakfast: true,
@@ -1125,7 +1116,7 @@ export const hotels = [
     location: "المدينه المنورة",
     description: "الجهة الشماليه من الحرم - صف أول",
     pricePerHour: '$100',
-    rating: 5,
+    rating: 4,
     wifi: true,
     conditioning : true,
     breakfast: true,
@@ -1153,7 +1144,7 @@ export const hotels = [
     location: "المدينه المنورة",
     description: "الجهة الشماليه من الحرم - صف أول",
     pricePerHour: '$100',
-    rating: 5,
+    rating: 4,
     wifi: true,
     conditioning : true,
     breakfast: true,

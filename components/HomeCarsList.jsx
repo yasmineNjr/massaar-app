@@ -56,7 +56,8 @@ const HomeCarsList = () => {
                         <h1 >{car.model} - {car.name}</h1>
                         <p className="text-sm overflow-y-auto prompt">{car.description}</p>
                         <div className='flex flex-row justify-between items-center'>
-                          <p className=" text-sm">{car.pricePerHour}</p>
+                          <p className=" text-sm"></p>
+                          {/* {car.pricePerHour} */}
                           <div className='flex flex-row justify-between items-center gap-4'>
                             <Image 
                               src={whatsappIcon} 

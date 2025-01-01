@@ -66,7 +66,8 @@ const PopularHotels = () => {
                   <h1 >{hotel.name}</h1>
                   <p className="text-sm overflow-y-auto prompt">{hotel.description}</p>
                   <div className='flex flex-row justify-between items-center'>
-                    <p className=" text-sm">{hotel.pricePerHour}</p>
+                    <p className=" text-sm"></p>
+                    {/* {hotel.pricePerHour} */}
                     <div className='flex flex-row justify-between items-center gap-4'>
                       <Image 
                         src={whatsappIcon} 
