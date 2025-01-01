@@ -82,8 +82,9 @@ const formSchema = z.object({
       setDate(value);
     };
     const daysHandler = (value) => {
-      const days = Number(value) || 0; // Ensure value is a number
-      setDays(days);
+      const d = Number(value) || 0; // Ensure value is a number
+      setDays(d);
+      console.log(d)
   
       // // Update total cost based on waiting hours
       // setTotalCost((prev) => {
@@ -146,7 +147,7 @@ const formSchema = z.object({
           <CustomFormField
               fieldType={FormFieldType.NUMRICINPUT}
               control={form.control}
-              name="hours"
+              name="days"
               label="عدد الأيام"
               placeholder="12"
               iconSrc="/assets/clock.svg"

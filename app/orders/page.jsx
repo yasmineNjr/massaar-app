@@ -13,11 +13,20 @@ const page = () => {
   const { clearOrders, orders } = useOrders();
   const router = useRouter()
   const data = orders;
+  console.log(data)
+
+  const totalCost = orders.reduce((accumulator, currentItem) => {
+    const quantity = parseInt(currentItem.quantity, 10); // Convert quantity to a number
+    return accumulator + (currentItem.price * quantity);
+  }, 0);
   
   const formatOrder = (order) => {
-    const trips = Array.isArray(order.trips)
-    ? order.trips.map((trip) => trip.title).join(', ')
-    : 'لا يوجد';
+    // const trips = Array.isArray(order.trips)
+    // ? order.trips.map((trip) => trip.title).join(', ')
+    // : 'لا يوجد';
+    const trips = Array.isArray(order.trips) && order.trips.length > 0 
+                  ? order.trips.join(', ') 
+                  : 'لا يوجد';
     const result = order.type === 'car' ?
     `
     المنتج: ${order.product}
@@ -40,7 +49,7 @@ const page = () => {
     الهاتف: ${order.phone}
     البريد الإلكتروني: ${order.email}
     التاريخ: ${order.date}
-    الأيام: ${order.hours}
+    الأيام: ${order.days}
     الملاحظات: ${order.notes}
     الدفع: ${order.payment}
     السعر: ${order.price}
@@ -50,13 +59,13 @@ const page = () => {
   };
   
   const completeOrderHandler = () => {
-    const phoneNumber = "+963988032201"; // Replace with your number
+    const phoneNumber = "+963992679607"; // Replace with your number
     const message = orders.map(formatOrder).join('\n\n'); // Combine all orders
     const encodedMessage = encodeURIComponent(message); // Encode for URL
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(url, '_blank'); // Open WhatsApp
-    // clearOrders();
-    // router.push('/');
+    clearOrders();
+    router.push('/');
   }
 
   return(
@@ -74,7 +83,8 @@ const page = () => {
                 data.length > 0 
                 ?
                 <>
-                  <DataTable data={data} columns={orderColumns} source='orders' total='600'/>
+                  <DataTable data={data} columns={orderColumns} source='orders' total={totalCost}/>
+
                   <div className="flex flex-1 justify-center items-center w-full gap-6 mt-10 h-[70px]">
                     <Button styles='w-[50%]' title='إتمام' onClickHandler={completeOrderHandler}/>
                     <Button styles='w-[50%]' title='إفراغ السلة' onClickHandler={clearOrders}/>

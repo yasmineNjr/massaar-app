@@ -43,7 +43,7 @@ const formSchema = z.object({
     const [payment, setPayment] = useState('الدفع أثناء التوصيل')
     const [bookWay, setBookWay] = useState('book')
     const [totalCost, setTotalCost] = useState(0)
-    const [selectedTrips, setSelectedTrips] = useState({});
+    const [selectedTrips, setSelectedTrips] = useState([]);
     const [waitingHours, setWaitingHours] = useState(0);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -69,16 +69,23 @@ const formSchema = z.object({
     };
   
 
-    const handleTripChange = (id, cost, checked) => {
-      // Update the selected trips
-      setSelectedTrips((prev) => ({
-        ...prev,
-        [id]: checked,
-      }));
-  
-      // Update the total cost
+    const handleTripChange = (id, title, cost, checked) => {
+      // Update selectedTrips to store only titles of selected trips
+      setSelectedTrips((prev) => {
+        // Ensure prev is always an array
+        const currentSelectedTrips = Array.isArray(prev) ? prev : [];
+    
+        if (checked) {
+          // Add the title to selectedTrips if checked
+          return [...currentSelectedTrips, title];
+        } else {
+          // Remove the title from selectedTrips if unchecked
+          return currentSelectedTrips.filter((tripTitle) => tripTitle !== title);
+        }
+      });
+    
+      // Update the total cost based on whether the trip is checked
       setTotalCost((prev) => (checked ? prev + cost : prev - cost));
-      // console.log(cost)
     };
 
     const handlePhoneChange = (value) => {
@@ -238,7 +245,11 @@ const formSchema = z.object({
                 control={form.control}
                 name={trip.id}
                 label={trip.title}
-                onCheckedChange={(checked) => handleTripChange(trip.id, Number(trip.price[item.title]), checked)}
+                //onCheckedChange={(checked) => handleTripChange(trip.id, Number(trip.price[item.title]), checked)}
+                onCheckedChange={(checked) => {
+                  // Assuming `trip.price` is an object, and `item.title` is used to get the correct price for each trip
+                  handleTripChange(trip.id, trip.title, Number(trip.price[item.title]), checked);
+                }}
               />
             
             ))}
