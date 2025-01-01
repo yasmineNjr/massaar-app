@@ -7,6 +7,7 @@ import Image from 'next/image';
 import NavLink from './NavLink';
 import { GiShoppingCart } from "react-icons/gi";
 import { useRouter } from 'next/navigation';
+import { useOrders } from '@/context/AppContext';
 // import {
 //   DropdownMenu,
 //   DropdownMenuContent,
@@ -20,6 +21,7 @@ function NavBar() {
 
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
+  const { orders } = useOrders(); // Get orders from context
   
   const clickMenu = () => {
     setToggle((prev) => !prev)
@@ -58,13 +60,30 @@ function NavBar() {
         
       </ul>
 
-      <div className='p-5 mb-1 mr-2 cursor-pointer transition-transform duration-300 hover:scale-125 hover:shadow-2xl'
-            onClick={orderHndler}>
-        <GiShoppingCart size={24}/>
+      <div
+        className="relative hidden md:block p-5 mb-1 mr-2 cursor-pointer "
+        onClick={orderHndler}
+      >
+        <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
+        {orders.length > 0 && (
+          <span className="absolute top-1 right-1.5 bg-gold text-dimWhite text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            {orders.length}
+          </span>
+        )}
       </div>
 
       <div className='md:hidden flex flex-1 justify-end items-center'>
-          
+        <div
+          className="relative p-5 mb-1 mr-2 cursor-pointer "
+          onClick={orderHndler}
+        >
+          <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
+          {orders.length > 0 && (
+            <span className="absolute top-1 right-1.5 bg-gold text-dimWhite text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {orders.length}
+            </span>
+          )}
+        </div>
         <Image 
           src={toggle ? close : menu} 
           alt='menu' 

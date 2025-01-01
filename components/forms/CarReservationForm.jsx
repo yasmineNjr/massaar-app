@@ -13,6 +13,8 @@ import FileUploader from "../FileUploadr"
 import { useState } from "react"
 import Button from "../Button"
 import { quickBookHandler, trips } from "@/constants"
+import { useOrders } from "@/context/AppContext"
+import { useRouter } from "next/navigation"
 
 
 export const FormFieldType = {
@@ -36,7 +38,9 @@ const formSchema = z.object({
   const CarReservationForm = ( {item} ) => {
     
     const form = useForm();
-    const [payment, setPayment] = useState('تحويل مصرفي مباشر')
+    const router = useRouter();
+
+    const [payment, setPayment] = useState('الدفع أثناء التوصيل')
     const [bookWay, setBookWay] = useState('book')
     const [totalCost, setTotalCost] = useState(0)
     const [selectedTrips, setSelectedTrips] = useState({});
@@ -70,6 +74,19 @@ const formSchema = z.object({
       // Update the total cost
       setTotalCost((prev) => (checked ? prev + cost : prev - cost));
       // console.log(cost)
+    };
+
+    const { addOrder } = useOrders();
+
+    const handleAddOrder = () => {
+      const newOrder = {
+        id: Date.now(),
+        product: item.name,
+        price: totalCost,
+        quantity: '1',
+      };
+      addOrder(newOrder);
+      router.push('/orders')
     };
    
     return (
@@ -249,7 +266,7 @@ const formSchema = z.object({
             <h2>الكلفة الإجمالية: {totalCost}</h2>
          </div>
          <div className="flex flex-1 justify-center items-center w-full gap-6">
-            <Button styles='w-[50%]' title='إتمام'/>
+            <Button styles='w-[50%]' title='إتمام' onClickHandler={handleAddOrder}/>
             {/* <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز السيارة ${item.name}؟`)}/> */}
          </div>
           

@@ -5,10 +5,14 @@ import styles from '../style'
 import { DataTable } from '@/components/table/DataTable'
 import { cars, orders } from '@/constants'
 import { orderColumns } from '@/components/table/orderColumns'
+import Button from '@/components/Button'
+import { useOrders } from '@/context/AppContext'
 
 const page = () => {
 
-  const data = orders
+  const { orders, clearOrders } = useOrders();
+
+  const data = orders;
 
   return(
   <div className="bg-transparent w-full overflow-hidden">
@@ -21,7 +25,23 @@ const page = () => {
                 سلة الحجوزات
                 </h1>
               </div>
-              <DataTable data={data} columns={orderColumns} source='orders' total='600'/>
+              {
+                data.length > 0 
+                ?
+                <>
+                  <DataTable data={data} columns={orderColumns} source='orders' total='600'/>
+                  <div className="flex flex-1 justify-center items-center w-full gap-6 mt-10 h-[70px]">
+                    <Button styles='w-[50%]' title='إتمام'/>
+                    <Button styles='w-[50%]' title='إفراغ السلة' onClickHandler={clearOrders}/>
+                  </div>
+                </>
+                :
+                <div className='text-dimWhite font-bold text-center w-full text-[20px] p-10'>
+                  <p>لا يوجد حجوزات </p>
+                </div>
+              }
+
+             
             </div>
           </section>
         </div>

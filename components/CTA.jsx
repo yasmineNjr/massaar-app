@@ -8,7 +8,7 @@ const CTA = () => (
     <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col rounded-[20px] bg-gradient-to-r from-gray-300 to-white shadow-customGray`}>
       <div className='flex flex-1 flex-col'>
         <h2 className={`${styles.heading2} text-primary`}>اختبر خدماتنا الآن!</h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`font-poppins font-bold  text-[18px] leading-[30.8px] max-w-[470px] mt-5 text-customSecondary`}>
         استعد لتجربة حج وعمرة مميزة ومريحة مع خدماتنا المتخصصة في حجز السيارات والفنادق. نوفر لك خيارات متنوعة تتيح لك التنقل بسهولة، سواءً كنت ترغب بسيارة مع سائق أو بدون، وأفضل أماكن الإقامة التي تضمن لك الراحة والطمأنينة خلال رحلتك المقدسة. انضم إلينا الآن واجعل رحلتك أسهل وأقرب.
         </p>
       </div>
