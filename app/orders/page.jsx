@@ -59,7 +59,7 @@ const page = () => {
   };
   
   const completeOrderHandler = () => {
-    const phoneNumber = "+963992679607"; // Replace with your number
+    const phoneNumber = "+966566633161"; // Replace with your number
     const message = orders.map(formatOrder).join('\n\n'); // Combine all orders
     const encodedMessage = encodeURIComponent(message); // Encode for URL
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
