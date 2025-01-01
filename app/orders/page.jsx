@@ -1,18 +1,28 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../style'
 import { DataTable } from '@/components/table/DataTable'
-import { cars, orders } from '@/constants'
 import { orderColumns } from '@/components/table/orderColumns'
 import Button from '@/components/Button'
 import { useOrders } from '@/context/AppContext'
 
 const page = () => {
 
-  const { orders, clearOrders } = useOrders();
+  const { clearOrders } = useOrders();
+  const [isClient, setIsClient] = useState(false);
+  const [ordersLst, setOrdersLst] = useState([]);
 
-  const data = orders;
+  useEffect(() => {
+    setIsClient(true);
+
+    if (typeof window !== "undefined") {
+      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+      setOrdersLst(orders);
+    }
+  }, []);
+
+  const data = ordersLst;
 
   return(
   <div className="bg-transparent w-full overflow-hidden">
