@@ -16,7 +16,7 @@ const page = () => {
   console.log(data)
   const completeOrderHandler = () => {
    
-    const phoneNumber = "+963955502266"; // Replace with your number
+    const phoneNumber = "+963988032201"; // Replace with your number
     const message = msg;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
