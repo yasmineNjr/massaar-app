@@ -6,23 +6,24 @@ import { DataTable } from '@/components/table/DataTable'
 import { orderColumns } from '@/components/table/orderColumns'
 import Button from '@/components/Button'
 import { useOrders } from '@/context/AppContext'
+import { useRouter } from 'next/navigation'
 
 const page = () => {
 
   const { clearOrders, orders } = useOrders();
-  // const [isClient, setIsClient] = useState(false);
-  // const [ordersLst, setOrdersLst] = useState([]);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-
-  //   if (typeof window !== "undefined") {
-  //     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-  //     setOrdersLst(orders);
-  //   }
-  // }, []);
-
+  const router = useRouter()
   const data = orders;
+  console.log(data)
+  const completeOrderHandler = () => {
+   
+    const phoneNumber = "+963955502266"; // Replace with your number
+    const message = msg;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+
+    clearOrders();
+    router.push('/');
+  }
 
   return(
   <div className="bg-transparent w-full overflow-hidden">
@@ -41,7 +42,7 @@ const page = () => {
                 <>
                   <DataTable data={data} columns={orderColumns} source='orders' total='600'/>
                   <div className="flex flex-1 justify-center items-center w-full gap-6 mt-10 h-[70px]">
-                    <Button styles='w-[50%]' title='إتمام'/>
+                    <Button styles='w-[50%]' title='إتمام' onClickHandler={completeOrderHandler}/>
                     <Button styles='w-[50%]' title='إفراغ السلة' onClickHandler={clearOrders}/>
                   </div>
                 </>
@@ -61,3 +62,17 @@ const page = () => {
 }
 
 export default page
+
+
+
+// const [isClient, setIsClient] = useState(false);
+  // const [ordersLst, setOrdersLst] = useState([]);
+
+  // useEffect(() => {
+  //   setIsClient(true);
+
+  //   if (typeof window !== "undefined") {
+  //     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+  //     setOrdersLst(orders);
+  //   }
+  // }, []);

@@ -45,6 +45,11 @@ const formSchema = z.object({
     const [totalCost, setTotalCost] = useState(0)
     const [selectedTrips, setSelectedTrips] = useState({});
     const [waitingHours, setWaitingHours] = useState(0);
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [date, setDate] = useState('');
+    const [notes, setNotes] = useState('');
 
     const onSubmit = (data) => {
       console.log(data);
@@ -76,12 +81,28 @@ const formSchema = z.object({
       // console.log(cost)
     };
 
+    const handlePhoneChange = (value) => {
+      setPhone(value);
+    };
+
+    const handleDateChange = (value) => {
+      setDate(value);
+    };
+
     const { addOrder } = useOrders();
 
     const handleAddOrder = () => {
       const newOrder = {
         id: Date.now(),
         product: "السيارة "+ item.name,
+        name: name,
+        phone: phone,
+        email: email,
+        date: date,
+        hours: waitingHours,
+        notes: notes,
+        payment: payment,
+        trips: selectedTrips,
         price: totalCost,
         quantity: '1',
       };
@@ -101,6 +122,7 @@ const formSchema = z.object({
             placeholder="John Doe"
             iconSrc="/assets/user.svg"
             iconAlt="user"
+            onChange={(e) => setName(e.target.value)}
           />
 
         
@@ -110,6 +132,8 @@ const formSchema = z.object({
               name="phone"
               label="رقم الجوال"
               placeholder="(555) 123-4567"
+              value={phone}
+              onChange={handlePhoneChange} 
           /> 
 
           <CustomFormField
@@ -120,6 +144,7 @@ const formSchema = z.object({
               placeholder="johndoe@gmail.com"
               iconSrc="/assets/email.svg"
               iconAlt="email"
+              onChange={(e) => setEmail(e.target.value)}
           />
 
           {/* HOURS & DATE */}
@@ -130,6 +155,8 @@ const formSchema = z.object({
               label="تاريخ الحجز"
               showTimeSelect
               dateFormat="MM/dd/yyyy  -  h:mm aa"
+              selected={date}
+              onChange={handleDateChange} 
           />
             
           <CustomFormField
@@ -150,6 +177,7 @@ const formSchema = z.object({
             name="details"
             label="معلومات إضافية(إختياري)"
             placeholder="ملاحظات حول الطلب."
+            onChange={(e) => setNotes(e.target.value)}
           />
           {/* 
           <CustomFormField

@@ -23,7 +23,7 @@ import { FormFieldType } from "./forms/CarReservationForm";
 
 const RenderField= ({field, props}) => {
     
-    const { fieldType, iconSrc, iconAlt, placeholder, showTimeSelect, dateFormat, renderSkeleton } = props;
+    const { fieldType, iconSrc, iconAlt, placeholder, showTimeSelect, dateFormat, renderSkeleton, onChange, selected } = props;
     
     switch(fieldType){
         case FormFieldType.INPUT:
@@ -43,6 +43,10 @@ const RenderField= ({field, props}) => {
                             placeholder={placeholder}
                             {...field}
                             className="shad-input border-0 text-customSecondary"
+                            onChange={(e) => {
+                                field.onChange(e); // Ensure react-hook-form updates its state
+                                props.onChange?.(e); // Trigger the external onChange handler if provided
+                              }}
                         />
                     </FormControl>
                 </div>
@@ -84,6 +88,10 @@ const RenderField= ({field, props}) => {
                     {...field}
                     className="shad-textArea text-customSecondary"
                     disabled={props.disabled}
+                    onChange={(e) => {
+                        field.onChange(e); // Ensure react-hook-form updates its state
+                        props.onChange?.(e); // Trigger the external onChange handler if provided
+                      }}
                    />
                 </FormControl>
             )
@@ -97,7 +105,7 @@ const RenderField= ({field, props}) => {
                         international
                         withCountryCallingCode
                         value={field.value}
-                        onChange={field.onChange}
+                        onChange={onChange}
                         className="input-phone bg-transparent text-customSecondary "
                     />
                 </FormControl>
@@ -114,12 +122,13 @@ const RenderField= ({field, props}) => {
                         className="mr-2"
                     />
                     <FormControl>
-                        <DatePicker selected={field.value} 
-                                    onChange={(date) => field.onChange(date)} 
+                        <DatePicker //selected={field.value} 
                                     dateFormat={dateFormat ?? 'MM/dd/yyyy'}
                                     showTimeSelect={showTimeSelect ?? false}
                                     timeInputLabel="Time:"
                                     wrapperClassName='date-picker'
+                                    selected={selected}
+                                    onChange={onChange}
                                     />
                     </FormControl>
                 </div>
