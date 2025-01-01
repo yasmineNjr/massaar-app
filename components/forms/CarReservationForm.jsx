@@ -81,7 +81,7 @@ const formSchema = z.object({
     const handleAddOrder = () => {
       const newOrder = {
         id: Date.now(),
-        product: item.name,
+        product: "السيارة "+ item.name,
         price: totalCost,
         quantity: '1',
       };

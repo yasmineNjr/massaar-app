@@ -16,6 +16,8 @@ import { useState } from "react"
 import { SelectItem } from "../ui/select"
 import Button from "../Button"
 import { quickBookHandler } from "@/constants"
+import { useOrders } from "@/context/AppContext"
+import { useRouter } from "next/navigation"
 
 
 export const FormFieldType = {
@@ -39,12 +41,27 @@ const formSchema = z.object({
   const CarReservationForm = ( {item} ) => {
     
     const form = useForm();
+    const router = useRouter();
     const [payment, setPayment] = useState('تحويل مصرفي مباشر')
     const [totalCost, setTotalCost] = useState(0)
+
+    const { addOrder } = useOrders();
+    
+    const handleAddOrder = () => {
+      const newOrder = {
+        id: Date.now(),
+        product: "الفندق "+ item.name,
+        price: '0',
+        quantity: '1',
+      };
+      addOrder(newOrder);
+      router.push('/orders')
+    };
 
     const onSubmit = (data) => {
       console.log(data);
     };
+
    
     return (
     <Form {...form}>
@@ -156,11 +173,11 @@ const formSchema = z.object({
             )}
             />
           }
-        <div className="flex flex-1 justify-center items-center w-full text-primary">
+        {/* <div className="flex flex-1 justify-center items-center w-full text-primary">
           <h2>الكلفة الإجمالية: {totalCost}</h2>
-        </div>
+        </div> */}
         <div className="flex flex-1 justify-center items-center w-full gap-6">
-            <Button styles='w-[50%]' title='إتمام'/>
+            <Button styles='w-[50%]' title='إتمام' onClickHandler={handleAddOrder}/>
             {/* <Button styles='w-[50%]' title='حجز سريع' onClickHandler={() => quickBookHandler(`مرحباً, هل يمكنك مساعدتي في حجز الفندق ${item.name}؟`)}/> */}
          </div>
           
