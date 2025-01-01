@@ -17,8 +17,8 @@ const page = () => {
   const completeOrderHandler = () => {
    
     const phoneNumber = "+963988032201"; // Replace with your number
-    const message = 'A test message';
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    // const message = 'A test message';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(data)}`;
     window.open(url, "_blank");
     clearOrders();
     router.push('/');
