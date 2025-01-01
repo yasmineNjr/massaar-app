@@ -498,10 +498,10 @@ export const cars = [
     pricePerHour: '$10',
     rating: 5,
     passengers: '4',
-    GPS: false,
+    GPS: true,
     automatic: true,
     mainImg: sonata,
-    imgs: [ sonata1, sonata2, sonata3],
+    imgs: [ sonata, sonata1, sonata2, sonata3],
     hours: '80'
   },
   {
@@ -513,10 +513,10 @@ export const cars = [
     pricePerHour: '$10',
     rating: 5,
     passengers: '4',
-    GPS: false,
+    GPS: true,
     automatic: true,
     mainImg: torus,
-    imgs: [ torus1, torus2, torus3],
+    imgs: [ torus ,torus1, torus2, torus3],
     hours: '80'
   },
   {
@@ -528,7 +528,7 @@ export const cars = [
     pricePerHour: '$10',
     rating: 5,
     passengers: '4',
-    GPS: false,
+    GPS: true,
     automatic: true,
     mainImg: leczes,
     imgs: [ leczes, leczes1, leczes1],
@@ -1751,6 +1751,21 @@ export async function getData() {
     // ...
   ]
 }
+
+export const orders = [
+    {
+      id: "1",
+      product: 'bmw',
+      price: '100',
+      quantity: '1',
+    },
+    {
+      id: "2",
+      product: 'superpan',
+      price: '150',
+      quantity: '2',
+    },
+  ]
 
 
 // {

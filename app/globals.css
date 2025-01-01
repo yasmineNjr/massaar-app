@@ -317,7 +317,7 @@ body {
   }
 
   .shad-table-row-header {
-    @apply border-b border-customSecondary text-customSecondary hover:bg-transparent !important;
+    @apply border-b border-customSecondary text-primary-foreground hover:bg-transparent !important;
   }
 
   .shad-table-row {

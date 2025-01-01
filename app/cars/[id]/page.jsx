@@ -77,10 +77,10 @@ const CarDetails = ({ params }) => {
                   <h1 className='text-xl text-primary font-bold'>{selectedCar.name} - {selectedCar.model}</h1>
               </div>
             
-              <div className='flex flex-row gap-2 mt-2'>
+              {/* <div className='flex flex-row gap-2 mt-2'>
                   <PiMoneyWavyFill  size={20}/>
                   <h1 className='text-gray-700 font-bold'>{selectedCar.pricePerHour}</h1>
-              </div>
+              </div> */}
               
               <ReactStars
                   count={5}

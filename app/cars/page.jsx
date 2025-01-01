@@ -19,7 +19,6 @@ const CarsList = () => {
                 </h1> */}
               </div>
                 <List items={cars} destination='car'/>
-              
             </div>
           </section>
         </div>

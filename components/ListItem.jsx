@@ -36,10 +36,10 @@ const ListItem = ({item}) => {
                 <FaLocationDot/>
                 <p className='text-customSecondary font-semibold'>{location}</p>
             </div>
-            <div className='flex flex-row gap-2 mt-2'>
+            {/* <div className='flex flex-row gap-2 mt-2'>
                 <PiMoneyWavyFill  size={20}/>
                 <h1 className='text-primary font-bold'>{pricePerHour}</h1>
-            </div>
+            </div> */}
             
             <ReactStars
                 count={5}

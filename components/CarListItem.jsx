@@ -30,11 +30,11 @@ const CarListItem = ({item}) => {
             <div className='truncate'>
                 <h1 className='text-xl font-bold text-primary'>{name} - {model}</h1>
             </div>
-           
+{/*            
             <div className='flex flex-row gap-2 mt-2'>
                 <PiMoneyWavyFill  size={20}/>
                 <h1 className='text-primary font-bold'>{pricePerHour}</h1>
-            </div>
+            </div> */}
             
             <ReactStars
                 count={5}

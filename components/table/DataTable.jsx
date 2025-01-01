@@ -22,6 +22,8 @@ import Image from "next/image"
 export function DataTable({
   columns,
   data,
+  source,
+  total
 }) {
   const table = useReactTable({
     data,
@@ -38,7 +40,7 @@ export function DataTable({
             <TableRow key={headerGroup.id} className="shad-table-row-header ">
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id} className='text-dimWhite text-center font-semibold'>
+                  <TableHead key={header.id} className='text-primary-foreground text-center font-semibold'>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -76,37 +78,49 @@ export function DataTable({
         </TableBody>
       </Table>
 
-      <div className="table-actions">
-      <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-          className="shad-gray-btn font-bold"
-        >
-          <Image
-            src="/assets/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow"
-            className="rotate-180"
-          />
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-          className="shad-gray-btn"
-        >
-          <Image
-            src="/assets/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow "
-          />
-        </Button>
-      </div>
+      {
+        source !== 'orders' 
+        ?
+        <div className="table-actions">
+          <Button
+              variant="outline"
+              size="sm"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+              className="shad-gray-btn font-bold"
+            >
+              <Image
+                src="/assets/arrow.svg"
+                width={24}
+                height={24}
+                alt="arrow"
+                className="rotate-180"
+              />
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+              className="shad-gray-btn"
+            >
+              <Image
+                src="/assets/arrow.svg"
+                width={24}
+                height={24}
+                alt="arrow "
+              />
+            </Button>
+        </div>
+        : 
+        <div className="text-primary-foreground font-bold text-center flex flex-row justify-center">
+          <p className="p-5">
+          إجمالي كلفة الحجوزات
+          </p>
+          <p className="p-5 text-gold">{total}</p>
+        </div>
+      }
+     
     </div>
   )
 }
