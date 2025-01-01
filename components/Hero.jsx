@@ -9,9 +9,9 @@ const Hero = () => (
     className={`flex flex-1 flex-col h-[700px] ${styles.paddingY} bg-transparent  justify-center items-center flex-col xl:px-0 sm:px-16 px-6`}
     style={{ backgroundImage: "url('/assets/home.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center",}}>
 
-        <div className='mb-10'>
+        {/* <div className='mb-10'>
           <Image src={logo} alt='algharbia' className='w-full max-w-[370px] h-auto'/>
-        </div>
+        </div> */}
             
         {/* <div className="ss:flex md:mr-4 mr-0 bg-transparent">
           <QuickBook/>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { close, logo, logoDark, logoLight, menu } from '../public/assets'
 import { navLinks } from '../constants';
 import Image from 'next/image';
@@ -21,7 +21,18 @@ function NavBar() {
 
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
-  const { orders } = useOrders(); // Get orders from context
+  // const { orders } = useOrders(); // Get orders from context
+  const [isClient, setIsClient] = useState(false);
+  const [ordersCount, setOrdersCount] = useState(0);
+
+  useEffect(() => {
+    setIsClient(true);
+
+    if (typeof window !== "undefined") {
+      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+      setOrdersCount(orders.length);
+    }
+  }, []);
   
   const clickMenu = () => {
     setToggle((prev) => !prev)
@@ -65,9 +76,9 @@ function NavBar() {
         onClick={orderHndler}
       >
         <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
-        {orders.length > 0 && (
-          <span className="absolute top-1 right-1.5 bg-gold text-dimWhite text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-            {orders.length}
+        {isClient && ordersCount > 0 && (
+          <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            {ordersCount}
           </span>
         )}
       </div>
@@ -78,9 +89,9 @@ function NavBar() {
           onClick={orderHndler}
         >
           <GiShoppingCart size={28} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
-          {orders.length > 0 && (
-            <span className="absolute top-1 right-1.5 bg-gold text-dimWhite text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-              {orders.length}
+          {isClient && ordersCount > 0 && (
+            <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {ordersCount}
             </span>
           )}
         </div>
