@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react';
-import { close, logo, logoDark, logoLight, menu } from '../public/assets'
+import { useState } from 'react';
+import { close, logoDark, menu } from '../public/assets'
 import { navLinks } from '../constants';
 import Image from 'next/image';
 import NavLink from './NavLink';

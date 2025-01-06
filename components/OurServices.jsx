@@ -7,7 +7,7 @@ const OurServices = () => {
   return (
     <section 
     className={`flex flex-1 flex-col  bg-transparent ${styles.paddingY} `}>
-            <h2 className={`${styles.heading2} text-primary-foreground`}>
+            <h2 className={`${styles.heading2} text-gold`}>
                 خدماتنا
             </h2>
         {/* </div> */}
