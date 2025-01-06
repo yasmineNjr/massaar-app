@@ -37,7 +37,7 @@ const CustomMarkerIcon = L.divIcon({
 function Location() {
   return (
     <section className={`flex flex-1 flex-col  bg-transparent ${styles.paddingY} `}>
-      <h2 className={`${styles.heading2} text-primary-foreground`}>
+      <h2 className={`${styles.heading2} text-gold`}>
           موقع شركتنا
       </h2>
        <div className="rounded-2xl overflow-hidden">

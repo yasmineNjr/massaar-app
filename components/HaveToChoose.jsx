@@ -28,7 +28,7 @@ function HaveToChoose() {
   return (
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
-      <h2 className={`${styles.heading2} text-primary-foreground`}>
+      <h2 className={`${styles.heading2} text-gold`}>
           لماذا عليك أن تختار<br className="sm:block hidden" /> مسار الغربية
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5 text-dimWhite`}>

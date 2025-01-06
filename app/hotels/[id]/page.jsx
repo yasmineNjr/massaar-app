@@ -39,7 +39,7 @@ const HotelDetails = ({ params }) => {
     <div className={`bg-transparent ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <div className="text-center my-10">
-          <h2 className={`${styles.heading2} text-right text-primary-foreground`}>
+          <h2 className={`${styles.heading2} text-right text-gold`}>
               حجز في الفندق {selectedHotel.name}
           </h2>
         </div>

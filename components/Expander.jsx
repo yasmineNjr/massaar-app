@@ -18,9 +18,9 @@ const Expander = ({ title, content, className }) => {
           ▼
         </span> */}
         {
-            isOpen ? <FaMinus color='#ffd700' /> : <FaPlus color='#292D32'/>
+            isOpen ? <FaMinus color='#000' /> : <FaPlus color='#292D32'/>
         }
-        <h3 className={`${isOpen ? "text-[#ffd700]" : "text-[#292D32]"} font-bold`}>{title}</h3>
+        <h3 className={`${isOpen ? "text-[#000]" : "text-[#292D32]"} font-bold text-[18px]`}>{title}</h3>
       </div>
       <div
         ref={contentRef}

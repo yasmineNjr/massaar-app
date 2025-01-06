@@ -37,7 +37,7 @@ const CustomerEvaluations = () => {
             </div> */}
 
             <div className={`flex flex-col mt-20`}>
-              <h1 className={`${styles.heading2} text-primary-foreground`}>شهادات عملائنا</h1>
+              <h1 className={`${styles.heading2} text-gold`}>شهادات عملائنا</h1>
               {
                 reviewList.map((review) => (
                   <div key={review.id} className='flex flex-col gap-8 mt-10 rounded-xl p-5 bg-gradient-to-r from-gray-300 to-white shadow-customGray'>

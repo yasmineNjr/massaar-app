@@ -7,7 +7,7 @@ const Testimonials = () => (
       <div className='absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full white__gradient'/>
 
       <div className='w-full flex justify-between items-center md:flex-row flex-col sm:mb-8 mb-2 relative z-[1]'>
-        <h2 className={`${styles.heading2} text-primary-foreground`}>
+        <h2 className={`${styles.heading2} text-gold`}>
         ماذا يقول عملاؤنا عنا
         </h2>
         <div className='w-full md:mt-0 mt-6'>
