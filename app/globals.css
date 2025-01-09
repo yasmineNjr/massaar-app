@@ -649,3 +649,21 @@ body {
 }
 
 
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-scale-pulse {
+  animation: scalePulse 1.5s ease-in-out infinite !important;
+}

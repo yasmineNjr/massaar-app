@@ -33,7 +33,7 @@ const HotelOffer = () => {
         </h1>
         <h1 className="font-bold text-[40px] text-primary">
           واحصل على حجز مجاني لكل 
-          <span className="text-gold text-[52px] mx-2 animate-scale-pulse">3</span>
+          <span className="text-gold text-[52px] mx-2 animate-flash">3</span>
           حجوزات
         </h1>
       </div>

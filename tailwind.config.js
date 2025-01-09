@@ -126,6 +126,11 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
+			flash: {
+				'0%': { color: '#b89f00' },
+				'50%': { color: '#c89d00' },
+				'100%': { color: '#ffd700' },
+			  },
 			circularShake: {
 				'0%': { transform: 'translate(0, 0)' },
 				'25%': { transform: 'translate(2px, -2px)' },
@@ -189,6 +194,7 @@ const config = {
   			}
   		},
   		animation: {
+			flash: 'flash 2s infinite',
 			circularShake: 'circularShake 0.8s ease-in-out infinite',
 			shake: 'shake 0.5s ease-in-out',
 			bounceText: 'bounceText 1s infinite',
