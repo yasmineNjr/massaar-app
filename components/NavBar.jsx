@@ -67,7 +67,7 @@ function NavBar() {
           >
             <BsCart4 size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold ${isActive('/orders') ? "text-gold" : ""}`}/>
             {orders.length > 0 && (
-              <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute top-1 -right-3 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                 {orders.length}
               </span>
             )}
@@ -98,7 +98,7 @@ function NavBar() {
           >
             <BsCart4 size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl ${isActive('/orders') ? "text-gold" : ""}`}/>
             {orders.length > 0 && (
-            <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            <span className="absolute top-1 -right-3 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
               {orders.length}
             </span>
           )}
