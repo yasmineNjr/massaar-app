@@ -4,6 +4,7 @@ import QuickBook from './QuickBook';
 import { commericalNum, logo, logoDark, saudiBussiness, taxNumber, zakatax } from '@/public/assets';
 
 const Hero = () => (
+
   <>
   <section 
     className={`flex flex-1 flex-col h-[700px] ${styles.paddingY} bg-transparent  justify-center items-center flex-col xl:px-0 sm:px-16 px-6`}
@@ -19,7 +20,7 @@ const Hero = () => (
 
     </section>
 
-    <p className={`${styles.paragraph} w-full p-10 text-center mt-5 text-dimWhite font-bold text-[22px]`}>
+    <p className={`${styles.paragraph} w-full p-10 text-center mt-5 text-primary-foreground font-bold text-[22px]`}>
       نوفر لك خيارات حجز السيارات والفنادق بالقرب من الحرم المكي والمدينة المنورة، لتجربة حج وعمرة مريحة وآمنة. اختر من بين مجموعة واسعة من السيارات والفنادق التي تناسب احتياجاتك، مع خدمات مميزة تضمن لك الراحة وتتيح لك التركيز على رحلتك الروحانية.
     </p>
 

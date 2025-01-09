@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }) {
     return (
       <div className="flex min-h-screen lg:flex-row flex-col">
         {/* Sidebar */}
-        <aside className="lg:w-[15%] w-auto bg-transparent text-customSecondary p-4">
+        <aside className="lg:w-[15%] w-auto bg-transparent text-primary-foreground p-4">
           <h2 className="text-lg font-bold mb-5">أهلا بك في لوحة التحكم</h2>
           <ul className="overflow-x-auto flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 lg:w-auto w-full lg:justify-start justify-between">
             {dashboardMenuItems.map((item) => (

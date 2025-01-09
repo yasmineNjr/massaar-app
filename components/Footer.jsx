@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
 
       <div className=' w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-dimWhite'>
-        <p className="font-poppins font-bold text-center text-[18px] leading-[27px] text-dimWhite">
+        <p className="font-poppins font-bold text-center text-[18px] leading-[27px] text-gold">
           {/* text-[#3F3E45] */}
         © 2024 مسار الغربية . جميع الحقوق محفوظة
         </p>

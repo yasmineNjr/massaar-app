@@ -2,117 +2,135 @@
 
 import StatusBadge from "../StatusBadge"
 import BookModal from "../BookModal"
+import { formatDateTime } from "@/constants";
 
 export const columns = [
 
     {
         header: "#",
         cell: ({ row }) => {
-          return <p className="text-14-medium">{row.index + 1}</p>;
+          return <p className="text-14-medium text-dimWhite">{row.index + 1}</p>;
         },
     },
+    // {
+    //   accessorKey: "is_approved",
+    //   header: "الحالة",
+    //   cell: ({ row }) => {
+    //     return (
+    //       <div className="min-w-[75px]  text-center">
+    //         {/* <StatusBadge status={row.original.status} /> */}
+    //         <StatusBadge status={row.original.is_approved} />
+    //       </div>
+    //     );
+    //   },
+    // },
     {
-      accessorKey: "status",
-      header: "الحالة",
-      cell: ({ row }) => {
-        return (
-          <div className="min-w-[75px]  text-center">
-            <StatusBadge status={row.original.status} />
-          </div>
-        );
-      },
-    },
-    {
-        accessorKey: "client",
+        accessorKey: "name",
         header: "العميل",
-        cell: ({ row }) => <p className="text-14-medium text-center">{row.original.client}</p>,
+        // cell: ({ row }) => <p className="text-14-medium text-center">{row.original.client}</p>,
+        cell: ({ row }) => 
+          <p className="text-14-medium text-center min-w-[120px] text-dimWhite">
+            {row.original.name}
+          </p>,
     },
     {
       accessorKey: "phone",
       header: "الجوال",
-      cell: ({ row }) => <p className="text-14-medium text-center">{row.original.phone}</p>,
+      cell: ({ row }) => <p className="text-14-medium text-dimWhite text-center">
+        {row.original.phone}
+        </p>,
     },
     {
-        accessorKey: "startDate",
-        header: "تاريخ الحجز",
+      accessorKey: "product",
+      header: "عنصر الحجز",
+      cell: ({ row }) =>  (
+          <p className="text-14-regular min-w-[120px] text-dimWhite text-center">
+            {/* {row.original.item} */}
+            {row.original.product}
+          </p>
+        )
+    },
+    {
+      accessorKey: "date",
+      header: "تاريخ الحجز",
+      cell: ({ row }) => {
+        const { dateTime } = formatDateTime(row.original.date); // Access the desired value
+        return (
+          <p className="text-14-regular min-w-[120px] text-center text-dimWhite">
+            {dateTime} {/* or {date}, or {time} */}
+          </p>
+        );
+      }
+    },
+    {
+      accessorKey: "duration",
+      header: 'المدة',
+      cell: ({ row }) => {
+        const { order_type, days, hours } = row.original;
+        return (
+          <p className="text-14-regular min-w-[50px] text-dimWhite text-center">
+            {order_type === "hotel" ? days : order_type === "car" ? hours : "-"}
+          </p>
+        );
+      },
+    },
+      {
+        accessorKey: "payment",
+        header: 'طريقة الدفع',
         cell: ({ row }) => (
-            <p className="text-14-regular min-w-[100px]  text-center">
-              {/* {formatDateTime(row.original.startDate).dateTime} */}
-              {row.original.startDate}
+            <p className="text-14-regular min-w-[100px] text-dimWhite text-center">
+              {row.original.payment}
             </p>
           )
       },
       {
-        accessorKey: "endDate",
-        header: "تاريخ الانتهاء",
+        accessorKey: "quantity",
+        header: "الكمية",
         cell: ({ row }) => (
-            <p className="text-14-regular min-w-[100px]  text-center">
-              {/* {formatDateTime(row.original.startDate).dateTime} */}
-              {row.original.endDate}
+            <p className="text-14-regular min-w-[50px] text-dimWhite text-center">
+              {row.original.quantity}
             </p>
           )
       },
       {
-        accessorKey: "amount",
+        accessorKey: "price",
         header: "الكلفة",
         cell: ({ row }) => (
-            <p className="text-14-regular min-w-[75px]  text-center">
-              {/* {formatDateTime(row.original.startDate).dateTime} */}
-              ${row.original.amount}
+            <p className="text-14-regular min-w-[75px] text-dimWhite text-center">
+              {/* ${row.original.amount} */}
+              {row.original.price}
             </p>
           )
       },
       {
-        accessorKey: "item",
-        header: "عنصر الحجز",
-        cell: ({ row }) =>  (
-            <p className="text-14-regular min-w-[75px]  text-center">
-              {row.original.item}
-            </p>
-          )
-    },
-//   {
-//     accessorKey: "amount",
-//     header: () => <div className="text-right">Amount</div>,
-//     cell: ({ row }) => {
-//       const amount = parseFloat(row.getValue("amount"))
-//       const formatted = new Intl.NumberFormat("en-US", {
-//         style: "currency",
-//         currency: "USD",
-//       }).format(amount)
- 
-//       return <div className="text-right font-medium">{formatted}</div>
-//     },
-//   },
+          id: "actions",
+          header: () => <div className="pl-4 text-center">العمليات</div>,
+          cell: ({ row }) => {
+            const reservation = row.original;
 
-{
-    id: "actions",
-    header: () => <div className="pl-4 text-center">العمليات</div>,
-    cell: ({ row }) => {
-      const reservation = row.original;
-
-      return (
-        <div className="flex gap-1">
-          <BookModal
-            // patientId={appointment.patient.$id}
-            // userId={appointment.userId}
-            // appointment={appointment}
-            type="schedule"
-            title="تثبيت الطلب"
-            description="هل أنت متأكد من تثبيت الطلب؟"
-          />
-          <BookModal
-            // patientId={appointment.patient.$id}
-            // userId={appointment.userId}
-            // appointment={appointment}
-            type="cancel"
-            title="إلغاء الطلب"
-            description="هل أنت متأكد من إلغاء الطلب؟"
-          />
-        </div>
-      );
-    },
-  },
+            return (
+              <div className="flex gap-1">
+                <BookModal
+                  order={reservation}
+                  type="details"
+                  title="تفاصيل"
+                  description="تفاصيل الطلب"
+                />
+                <BookModal
+                  order={reservation}
+                  type="schedule"
+                  title="تثبيت الطلب"
+                  description="هل أنت متأكد من تثبيت الطلب؟"
+                />
+                <BookModal
+                  type="cancel"
+                  title="إلغاء الطلب"
+                  description="هل أنت متأكد من إلغاء الطلب؟"
+                />
+              </div>
+            );
+          },
+        },
 //   {
 //     id: "actions",
 //     cell: ({ row }) => {
@@ -141,4 +159,19 @@ export const columns = [
 //         )
 //     },
 //     },
+
+
+//   {
+//     accessorKey: "amount",
+//     header: () => <div className="text-right">Amount</div>,
+//     cell: ({ row }) => {
+//       const amount = parseFloat(row.getValue("amount"))
+//       const formatted = new Intl.NumberFormat("en-US", {
+//         style: "currency",
+//         currency: "USD",
+//       }).format(amount)
+ 
+//       return <div className="text-right font-medium">{formatted}</div>
+//     },
+//   },
 ]

@@ -1,9 +1,10 @@
-import styles, { layout } from '@/app/style'
-import { heroImages, ourServices } from '@/constants'
-import Image from 'next/image'
-import React from 'react'
+'use client'
+
+import styles from '@/app/style'
+import { ourServices } from '@/constants'
 
 const OurServices = () => {
+
   return (
     <section 
     className={`flex flex-1 flex-col  bg-transparent ${styles.paddingY} `}>
@@ -22,6 +23,7 @@ const OurServices = () => {
                     </div>
                 ))}
             </div>
+
       </div>
 
     </section>

@@ -1590,9 +1590,9 @@ export const dashboardMenuItems = [
   { name: "إدارة السيارات", href: "/dashboard/manage-cars" },
   { name: "إدارة الفنادق", href: "/dashboard/manage-hotels" },
   { name: "تعليقات العملاء", href: "/dashboard/manage-evaluations" },
-  { name: "رسائل العملاء", href: "/dashboard/manage-messages" },
-  { name: "سيارة جديدة", href: "/dashboard/new-car" },
-  { name: "فندق جديد", href: "/dashboard/new-hotel" },
+  // { name: "رسائل العملاء", href: "/dashboard/manage-messages" },
+  // { name: "سيارة جديدة", href: "/dashboard/new-car" },
+  // { name: "فندق جديد", href: "/dashboard/new-hotel" },
   { name: "إعدادات", href: "/dashboard/settings" },
 ];
 
@@ -1756,7 +1756,24 @@ export const orders = [
       price: '150',
       quantity: '2',
     },
-  ]
+]
+
+export function formatDateTime(dateString) {
+  const date = new Date(dateString);
+
+  // Extract year, month, day, and time
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  const hours = String(date.getUTCHours()).padStart(2, '0');
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+
+  return {
+    date: `${year}-${month}-${day}`, // YYYY-MM-DD
+    time: `${hours}:${minutes}`,     // HH:MM
+    dateTime: `${year}-${month}-${day} ${hours}:${minutes}` // Combined
+  };
+}
 
 
 // {
