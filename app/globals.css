@@ -616,3 +616,36 @@ body {
   }
 }
 
+/* Define the animation for moving the text from right to left */
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Define the animation for moving the button from left to right */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.move-right-to-left {
+  animation: moveRightToLeft 1s forwards;
+}
+
+.move-left-to-right {
+  animation: moveLeftToRight 1s forwards;
+}
+
+
