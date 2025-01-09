@@ -14,6 +14,9 @@ import HomeCarsList from "@/components/HomeCarsList";
 import OurServices from "@/components/OurServices";
 import Licenses from "@/components/Licenses";
 import Contact from "@/components/Contact";
+import CarOffer from "@/components/CarOffer";
+import HotelOffer from "@/components/HotelOffer";
+import OurTrips from "@/components/OurTrips";
 const Location = dynamic(() => import('@/components/Location'), { ssr: false });
 // import Location from "@/components/Location";
 
@@ -33,8 +36,11 @@ export default function Home() {
           <Licenses/>
           <Contact/>
           <OurServices/>
+          <OurTrips/>
+          <CarOffer/>
           <HomeCarsList/>
           {/* <PopularCars/> */}
+          <HotelOffer/>
           <PopularHotels/>
           <HaveToChoose/>
           <Stats />

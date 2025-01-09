@@ -85,6 +85,7 @@ import mecca1 from './mecca1.jpg'
 import mecca2 from './mecca2.jpg'
 import medina1 from './medina1.jpg'
 import medina2 from './medina2.jpg'
+import carOfferHome from './carOffer.jpg'
 
 export {
   logo,
@@ -173,5 +174,6 @@ export {
   mecca1,
   mecca2,
   medina1,
-  medina2
+  medina2,
+  carOfferHome
 };

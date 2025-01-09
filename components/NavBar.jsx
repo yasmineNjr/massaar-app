@@ -8,8 +8,9 @@ import NavLink from './NavLink';
 import { GiShoppingCart } from "react-icons/gi";
 import { BsCart4 } from "react-icons/bs";
 import { IoSettingsSharp } from "react-icons/io5";
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useOrders } from '@/context/AppContext';
+import { useActivePathContext } from "./ActivePathProvider";
 // import {
 //   DropdownMenu,
 //   DropdownMenuContent,
@@ -24,6 +25,11 @@ function NavBar() {
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
   const { orders } = useOrders(); // Get orders from context
+  const { state, setState } = useActivePathContext();
+  // const isActive = (path) => state === path;
+  const pathname = usePathname();
+  const isActive = (path) => pathname === path || pathname.startsWith(path + '/');
+
   // const [isClient, setIsClient] = useState(false);
   // const [ordersCount, setOrdersCount] = useState(0);
 
@@ -54,12 +60,12 @@ function NavBar() {
       
       <div>
         
-        <div className='flex flex-row justify-end'>
+        <div className='flex flex-row justify-end mb-5'>
           <div
             className="relative hidden md:block py-5 mb-1 mr-3 cursor-pointer"
             onClick={orderHndler}
           >
-            <BsCart4 size={24} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold'/>
+            <BsCart4 size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold ${isActive('/orders') ? "text-gold" : ""}`}/>
             {orders.length > 0 && (
               <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                 {orders.length}
@@ -71,7 +77,7 @@ function NavBar() {
             className="relative hidden md:block py-5 mr-5 cursor-pointer"
             onClick={settingsHndler}
           >
-            <IoSettingsSharp size={24} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold'/>
+            <IoSettingsSharp size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold ${isActive('/dashboard') ? "text-gold" : ""}`}/>
           </div>
         </div>
 
@@ -90,7 +96,7 @@ function NavBar() {
             className="relative py-5 mb-1 mr-2 cursor-pointer "
             onClick={orderHndler}
           >
-            <BsCart4 size={24} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl'/>
+            <BsCart4 size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl ${isActive('/orders') ? "text-gold" : ""}`}/>
             {orders.length > 0 && (
             <span className="absolute top-1 right-1.5 bg-gold text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
               {orders.length}
@@ -101,9 +107,10 @@ function NavBar() {
             className="relative py-5 mb-1 mr-5  cursor-pointer"
             onClick={settingsHndler}
           >
-            <IoSettingsSharp size={24} className='transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold'/>
+            <IoSettingsSharp size={24} className={`transition-transform duration-300 hover:scale-125 hover:shadow-2xl hover:text-gold ${isActive('/dashboard') ? "text-gold" : ""}`}/>
           </div>
         </div>
+        
         <div className='flex justify-end w-full'>
           <Image 
             src={toggle ? close : menu} 

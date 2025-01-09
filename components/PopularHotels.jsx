@@ -37,19 +37,7 @@ const PopularHotels = () => {
 
   return (
     <section className={`flex flex-col ${styles.paddingY}`}>
-      {/* <div className={`${layout.sectionInfo} md:order-2 order-1`}>
-        <h2 className={`${styles.heading2} text-primary`}>
-            الفنادق الأكثر طلباً
-        </h2>
-        <div className='w-full md:mt-0 mt-6'>
-        <p className={`${styles.paragraph} max-w-[450px]`}>
-        نقدم لك قائمة بأفضل الفنادق التي تحظى بأعلى معدلات الحجز والطلب من قبل الحجاج والمعتمرين. تم اختيار هذه الفنادق بعناية بناءً على تقييمات الزوار، الموقع الاستراتيجي القريب من الحرمين الشريفين، والخدمات المتكاملة التي توفرها لتلبية احتياجات ضيوف الرحمن. ستجد مجموعة من الخيارات التي تناسب مختلف الميزانيات. احجز الآن لتضمن مكانك، وتمتع بتجربة روحانية مميزة .
-        </p>
-        </div>
-        <div className="mt-6" >
-          <Button title='عرض الكل' onClickHandler={viewAllHandler}/>
-        </div>
-      </div> */}
+      
        <h2 className={`${styles.heading2} text-gold mb-5`}>
           احجز فندقك من عندنا
       </h2>
@@ -61,7 +49,7 @@ const PopularHotels = () => {
               className={`relative rounded-xl group shadow-customGray hover:shadow-cardhover overflow-hidden min-w-[301px] h-[370px]  ${index !== hotel.length-1 ? 'ml-6' : 'ml-0'} flex justify-center items-center cursor-pointer`} key={`gallery_image-${index + 1}`}
               onClick={() => viewDetailsHandler(hotel.id)}
             >
-              <Image src={hotel.mainImg} alt={hotel.name} layout="fill"/>
+              <Image src={hotel.mainImg} alt={hotel.name} layout="fill" className="transition-transform duration-300 hover:scale-105"/>
               <div className="group-hover:flex flex-col max-h-[94.5%] hidden text-customSecondary font-semibold absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-300 to-white m-2 p-4 rounded-md">
                   <h1 >{hotel.name}</h1>
                   <p className="text-sm overflow-y-auto prompt">{hotel.description}</p>
