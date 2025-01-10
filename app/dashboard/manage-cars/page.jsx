@@ -14,7 +14,7 @@ const ManageCars = async() => {
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <div className="text-center">
-                    <h2 className={`${styles.heading2} text-right text-primary`}>
+                    <h2 className={`${styles.heading2} text-right text-gold`}>
                     إدارة السيارات    
                     </h2>
                 </div>

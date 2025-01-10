@@ -56,7 +56,7 @@ const formatOrder = (order) => {
 };
 
 
-const BookModal = ({ type, description, order }) => {
+const BookModal = ({ type, description, order, source }) => {
 
   const [open, setOpen] = useState(false)
   
@@ -109,9 +109,10 @@ const BookModal = ({ type, description, order }) => {
             </DialogHeader>
 
             <ManageReservationForm
-                type={type}
-                order={order}
-                setOpen={setOpen}
+              source={source}
+              type={type}
+              order={order}
+              setOpen={setOpen}
             />
         </DialogContent>
     </Dialog>

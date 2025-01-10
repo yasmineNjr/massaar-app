@@ -111,18 +111,21 @@ export const columns = [
             return (
               <div className="flex gap-1">
                 <BookModal
+                  source='order'
                   order={reservation}
                   type="details"
                   title="تفاصيل"
                   description="تفاصيل الطلب"
                 />
                 <BookModal
+                  source='order'
                   order={reservation}
                   type="schedule"
                   title="تثبيت الطلب"
                   description="هل أنت متأكد من تثبيت الطلب؟"
                 />
                 <BookModal
+                  source='order'
                   order={reservation}
                   type="delete"
                   title="إلغاء الطلب"

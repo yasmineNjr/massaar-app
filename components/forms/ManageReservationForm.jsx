@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Button } from '../ui/button'
 
-const ManageReservationForm = ({ type, setOpen, order }) => {
+const ManageReservationForm = ({ type, setOpen, order, source }) => {
     
     const [isLoading, setIsLoading] = useState(false);
 
@@ -38,6 +38,37 @@ const ManageReservationForm = ({ type, setOpen, order }) => {
           }
       };
 
+    const updateEvaluationApproval = async (e_id , is_approved) => {
+      try {
+        console.log("Updating order with ID:", e_id, "Approval Status:", is_approved);
+        
+        setIsLoading(true);
+        const response = await fetch("/api/evaluations", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ e_id , is_approved }),
+          timeout: 10000, // Set the timeout to 10 seconds
+        });
+    
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Order updated:", result);
+          return result; // Optionally return the result if needed
+        } else {
+          const error = await response.json();
+          console.error("Error updating order:", error);
+        }
+      } catch (error) {
+        console.error("Network error:", error.message);
+      }finally {
+          setIsLoading(false); // Set loading to false after fetching
+          setOpen && setOpen(false); 
+          // window.location.reload(); // Refresh the page
+        }
+    };
+
     const deleteOrder = async (order_id) => {
       try {
         setIsLoading(true); // Show a loading indicator if applicable
@@ -64,7 +95,35 @@ const ManageReservationForm = ({ type, setOpen, order }) => {
         setOpen && setOpen(false); 
         window.location.reload(); // Optionally refresh the page
       }
-    };      
+    };  
+    
+    const deleteEvaluation = async (e_id) => {
+      try {
+        setIsLoading(true); // Show a loading indicator if applicable
+        const response = await fetch("/api/evaluations", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ e_id }), // Pass the order_id as JSON
+        });
+    
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Order deleted:", result);
+          return result; // Optionally return the result if needed
+        } else {
+          const error = await response.json();
+          console.error("Error deleting order:", error);
+        }
+      } catch (error) {
+        console.error("Network error:", error.message);
+      } finally {
+        setIsLoading(false); // Hide the loading indicator
+        setOpen && setOpen(false); 
+        window.location.reload(); // Optionally refresh the page
+      }
+    };  
       
     const handleClick = async() => {
         if(type === 'details'){
@@ -75,9 +134,17 @@ const ManageReservationForm = ({ type, setOpen, order }) => {
             window.open(url, "_blank");
             setOpen && setOpen(false);      
         } else if (type === 'schedule'){
-            await updateOrderApproval(order.order_id, true)
+            if(source === 'order'){
+              await updateOrderApproval(order.order_id, true)
+            } else if(source === 'evaluation'){
+              await updateEvaluationApproval(order.e_id, true)
+            }
         } else if (type === 'delete'){
+          if(source === 'order'){
             await deleteOrder(order.order_id)
+          } else if(source === 'evaluation'){
+            await deleteEvaluation(order.e_id)
+          }
         }
     }
     const handleClose = () => {
