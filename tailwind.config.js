@@ -32,7 +32,6 @@ const config = {
   		}
   	},
   	extend: {
-		
 		boxShadow: {
 			customGray: '0 4px 10px rgba(50, 50, 50, 0.8)', // dark gray shadow
 		},
@@ -126,6 +125,14 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
+			// 'appear': {
+			// 	from: { opacity: '0', transform: 'translateX(-3rem)' },
+			// 	to:   { opacity: '1', transform: 'translateX(0)' },
+			//   },
+			appear: {
+				'0%': { opacity: '0', transform: 'translateX(-3rem)' },
+				'100%': { opacity: '1', transform: 'translateX(0)' },
+			  },
 			flash: {
 				'0%': { color: '#b89f00' },
 				'50%': { color: '#c89d00' },
@@ -194,6 +201,7 @@ const config = {
   			}
   		},
   		animation: {
+		    'appear': 'appear 1s ease-out forwards',
 			flash: 'flash 2s infinite',
 			circularShake: 'circularShake 0.8s ease-in-out infinite',
 			shake: 'shake 0.5s ease-in-out',

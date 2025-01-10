@@ -1297,6 +1297,7 @@ export const hotels = [
 export const features = [
   {
     id: "feature-1",
+    delay: 'animation-delay-100',
     icon: <IoShieldCheckmark size={30} color='#e6c200'/>,
     title: "مصداقية وخبرة",
     content:
@@ -1304,6 +1305,7 @@ export const features = [
   },
   {
     id: "feature-2",
+    delay: 'animation-delay-200',
     icon: <GrServices size={30} color='#e6c200'/>,
     title: "خدمات متخصصة ومتكاملة",
     content:
@@ -1311,6 +1313,7 @@ export const features = [
   },
   {
     id: "feature-3",
+    delay: 'animation-delay-300',
     icon: <FaCalendarAlt size={30} color='#e6c200'/>,
     title: "دعم مواصل على مدار الساعة مع سهولة و سرعة في الحجز",
     content:
@@ -1318,6 +1321,7 @@ export const features = [
   },
   {
     id: "feature-4",
+    delay: 'animation-delay-400',
     icon: <BiSolidOffer size={30} color='#e6c200'/>,
     title: "أفضل العروض والأسعار التنافسية",
     content:
