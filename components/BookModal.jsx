@@ -71,7 +71,7 @@ const BookModal = ({ type, description, order }) => {
   }else if(type === 'details'){
     typeText = 'تفاصيل';
   }else if(type === 'delete'){
-    typeText = 'حذف'
+    typeText = 'إلغاء'
   }
   else if(type === 'cancel'){
     typeText = 'إلغاء'

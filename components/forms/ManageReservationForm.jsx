@@ -4,18 +4,20 @@ import React, { useState } from 'react'
 import { Button } from '../ui/button'
 
 const ManageReservationForm = ({ type, setOpen, order }) => {
-
+    
     const [isLoading, setIsLoading] = useState(false);
 
-    const updateOrderApproval = async (id, is_approved) => {
+    const updateOrderApproval = async (order_id , is_approved) => {
         try {
-            setIsLoading(true);
+          console.log("Updating order with ID:", order_id, "Approval Status:", is_approved);
+          
+          setIsLoading(true);
           const response = await fetch("/api/orders", {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ id, is_approved }),
+            body: JSON.stringify({ order_id , is_approved }),
             timeout: 10000, // Set the timeout to 10 seconds
           });
       
@@ -35,8 +37,36 @@ const ManageReservationForm = ({ type, setOpen, order }) => {
             window.location.reload(); // Refresh the page
           }
       };
+
+    const deleteOrder = async (order_id) => {
+      try {
+        setIsLoading(true); // Show a loading indicator if applicable
+        const response = await fetch("/api/orders", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ order_id }), // Pass the order_id as JSON
+        });
+    
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Order deleted:", result);
+          return result; // Optionally return the result if needed
+        } else {
+          const error = await response.json();
+          console.error("Error deleting order:", error);
+        }
+      } catch (error) {
+        console.error("Network error:", error.message);
+      } finally {
+        setIsLoading(false); // Hide the loading indicator
+        setOpen && setOpen(false); 
+        window.location.reload(); // Optionally refresh the page
+      }
+    };      
       
-    const handleClick = () => {
+    const handleClick = async() => {
         if(type === 'details'){
             //send via whatsapp
             const phoneNumber = order.phone; // Replace with your number
@@ -45,7 +75,9 @@ const ManageReservationForm = ({ type, setOpen, order }) => {
             window.open(url, "_blank");
             setOpen && setOpen(false);      
         } else if (type === 'schedule'){
-            updateOrderApproval(order.id, true)
+            await updateOrderApproval(order.order_id, true)
+        } else if (type === 'delete'){
+            await deleteOrder(order.order_id)
         }
     }
     const handleClose = () => {

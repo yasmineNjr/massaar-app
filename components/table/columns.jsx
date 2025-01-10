@@ -25,12 +25,12 @@ export const columns = [
     //   },
     // },
     {
-        accessorKey: "name",
+        accessorKey: "client_name",
         header: "العميل",
         // cell: ({ row }) => <p className="text-14-medium text-center">{row.original.client}</p>,
         cell: ({ row }) => 
           <p className="text-14-medium text-center min-w-[120px] text-dimWhite">
-            {row.original.name}
+            {row.original.client_name}
           </p>,
     },
     {
@@ -123,7 +123,8 @@ export const columns = [
                   description="هل أنت متأكد من تثبيت الطلب؟"
                 />
                 <BookModal
-                  type="cancel"
+                  order={reservation}
+                  type="delete"
                   title="إلغاء الطلب"
                   description="هل أنت متأكد من إلغاء الطلب؟"
                 />

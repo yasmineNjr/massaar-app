@@ -2,7 +2,32 @@ import { db } from "@/lib/db";
 
 export async function GET(req) {
   try {
-    const [rows] = await db.execute("SELECT * FROM OrderTbl, Client where Client.id = OrderTbl.client_id and is_approved = false");
+    const [rows] = await db.execute(`
+      SELECT 
+        OrderTbl.id AS order_id,
+        OrderTbl.order_type,
+        OrderTbl.product,
+        OrderTbl.date,
+        OrderTbl.hours,
+        OrderTbl.days,
+        OrderTbl.notes,
+        OrderTbl.payment,
+        OrderTbl.price,
+        OrderTbl.quantity,
+        OrderTbl.is_approved,
+        OrderTbl.client_id,
+        Client.name AS client_name,
+        Client.phone,
+        Client.email
+      FROM 
+        OrderTbl
+      INNER JOIN 
+        Client 
+      ON 
+        Client.id = OrderTbl.client_id
+      WHERE 
+        OrderTbl.is_approved = false
+    `);
     return new Response(JSON.stringify(rows), { status: 200 });
   } catch (error) {
     return new Response(
@@ -47,34 +72,49 @@ export async function POST(req) {
 
 export async function PATCH(req) {
   try {
-    // Parse the incoming JSON payload
-    const { id, is_approved } = await req.json();
-    console.log("Received data for update:", { id, is_approved });
+    const { order_id, is_approved } = await req.json();
+    console.log("Received data for update:", { order_id, is_approved });
 
-    // Validate required fields
-    if (typeof id === "undefined" || typeof is_approved === "undefined") {
-      throw new Error("Missing required fields: orderId, is_approved");
+    if (!order_id || typeof is_approved === "undefined") {
+      return new Response(
+        JSON.stringify({ error: "Missing required fields" }),
+        { status: 400 }
+      );
     }
 
-    // Update the `is_approved` column in the database
-    const [result] = await db.execute(
-      "UPDATE OrderTbl SET is_approved = ? WHERE id = ?",
-      [is_approved, id]
+    // Check current value in the database
+    const [rows] = await db.execute(
+      "SELECT is_approved FROM OrderTbl WHERE id = ?",
+      [order_id]
     );
+    console.log("Current value in DB:", rows);
 
-    console.log("Database update result:", result);
-
-    if (result.affectedRows === 0) {
+    if (rows.length === 0) {
       return new Response(
-        JSON.stringify({ error: "Order not found or no changes made" }),
+        JSON.stringify({ error: "Order not found" }),
         { status: 404 }
       );
     }
 
-    return new Response(
-      JSON.stringify({ success: true, id, is_approved }),
-      { status: 200 }
+    // Execute the update query
+    const [result] = await db.execute(
+      "UPDATE OrderTbl SET is_approved = ? WHERE id = ?",
+      [is_approved, order_id]
     );
+
+    console.log("Update query result:", result);
+
+    if (result.affectedRows > 0) {
+      return new Response(
+        JSON.stringify({ success: true, order_id, is_approved }),
+        { status: 200 }
+      );
+    } else {
+      return new Response(
+        JSON.stringify({ error: "No rows updated" }),
+        { status: 400 }
+      );
+    }
   } catch (error) {
     console.error("Error during PATCH request:", error.message);
     return new Response(
@@ -82,5 +122,39 @@ export async function PATCH(req) {
       { status: 500 }
     );
   }
+}  
+
+export async function DELETE(req) {
+  try {
+    // Extract the order ID from the request body
+    const { order_id } = await req.json();
+
+    if (!order_id) {
+      throw new Error("Missing required field: order_id");
+    }
+
+    // Execute the DELETE query
+    const [result] = await db.execute("DELETE FROM OrderTbl WHERE id = ?", [order_id]);
+
+    // Check if the row was successfully deleted
+    if (result.affectedRows === 0) {
+      return new Response(
+        JSON.stringify({ error: "No order found with the provided ID" }),
+        { status: 404 }
+      );
+    }
+
+    return new Response(
+      JSON.stringify({ message: "Order successfully deleted", order_id }),
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error during DELETE request:", error.message);
+    return new Response(
+      JSON.stringify({ error: "Database error: " + error.message }),
+      { status: 500 }
+    );
+  }
 }
+
   

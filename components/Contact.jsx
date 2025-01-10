@@ -14,7 +14,7 @@ const Contact = () => {
             966566633161
         </h2>
 
-         <div className='flex flex-row justify-between mt-5 w-[50%]'>
+         <div className='flex flex-row justify-between mt-5 w-full sm:w-[50%]'>
             <Image 
                 src={whatsappIcon} 
                 alt='whatsapp' 

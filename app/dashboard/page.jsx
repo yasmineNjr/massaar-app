@@ -47,7 +47,7 @@ const Dashboard = () => {
     setOrders(allOrders.filter((d) => d.order_type === 'hotel')); // Filter from full list
     setHighlightOption('pending')
   };
-
+  
   return (
     <div className="w-full overflow-hidden">
   
