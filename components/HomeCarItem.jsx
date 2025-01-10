@@ -10,12 +10,14 @@ const HomeCarItem = ({ car, onClick }) => {
 
   return (
     <div
-      className="bg-white relative rounded-xl group shadow-customGray hover:shadow-cardhover min-w-[301px] h-[430px] overflow-hidden cursor-pointer hover:shadow-2xl"
+      // className="bg-white relative rounded-xl group shadow-customGray hover:shadow-cardhover min-w-[301px] h-[430px] overflow-hidden cursor-pointer hover:shadow-2xl"
+      className="bg-white relative rounded-xl group shadow-customGray hover:shadow-cardhover w-full h-[300px] overflow-hidden cursor-pointer hover:shadow-2xl"
       onClick={() => onClick(car.id)}
       onMouseEnter={() => setIsHovered(true)} // Set hover state
       onMouseLeave={() => setIsHovered(false)} // Reset hover state
     >
-      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+      {/* <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"> */}
+      <div className="relative w-full h-[250px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
         <Image
           src={isHovered ? car.imgs[0] : car.mainImg} // Change image source on hover
           alt={car.name}

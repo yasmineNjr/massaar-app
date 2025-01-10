@@ -24,7 +24,8 @@ const HomeCarsList = () => {
         
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10 bg-primary-foreground"> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-10 bg-primary-foreground p-4 box-border border-[8px] border-gold">
         {
             cars.map((car) => (
                 <HomeCarItem car={car} onClick={viewDetailsHandler}/>
