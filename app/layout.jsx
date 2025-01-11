@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children, searchParams }) {
 
   const isAdmin = searchParams?.admin === "true";
-
+  const MAINTENANCE_MODE = true;
   return (
     <html lang="en" dir="rtl">
       <OrderProvider>
@@ -35,7 +35,7 @@ export default function RootLayout({ children, searchParams }) {
           <body>
             {/* bg-gradient-to-r from-customLightGreen to-white */}
             {
-              process.env.MAINTENANCE_MODE === "true"
+              MAINTENANCE_MODE === true
               ?
               <div className="min-h-screen w-full bg-transparent text-primary-foreground text-center ">
                 <div className="w-full h-full flex flex-col justify-center">
