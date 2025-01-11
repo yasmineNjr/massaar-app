@@ -34,44 +34,53 @@ export default function RootLayout({ children, searchParams }) {
         <ActivePathProvider>
           <body>
             {/* bg-gradient-to-r from-customLightGreen to-white */}
-            <div className="w-full overflow-hidden bg-transparent">
-              {isAdmin && <PasskeyModal/>}
-
-              <div className={`${styles.paddingX} ${styles.flexCenter} `}>
-                <div className={`${styles.boxWidth}`}>
-                  <NavBar/>
+            {
+              process.env.MAINTENANCE_MODE === "true"
+              ?
+              <div className="min-h-screen w-full bg-transparent text-primary-foreground text-center ">
+                <div className="w-full h-full flex flex-col justify-center">
+                  <h1>We'll be back soon!</h1>
+                  <p>The site is currently under maintenance. Please check back later.</p>
                 </div>
               </div>
+              :
+              <div className="w-full overflow-hidden bg-transparent">
+                {isAdmin && <PasskeyModal/>}
 
-              <div className="relative">
-                {children}
-                {/* <div className="fixed bottom-12 right-5 flex flex-col gap-2 -z-15">
-                {
-                  socialMedia.map((item , index) => (
-                    item.isFloating &&
-                    <FloatingContactIcon key={index} item={item}/>
-                  ))
-                }
-                </div> */}
-                {/* Floating Icons */}
-                <FloatingIconsWithFooterCheck socialMedia={socialMedia} />
+                <div className={`${styles.paddingX} ${styles.flexCenter} `}>
+                  <div className={`${styles.boxWidth}`}>
+                    <NavBar/>
+                  </div>
+                </div>
 
-                <div className="fixed bottom-12 left-5 flex flex-col gap-2 -z-15">
-                  <ScrollToTop /> {/* Floating "Go to Top" button */}
+                <div className="relative">
+                  {children}
+                  {/* <div className="fixed bottom-12 right-5 flex flex-col gap-2 -z-15">
+                  {
+                    socialMedia.map((item , index) => (
+                      item.isFloating &&
+                      <FloatingContactIcon key={index} item={item}/>
+                    ))
+                  }
+                  </div> */}
+                  {/* Floating Icons */}
+                  <FloatingIconsWithFooterCheck socialMedia={socialMedia} />
+
+                  <div className="fixed bottom-12 left-5 flex flex-col gap-2 -z-15">
+                    <ScrollToTop /> {/* Floating "Go to Top" button */}
+                  </div>
+                </div>
+
+                <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                  <div className={`${styles.boxWidth}`}>
+                    <Footer/>
+                  </div>
                 </div>
               </div>
-
-              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
-                  <Footer/>
-                </div>
-              </div>
-            </div>
+            }      
           </body>
         </ActivePathProvider>
       </OrderProvider>
-      
-     
     </html>
   );
 }

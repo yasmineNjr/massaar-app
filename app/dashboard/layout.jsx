@@ -7,8 +7,9 @@ import { dashboardMenuItems } from "@/constants";
 export default function DashboardLayout({ children }) {
     
       const [selectedItem, setSelectedItem] = useState("إدارة الطلبات");
-
+      
     return (
+      
       <div className="flex min-h-screen lg:flex-row flex-col">
         {/* Sidebar */}
         <aside className="lg:w-[15%] w-auto bg-transparent text-primary-foreground p-4">
