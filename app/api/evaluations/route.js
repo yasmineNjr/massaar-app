@@ -8,6 +8,7 @@ export async function GET(req) {
             Evaluation.e_date AS date,
             Evaluation.level,
             Evaluation.text,
+            Evaluation.is_approved,
             Client.name AS client_name,
             Client.phone
         FROM 
@@ -16,12 +17,45 @@ export async function GET(req) {
             Client 
         ON 
             Client.id = Evaluation.client_id
-        WHERE 
-            Evaluation.is_approved = 0
+        
         `);
-      
+        // WHERE 
+        // Evaluation.is_approved = 0  
     return new Response(JSON.stringify(rows), { status: 200 });
   } catch (error) {
+    return new Response(
+      JSON.stringify({ error: "Database error: " + error.message }),
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(req) {
+  try {
+    const { e_date,	level,	text,	is_approved,	client_id } = await req.json();
+    console.log("Received data:", { e_date,	level,	text,	is_approved,	client_id });
+
+    // if (!e_date || !level || !text || !is_approved || !client_id) {
+    //   throw new Error("Missing required fields: e_date,	level,	text,	is_approved,	client_id");
+    // }
+
+    // Insert the new client if the phone does not exist
+    const [result] = await db.execute(
+      "INSERT INTO Evaluation (e_date,	level,	text,	is_approved,	client_id) VALUES (?,	?, ?,	?, ?)",
+      [e_date,	level,	text,	is_approved,	client_id]
+    );
+
+    // Get the ID of the newly inserted row
+    const insertedId = result.insertId;
+
+    console.log("Database insert result:", result);
+
+    return new Response(
+      JSON.stringify({ id: insertedId, e_date, level, text,	is_approved, client_id }),
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error("Error during POST request:", error.message);
     return new Response(
       JSON.stringify({ error: "Database error: " + error.message }),
       { status: 500 }

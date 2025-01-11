@@ -65,7 +65,7 @@ const ManageReservationForm = ({ type, setOpen, order, source }) => {
       }finally {
           setIsLoading(false); // Set loading to false after fetching
           setOpen && setOpen(false); 
-          // window.location.reload(); // Refresh the page
+          window.location.reload(); // Refresh the page
         }
     };
 

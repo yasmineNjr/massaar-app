@@ -42,7 +42,7 @@ export async function POST(req) {
       const { type, product, date, hours, days, notes, payment, price, quantity, is_approved, client_id } = await req.json();
       console.log("Received data:", { type, product, date, hours, days, notes, payment, price, quantity, is_approved, client_id });
   
-      if (!type || !product || !date || !hours || !days || !payment || !price || !quantity || is_approved || !client_id) {
+      if (!type || !product || !date || !hours || !days || !payment || !price || !quantity || !is_approved || !client_id) {
         throw new Error("Missing required fields: product, date, hours, days, notes, payment, price, quantity, client_id");
       }
   

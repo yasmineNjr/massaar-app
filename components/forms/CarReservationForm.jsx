@@ -68,7 +68,6 @@ const formSchema = z.object({
       });
     };
   
-
     const handleTripChange = (id, title, cost, checked) => {
       // Update selectedTrips to store only titles of selected trips
       setSelectedTrips((prev) => {

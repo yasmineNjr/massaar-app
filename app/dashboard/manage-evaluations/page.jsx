@@ -22,7 +22,8 @@ const ManageEvaluations = async() => {
           throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
         const data = await response.json();
-        setEvaluations(data); // Store the full list of orders
+        const unApprovedItems = data.filter(item => item.is_approved === 0);
+        setEvaluations(unApprovedItems); // Store the full list of reviews
         // console.log(data);
       } catch (error) {
         console.error("Failed to fetch Evaluations:", error.message);
