@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children, searchParams }) {
 
   const isAdmin = searchParams?.admin === "true";
-  const MAINTENANCE_MODE = false;
+  const MAINTENANCE_MODE = true;
   return (
     <html lang="en" dir="rtl">
       <OrderProvider>
