@@ -20,10 +20,11 @@ const NavLink = ({ item, idx, length }) => {
       //   active === item.title ? "border-b-2 border-primary" : ""
       // }`}
       // ${state === item.link ? "border-b-2 border-primary-foreground" : ""}
-      className={`font-normal cursor-pointer text-[18px] transition-transform duration-300 hover:scale-105 
+      className={`font-normal cursor-pointer text-[18px] 
         ${idx === length-1 ?' ml-0' : 'ml-10'}
         ${isActive(item.link) ? "border-b-2 border-gold text-gold" : ""}
         `}
+        // transition-transform duration-300 hover:scale-105 
     >
       {item.title}
     </Link>

@@ -1457,42 +1457,42 @@ export const socialMedia = [
 export const ourServices = [
   {
     id: 'service-1',
-    icon: <GiJourney size={75} color='#2ecc71'/>,
+    icon: <GiJourney size={75} color='#b89f00'/>,//color='#2ecc71' 
     text: 'تجربة رائعة',
   },
   {
     id: 'service-2',
-    icon: <FaRoad size={75} color= '#76828D'/>,
+    icon: <FaRoad size={75} color='#b89f00'/>,//color= '#76828D'
     text: 'راحة في الطريق',
   },
   {
     id: 'service-3',
-    icon: <LuCalendarClock size={75} color="#F24E43"/>,
+    icon: <LuCalendarClock size={75} color='#b89f00'/>,//color="#F24E43"
     text: 'التزام في المواعيد',
   },
   {
     id: 'service-4',
-    icon: <IoShieldCheckmark size={75} color="#3498db"/>,
+    icon: <IoShieldCheckmark size={75} color='#b89f00'/>,//color="#3498db"
     text: 'مصداقية',
   },
   {
     id: 'service-5',
-    icon: <MdCarRental size={75} color='#F37877'/>,
+    icon: <MdCarRental size={75} color='#b89f00'/>,//color='#F37877'
     text: 'حجز مسبق للعودة',
   },
   {
     id: 'service-6',
-    icon: <BiSolidOffer size={75} color='#ffd700'/>,
+    icon: <BiSolidOffer size={75} color='#b89f00'/>,//color='#ffd700'
     text: 'أسعار منافسة',
   },
   {
     id: 'service-7',
-    icon: <FaWifi size={75} color="#ABB8C4"/>,
+    icon: <FaWifi size={75} color='#b89f00'/>,//color="#ABB8C4"
     text: 'انترنت واي فاي',
   },
   {
     id: 'service-8',
-    icon: <BiSolidCarGarage size={75} color="#3E1716"/>,
+    icon: <BiSolidCarGarage size={75} color='#b89f00'/>,//color="#3E1716"
     text: 'عازل حراري',
   },
 ];

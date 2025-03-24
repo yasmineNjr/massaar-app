@@ -21,7 +21,7 @@ export const evaluationsColumns = [
     },
     {
         accessorKey: "phone",
-        header: "العميل",
+        header: "الجوال",
         cell: ({ row }) =>  (
             <p className="text-14-regular min-w-[20px] text-dimWhite text-center">
             {row.original.phone}

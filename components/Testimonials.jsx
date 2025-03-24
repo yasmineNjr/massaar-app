@@ -1,8 +1,39 @@
+'use client'
+
 import { feedback } from "../constants";
 import styles from "@/app/style";
 import FeedbackCard from './FeedbackCard';
+import { useEffect, useState } from "react";
 {/* <br className="sm:block hidden" />  */}
-const Testimonials = () => (
+const Testimonials = () => {
+
+  const [evaluations, setEvaluations] = useState([]); // Store the filtered orders
+    const [isLoading, setIsLoading] = useState(true); // Track loading state
+      
+      useEffect(() => {
+        const fetchEvaluations = async () => {
+          try {
+            setIsLoading(true); // Set loading to true before fetching
+            const response = await fetch("/api/evaluations");
+            if (!response.ok) {
+              throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+            const data = await response.json();
+            const approvedItems = data.filter(item => item.is_approved === 1);
+            setEvaluations(approvedItems); // Store the full list of orders
+            // console.log(data);
+            // console.log(approvedItems);
+          } catch (error) {
+            console.error("Failed to fetch Evaluations:", error.message);
+          }finally {
+            setIsLoading(false); // Set loading to false after fetching
+          }
+        };
+    
+        fetchEvaluations();
+      }, []);
+    
+  return(
     <section id='clients' className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}>
       <div className='absolute z-[0] w-[60%] h-[60%] -left-[50%] rounded-full white__gradient'/>
 
@@ -17,12 +48,21 @@ const Testimonials = () => (
         </div>
       </div>
       
-      <div className='flex flex-wrap justify-center gap-4 w-full feedback-container relative z-[1]'>
-        {feedback.map((card) => (
-          <FeedbackCard key={card.id} {...card} backContent='xxxxx'/>
-        ))}
+      {/* <div className='flex flex-wrap justify-center gap-4 w-full feedback-container relative z-[1]'> */}
+      <div className="flex flex-wrap justify-center gap-4 w-full feedback-container relative z-[1]">
+        {
+          isLoading 
+          ? 
+          <div className="flex justify-center items-center">
+            <div className="w-12 h-12 border-4 border-t-transparent border-l-gold border-b-gold border-r-gold rounded-full animate-spin"></div>
+          </div> 
+          : 
+          evaluations.map((ev) => (
+            <FeedbackCard card={ev}/>
+          ))
+        }
       </div>
     </section>
   )
-
+}
 export default Testimonials

@@ -51,7 +51,7 @@ function NavBar() {
     router.push('/orders');
   }
   const settingsHndler = () => {
-    router.push('/dashboard');
+    // router.push('/dashboard');
   }
 
   return (
@@ -124,7 +124,8 @@ function NavBar() {
               {navLinks.map((nav, index) => (
                 //  nav.id !== 'reservations' ?
                   <li key={nav.id} 
-                  className={`transition-transform duration-300 hover:scale-105 cursor-pointer ${index === navLinks.length-1 ?' mb-0' : 'mb-4'} hover:text-customGold`}>
+                  className={`cursor-pointer ${index === navLinks.length-1 ?' mb-0' : 'mb-4'} hover:text-customGold`}>
+                    {/* transition-transform duration-300 hover:scale-105  */}
                     <a href={`${nav.link}`}>{nav.title}</a>
                   </li> 
                   // : 

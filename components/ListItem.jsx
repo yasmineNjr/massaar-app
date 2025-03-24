@@ -22,7 +22,8 @@ const ListItem = ({item}) => {
     return (
      <div 
         key={id} //bg-gradient-to-r from-transparent via-gray-400 to-transparent
-        className='flex flex-col mt-10 w-[340px] h-[600px] shadow-customGray overflow-hidden rounded-xl text-customGray cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl  bg-gradient-to-r from-gray-500 to-white'
+        className='flex flex-col mt-10 w-[340px] h-[600px]  overflow-hidden rounded-xl text-customGray cursor-pointer  bg-gradient-to-r from-gray-500 to-white'
+        // transition-transform duration-300 hover:scale-105 hover:shadow-2xl shadow-customGray
         onClick={() => clickHandler(id)}
     >
         <div className='rounded-xl relative min-w-[301px] h-[370px]'>

@@ -125,10 +125,6 @@ const config = {
 			cancelled: "url('/assets/cancelled-bg.png')",
 		  },
   		keyframes: {
-			// 'appear': {
-			// 	from: { opacity: '0', transform: 'translateX(-3rem)' },
-			// 	to:   { opacity: '1', transform: 'translateX(0)' },
-			//   },
 			appear: {
 				'0%': { opacity: '0', transform: 'translateX(-3rem)' },
 				'100%': { opacity: '1', transform: 'translateX(0)' },

@@ -18,7 +18,8 @@ const OurServices = () => {
             {
                 ourServices.map((service, idx) => (
                     <div key={service.id} className="flex flex-col items-center text-center ">
-                        <div className="text-5xl mb-2 hover:animate-circularShake">{service.icon}</div>
+                      {/* hover:animate-circularShake */}
+                        <div className="text-5xl mb-2 ">{service.icon}</div>
                         <p className="text-lg text-dimWhite">{service.text}</p>
                     </div>
                 ))}

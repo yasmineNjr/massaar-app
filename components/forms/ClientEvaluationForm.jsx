@@ -27,11 +27,11 @@ const ClientEvaluationForm = () => {
       };
 
     const [rating, setRating] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
     const [name, setName]   = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [text, setText]   = useState('');
-    const [client, setClient]   = useState('');
     const { dateTime } = formatDateTime(Date.now());
 
     const handleRatingChange = (newRating) => {
@@ -98,7 +98,15 @@ const ClientEvaluationForm = () => {
         console.log("Sended data for insert:", { e_date,	level,	text,	is_approved,	client_id });
 
         if (client_id) {
-            await addNewEvaluation(e_date,	level,	text,	is_approved,	client_id);
+            try{
+                setIsLoading(true);
+                await addNewEvaluation(e_date,	level,	text,	is_approved,	client_id);
+            }catch{
+                console.log('Something went wrong')
+            } finally {
+                setIsLoading(false);
+                setName('');setPhone('');setEmail('');setText('');setRating(0);
+            }
         }
        
     };    
@@ -163,7 +171,15 @@ const ClientEvaluationForm = () => {
             </div>
             
             <div className="flex flex-1 justify-center items-center w-full mt-6">
-                <Button styles='lg:w-[50%] md:w-[50%] w-[100%]' title='إدخال' onClickHandler={addNewEvaluationHandler}/>
+                {
+                    isLoading 
+                    ?
+                    <div className="flex justify-center items-center">
+                        <div className="w-12 h-12 border-4 border-t-transparent border-l-gold border-b-gold border-r-gold rounded-full animate-spin"></div>
+                    </div> 
+                    :
+                    <Button styles='lg:w-[50%] md:w-[50%] w-[100%]' title='إدخال' onClickHandler={addNewEvaluationHandler}/>
+                }
             </div>
         </form>
     </Form>

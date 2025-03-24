@@ -36,11 +36,11 @@ export default function Home() {
           <Licenses/>
           <Contact/>
           <OurServices/>
-          <OurTrips/>
-          <CarOffer/>
+          {/* <OurTrips/> */}
+          {/* <CarOffer/> */}
           <HomeCarsList/>
           {/* <PopularCars/> */}
-          <HotelOffer/>
+          {/* <HotelOffer/> */}
           <PopularHotels/>
           <HaveToChoose/>
           <Stats />
